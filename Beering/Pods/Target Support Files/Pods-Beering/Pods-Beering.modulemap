@@ -1,0 +1,6 @@
+framework module Pods_Beering {
+  umbrella header "Pods-Beering-umbrella.h"
+
+  export *
+  module * { export * }
+}
