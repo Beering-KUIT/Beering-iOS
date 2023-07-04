@@ -1,5 +1,5 @@
 //
-//  NextViewController.swift
+//  LoginVC.swift
 //  Beering
 //
 //  Created by YoonSub Lim on 2023/07/04.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NextViewController: UIViewController {
+class LoginVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

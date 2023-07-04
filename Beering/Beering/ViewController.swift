@@ -15,6 +15,20 @@ class ViewController: UIViewController {
 
         self.view.backgroundColor = .yellow
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+
+        let LoginStoryboard = UIStoryboard(name: "Login", bundle: nil)
+        let LoginVC = LoginStoryboard.instantiateInitialViewController()
+        // 메인 화면을 풀 스크린으로 표시
+        LoginVC?.modalPresentationStyle = .fullScreen
+        self.present(LoginVC!, animated: true)
+        
+        // 윈도우의 rootViewController로 설정하여 메인 화면 표시
+        UIApplication.shared.windows.first?.rootViewController = LoginVC
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
+
+    }
 
 }
 
