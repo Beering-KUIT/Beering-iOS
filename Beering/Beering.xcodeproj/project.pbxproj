@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E1D582E2A53ECFD00C1FE9B /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1D582D2A53ECFD00C1FE9B /* UIViewController.swift */; };
+		2E1D58342A53F83000C1FE9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1D58332A53F83000C1FE9B /* Main.storyboard */; };
 		2E9F85D32A5270F10082BC8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F85D22A5270F10082BC8B /* AppDelegate.swift */; };
 		2E9F85D52A5270F10082BC8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F85D42A5270F10082BC8B /* SceneDelegate.swift */; };
 		2E9F85D72A5270F10082BC8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F85D62A5270F10082BC8B /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		045DA4A813987AF870E47FF4 /* Pods_Beering.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beering.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1D582D2A53ECFD00C1FE9B /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		2E1D58332A53F83000C1FE9B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2E9F85CF2A5270F10082BC8B /* Beering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9F85D22A5270F10082BC8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E9F85D42A5270F10082BC8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				2E9F85DB2A5270F20082BC8B /* Assets.xcassets */,
 				2E9F85DD2A5270F20082BC8B /* LaunchScreen.storyboard */,
 				2E9F85E02A5270F20082BC8B /* Info.plist */,
+				2E1D58332A53F83000C1FE9B /* Main.storyboard */,
 			);
 			path = Beering;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E1D58342A53F83000C1FE9B /* Main.storyboard in Resources */,
 				2E9F85DF2A5270F20082BC8B /* LaunchScreen.storyboard in Resources */,
 				2E9F85DC2A5270F20082BC8B /* Assets.xcassets in Resources */,
 			);
