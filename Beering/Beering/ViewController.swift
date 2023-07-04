@@ -6,15 +6,21 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
         self.view.backgroundColor = .yellow
     }
 
+}
 
+struct VCPreView:PreviewProvider {
+    static var previews: some View {
+        ViewController().toPreview()
+    }
 }
 
