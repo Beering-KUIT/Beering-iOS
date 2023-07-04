@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E1D582E2A53ECFD00C1FE9B /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1D582D2A53ECFD00C1FE9B /* UIViewController.swift */; };
 		2E9F85D32A5270F10082BC8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F85D22A5270F10082BC8B /* AppDelegate.swift */; };
 		2E9F85D52A5270F10082BC8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F85D42A5270F10082BC8B /* SceneDelegate.swift */; };
 		2E9F85D72A5270F10082BC8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F85D62A5270F10082BC8B /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		045DA4A813987AF870E47FF4 /* Pods_Beering.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beering.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E1D582D2A53ECFD00C1FE9B /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		2E9F85CF2A5270F10082BC8B /* Beering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9F85D22A5270F10082BC8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E9F85D42A5270F10082BC8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		2E1D582C2A53EC7300C1FE9B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2E1D582D2A53ECFD00C1FE9B /* UIViewController.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		2E9F85C62A5270F10082BC8B = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +80,7 @@
 		2E9F85D12A5270F10082BC8B /* Beering */ = {
 			isa = PBXGroup;
 			children = (
+				2E1D582C2A53EC7300C1FE9B /* Extension */,
 				2E9F85D22A5270F10082BC8B /* AppDelegate.swift */,
 				2E9F85D42A5270F10082BC8B /* SceneDelegate.swift */,
 				2E9F85D62A5270F10082BC8B /* ViewController.swift */,
@@ -204,6 +215,7 @@
 			files = (
 				2E9F85D72A5270F10082BC8B /* ViewController.swift in Sources */,
 				2E9F85D32A5270F10082BC8B /* AppDelegate.swift in Sources */,
+				2E1D582E2A53ECFD00C1FE9B /* UIViewController.swift in Sources */,
 				2E9F85D52A5270F10082BC8B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
