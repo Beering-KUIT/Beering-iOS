@@ -80,6 +80,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource{
         cell.profileImage.loadImage(from: profileImageArr[indexPath.row])
         cell.profileImage.makeCircular()
         cell.nickname.text = nicknameArr[indexPath.row]
+//        cell.reviewText.setLineSpacing(spacing: 10)
         
         print("## " + cell.nickname.text!)
         print("## indexPath.row : " + String(indexPath.row))

@@ -20,6 +20,7 @@
 		2E309DC92A55131F00B19B2A /* ReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E309DC72A55131F00B19B2A /* ReviewCell.xib */; };
 		2E309DCD2A5532C500B19B2A /* ImageScrollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E309DCC2A5532C500B19B2A /* ImageScrollCell.swift */; };
 		2E309DCF2A55425000B19B2A /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E309DCE2A55425000B19B2A /* UIImageView.swift */; };
+		2E309DD12A554C3600B19B2A /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E309DD02A554C3600B19B2A /* UILabel.swift */; };
 		2E9F85D32A5270F10082BC8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F85D22A5270F10082BC8B /* AppDelegate.swift */; };
 		2E9F85D52A5270F10082BC8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F85D42A5270F10082BC8B /* SceneDelegate.swift */; };
 		2E9F85D72A5270F10082BC8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F85D62A5270F10082BC8B /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 		2E309DC72A55131F00B19B2A /* ReviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewCell.xib; sourceTree = "<group>"; };
 		2E309DCC2A5532C500B19B2A /* ImageScrollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollCell.swift; sourceTree = "<group>"; };
 		2E309DCE2A55425000B19B2A /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		2E309DD02A554C3600B19B2A /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		2E9F85CF2A5270F10082BC8B /* Beering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9F85D22A5270F10082BC8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E9F85D42A5270F10082BC8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				2E1D582D2A53ECFD00C1FE9B /* UIViewController.swift */,
+				2E309DD02A554C3600B19B2A /* UILabel.swift */,
 				2E309DCE2A55425000B19B2A /* UIImageView.swift */,
 			);
 			path = Extension;
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E309DD12A554C3600B19B2A /* UILabel.swift in Sources */,
 				2E9F85D72A5270F10082BC8B /* ViewController.swift in Sources */,
 				2E309DCF2A55425000B19B2A /* UIImageView.swift in Sources */,
 				2E9F85D32A5270F10082BC8B /* AppDelegate.swift in Sources */,
