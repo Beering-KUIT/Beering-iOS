@@ -16,8 +16,34 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fqx-oy-qV1">
+                                <rect key="frame" x="129" y="312" width="136" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="로그인 필요할 때"/>
+                                <connections>
+                                    <action selector="loginRequestBtnTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="jKu-xL-Rpj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRC-yp-Ohh">
+                                <rect key="frame" x="121" y="492" width="151" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="로그인 되어있을 때"/>
+                                <connections>
+                                    <action selector="loginDoneBtnTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="x3h-Fx-KwI"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="mRC-yp-Ohh" secondAttribute="bottom" constant="291" id="2c5-ua-srb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Fqx-oy-qV1" secondAttribute="trailing" constant="128" id="F7t-3V-7pa"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mRC-yp-Ohh" secondAttribute="trailing" constant="121" id="NfV-xB-nqQ"/>
+                            <constraint firstItem="mRC-yp-Ohh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="121" id="dO2-3Z-Gem"/>
+                            <constraint firstItem="Fqx-oy-qV1" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="253" id="vKz-wP-Ca9"/>
+                            <constraint firstItem="Fqx-oy-qV1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="129" id="zUW-Eq-JQx"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
