@@ -122,7 +122,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="96" id="ehE-oE-WhV"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="74U-v9-LIh">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="74U-v9-LIh">
                                     <size key="itemSize" width="96" height="96"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -166,6 +166,7 @@
             <connections>
                 <outlet property="nickname" destination="gGa-cc-YVC" id="gYG-JI-oAe"/>
                 <outlet property="profileImage" destination="5Yp-nP-shr" id="in5-oU-7Nd"/>
+                <outlet property="reviewImageCollectionView" destination="Qde-6L-eYB" id="wXz-EJ-gtx"/>
                 <outlet property="reviewText" destination="Dmg-6L-kc8" id="yXy-t5-RhW"/>
             </connections>
             <point key="canvasLocation" x="148.85496183206106" y="67.605633802816911"/>

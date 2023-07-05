@@ -11,13 +11,8 @@ import SwiftUI
 class HomeVC: UIViewController {
 
     @IBOutlet weak var reviewTableView: UITableView!
+    
     var profileImageArr: [String] = [
-        "https://picsum.photos/50",
-        "https://picsum.photos/50",
-        "https://picsum.photos/50",
-        "https://picsum.photos/50",
-        "https://picsum.photos/50",
-        "https://picsum.photos/50",
         "https://picsum.photos/50",
         "https://picsum.photos/50",
         "https://picsum.photos/50",
@@ -32,13 +27,26 @@ class HomeVC: UIViewController {
     "임윤섭3",
     "임윤섭4",
     "임윤섭5",
-    "임윤섭6",
-    "임윤섭7",
-    "임윤섭8",
-    "임윤섭9",
-    "임윤섭10",
-    "임윤섭11",
-    "임윤섭12",
+    "임윤섭6"
+    ]
+    
+    var reviewImages: [[String]] = [
+    [],
+    ["https://picsum.photos/50"],
+    ["https://picsum.photos/50",
+     "https://picsum.photos/50"],
+    ["https://picsum.photos/50",
+     "https://picsum.photos/50",
+     "https://picsum.photos/50"],
+    ["https://picsum.photos/50",
+     "https://picsum.photos/50",
+     "https://picsum.photos/50",
+     "https://picsum.photos/50"],
+    ["https://picsum.photos/50",
+     "https://picsum.photos/50",
+     "https://picsum.photos/50",
+     "https://picsum.photos/50",
+     "https://picsum.photos/50"]
     ]
     
     override func viewDidLoad() {
@@ -50,27 +58,17 @@ class HomeVC: UIViewController {
         reviewTableView.delegate = self
         reviewTableView.dataSource = self
         
-        let nibName = UINib(nibName: "ReviewCell", bundle: nil)
-        reviewTableView.register(nibName, forCellReuseIdentifier: "reviewCell")
+        let reviewCellNibName = UINib(nibName: "ReviewCell", bundle: nil)
+        reviewTableView.register(reviewCellNibName, forCellReuseIdentifier: "reviewCell")
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
+// Review Table View Cell 데이터 삽입
 extension HomeVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("### numberOfRows " + String(section))
-        return nicknameArr.count /// TODO Change
+        return nicknameArr.count /// TODO Change to Review Data Object Count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -82,9 +80,15 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource{
         cell.nickname.text = nicknameArr[indexPath.row]
 //        cell.reviewText.setLineSpacing(spacing: 10)
         
-        print("## " + cell.nickname.text!)
-        print("## indexPath.row : " + String(indexPath.row))
-        // 초기화
+        cell.reviewImageCollectionView.delegate = cell
+        cell.reviewImageCollectionView.dataSource = cell
+//        cell.reviewImageCollectionView.reloadData()
+        
+//        print("## reviewImages[indexPath.row] is \(reviewImages[indexPath.row])")
+        cell.setReviewImages(reviewImages[indexPath.row])
+        
+//        print("## " + cell.nickname.text!)
+//        print("## indexPath.row : " + String(indexPath.row))
         
         return cell
     }
