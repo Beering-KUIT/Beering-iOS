@@ -104,7 +104,7 @@
 				2E309DC32A550FE400B19B2A /* Home */,
 				2E309DB92A550BCB00B19B2A /* TabBar.storyboard */,
 				2E309DBD2A550C5A00B19B2A /* myPage.storyboard */,
-				2E309DBB2A550C3E00B19B2A /* Search.storyboard */,
+				2ED7A1722A57B777009CC66A /* Search */,
 			);
 			path = yoonsub;
 			sourceTree = "<group>";
@@ -155,6 +155,14 @@
 				2E1D58332A53F83000C1FE9B /* Main.storyboard */,
 			);
 			path = Beering;
+			sourceTree = "<group>";
+		};
+		2ED7A1722A57B777009CC66A /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				2E309DBB2A550C3E00B19B2A /* Search.storyboard */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		D0580859C666F16728463A04 /* Frameworks */ = {
