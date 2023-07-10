@@ -89,26 +89,6 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		2E1D58402A54016A00C1FE9B /* byungkik */ = {
-			isa = PBXGroup;
-			children = (
-				2E1D583E2A53FB2200C1FE9B /* LoginVC.swift */,
-				2E1D583C2A53FB0D00C1FE9B /* Login.storyboard */,
-			);
-			path = byungkik;
-			sourceTree = "<group>";
-		};
-		2E1D58412A54018D00C1FE9B /* yoonsub */ = {
-			isa = PBXGroup;
-			children = (
-				2E309DC32A550FE400B19B2A /* Home */,
-				2E309DB92A550BCB00B19B2A /* TabBar.storyboard */,
-				2E309DBD2A550C5A00B19B2A /* myPage.storyboard */,
-				2ED7A1722A57B777009CC66A /* Search */,
-			);
-			path = yoonsub;
-			sourceTree = "<group>";
-		};
 		2E309DC32A550FE400B19B2A /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,13 +123,16 @@
 		2E9F85D12A5270F10082BC8B /* Beering */ = {
 			isa = PBXGroup;
 			children = (
-				2E1D58412A54018D00C1FE9B /* yoonsub */,
-				2E1D58402A54016A00C1FE9B /* byungkik */,
+				2ED7A1752A5BA6E2009CC66A /* Account */,
+				2E309DC32A550FE400B19B2A /* Home */,
+				2ED7A1722A57B777009CC66A /* Search */,
+				2ED7A1772A5BA76E009CC66A /* MyPage */,
 				2E1D582C2A53EC7300C1FE9B /* Extension */,
 				2E9F85D22A5270F10082BC8B /* AppDelegate.swift */,
 				2E9F85D42A5270F10082BC8B /* SceneDelegate.swift */,
 				2E9F85D62A5270F10082BC8B /* ViewController.swift */,
 				2E9F85DB2A5270F20082BC8B /* Assets.xcassets */,
+				2E309DB92A550BCB00B19B2A /* TabBar.storyboard */,
 				2E9F85DD2A5270F20082BC8B /* LaunchScreen.storyboard */,
 				2E9F85E02A5270F20082BC8B /* Info.plist */,
 				2E1D58332A53F83000C1FE9B /* Main.storyboard */,
@@ -163,6 +146,31 @@
 				2E309DBB2A550C3E00B19B2A /* Search.storyboard */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		2ED7A1752A5BA6E2009CC66A /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				2ED7A1762A5BA747009CC66A /* Login */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		2ED7A1762A5BA747009CC66A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2E1D583E2A53FB2200C1FE9B /* LoginVC.swift */,
+				2E1D583C2A53FB0D00C1FE9B /* Login.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		2ED7A1772A5BA76E009CC66A /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				2E309DBD2A550C5A00B19B2A /* myPage.storyboard */,
+			);
+			path = MyPage;
 			sourceTree = "<group>";
 		};
 		D0580859C666F16728463A04 /* Frameworks */ = {
