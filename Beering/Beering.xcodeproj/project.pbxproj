@@ -37,6 +37,9 @@
 		2ED7A18F2A5E76A3009CC66A /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2ED7A1862A5E76A3009CC66A /* Pretendard-SemiBold.otf */; };
 		2ED7A1902A5E76A3009CC66A /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2ED7A1872A5E76A3009CC66A /* Pretendard-Medium.otf */; };
 		2ED7A1932A5E7D85009CC66A /* OoohBaby-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ED7A1922A5E7D85009CC66A /* OoohBaby-Regular.ttf */; };
+		2ED7A1952A5E9AA8009CC66A /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED7A1942A5E9AA8009CC66A /* UITextField.swift */; };
+		2ED7A1992A5E9BE2009CC66A /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED7A1982A5E9BE2009CC66A /* SearchVC.swift */; };
+		2ED7A19B2A5E9E67009CC66A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED7A19A2A5E9E67009CC66A /* UIView.swift */; };
 		CF96CD6F49E151AD33D2DCA8 /* Pods_Beering.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045DA4A813987AF870E47FF4 /* Pods_Beering.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +77,9 @@
 		2ED7A1862A5E76A3009CC66A /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		2ED7A1872A5E76A3009CC66A /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		2ED7A1922A5E7D85009CC66A /* OoohBaby-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OoohBaby-Regular.ttf"; sourceTree = "<group>"; };
+		2ED7A1942A5E9AA8009CC66A /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		2ED7A1982A5E9BE2009CC66A /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		2ED7A19A2A5E9E67009CC66A /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		7D62E9E04607F08D67C59DDA /* Pods-Beering.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beering.release.xcconfig"; path = "Target Support Files/Pods-Beering/Pods-Beering.release.xcconfig"; sourceTree = "<group>"; };
 		D6F412E016012A6E28AC04C7 /* Pods-Beering.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beering.debug.xcconfig"; path = "Target Support Files/Pods-Beering/Pods-Beering.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +111,8 @@
 				2E1D582D2A53ECFD00C1FE9B /* UIViewController.swift */,
 				2E309DD02A554C3600B19B2A /* UILabel.swift */,
 				2E309DCE2A55425000B19B2A /* UIImageView.swift */,
+				2ED7A1942A5E9AA8009CC66A /* UITextField.swift */,
+				2ED7A19A2A5E9E67009CC66A /* UIView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -165,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				2E309DBB2A550C3E00B19B2A /* Search.storyboard */,
+				2ED7A1982A5E9BE2009CC66A /* SearchVC.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -375,6 +384,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ED7A19B2A5E9E67009CC66A /* UIView.swift in Sources */,
+				2ED7A1992A5E9BE2009CC66A /* SearchVC.swift in Sources */,
 				2E309DD12A554C3600B19B2A /* UILabel.swift in Sources */,
 				2E9F85D72A5270F10082BC8B /* ViewController.swift in Sources */,
 				2E309DCF2A55425000B19B2A /* UIImageView.swift in Sources */,
@@ -384,6 +395,7 @@
 				2E9F85D52A5270F10082BC8B /* SceneDelegate.swift in Sources */,
 				2E1D583F2A53FB2200C1FE9B /* LoginVC.swift in Sources */,
 				2E309DC82A55131F00B19B2A /* ReviewCell.swift in Sources */,
+				2ED7A1952A5E9AA8009CC66A /* UITextField.swift in Sources */,
 				2E309DDA2A55558700B19B2A /* ReviewImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
