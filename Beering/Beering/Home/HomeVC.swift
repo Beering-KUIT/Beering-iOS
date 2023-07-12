@@ -12,6 +12,8 @@ class HomeVC: UIViewController {
 
     @IBOutlet weak var reviewTableView: UITableView!
     
+    @IBOutlet weak var homeProfileImage: UIImageView!
+    
     var profileImageArr: [String] = [
         "https://picsum.photos/50",
         "https://picsum.photos/50",
@@ -32,21 +34,21 @@ class HomeVC: UIViewController {
     
     var reviewImages: [[String]] = [
     [],
-    ["https://picsum.photos/50"],
-    ["https://picsum.photos/50",
-     "https://picsum.photos/50"],
-    ["https://picsum.photos/50",
-     "https://picsum.photos/50",
-     "https://picsum.photos/50"],
-    ["https://picsum.photos/50",
-     "https://picsum.photos/50",
-     "https://picsum.photos/50",
-     "https://picsum.photos/50"],
-    ["https://picsum.photos/50",
-     "https://picsum.photos/50",
-     "https://picsum.photos/50",
-     "https://picsum.photos/50",
-     "https://picsum.photos/50"]
+    ["https://picsum.photos/347"],
+    ["https://picsum.photos/347",
+     "https://picsum.photos/347"],
+    ["https://picsum.photos/347",
+     "https://picsum.photos/347",
+     "https://picsum.photos/347"],
+    ["https://picsum.photos/347",
+     "https://picsum.photos/347",
+     "https://picsum.photos/347",
+     "https://picsum.photos/347"],
+    ["https://picsum.photos/347",
+     "https://picsum.photos/347",
+     "https://picsum.photos/347",
+     "https://picsum.photos/347",
+     "https://picsum.photos/347"]
     ]
     
     override func viewDidLoad() {
@@ -61,6 +63,8 @@ class HomeVC: UIViewController {
         let reviewCellNibName = UINib(nibName: "ReviewCell", bundle: nil)
         reviewTableView.register(reviewCellNibName, forCellReuseIdentifier: "reviewCell")
         
+        homeProfileImage.makeCircular()
+        homeProfileImage.loadImage(from: "https://picsum.photos/333")
     }
     
 }
@@ -86,6 +90,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource{
         
 //        print("## reviewImages[indexPath.row] is \(reviewImages[indexPath.row])")
         cell.setReviewImages(reviewImages[indexPath.row])
+        cell.setCollectionViewHeight()
         
 //        print("## " + cell.nickname.text!)
 //        print("## indexPath.row : " + String(indexPath.row))

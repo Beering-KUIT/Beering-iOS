@@ -36,9 +36,15 @@ class ReviewCell: UITableViewCell {
         self.reviewImageCollectionView.reloadData()
     }
     
+    // 이미지뷰 크기 지정
+    /// TODO 이미지 개수 0개이면 높이 0으로
+    func setCollectionViewHeight(){
+        self.reviewImageCollectionView.heightAnchor.constraint(equalToConstant: 208).isActive = true
+    }
+    
 }
 
-extension ReviewCell: UICollectionViewDelegate, UICollectionViewDataSource{
+extension ReviewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return reviewImages.count
@@ -55,4 +61,10 @@ extension ReviewCell: UICollectionViewDelegate, UICollectionViewDataSource{
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+//        print("resize image cell width : \((self.reviewImageCollectionView?.frame.width)!)")
+//        print("resize image cell height : \((self.reviewImageCollectionView?.frame.height)!)")
+        return CGSize(width: (self.reviewImageCollectionView?.frame.width)!, height: (self.reviewImageCollectionView?.frame.height)!)
+    }
 }
