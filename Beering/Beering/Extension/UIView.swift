@@ -40,7 +40,7 @@ extension UIView {
     
     // 원형으로 바꾸기. e.g. 프로필 이미지 등
     func makeCircular() {
-        self.layer.cornerRadius = self.frame.size.width / 2
+        self.layer.cornerRadius = self.frame.size.height / 2
         self.clipsToBounds = true
     }
     

@@ -89,12 +89,12 @@
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jrb-52-gGG">
-                                                <rect key="frame" x="56" y="5" width="267" height="40"/>
+                                                <rect key="frame" x="60" y="5" width="263" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Tuq-Lg-PIQ"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Aat-xT-D1m">
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Aat-xT-D1m">
                                                     <size key="itemSize" width="61" height="40"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -118,7 +118,7 @@
                                             <constraint firstItem="f0X-S4-RPe" firstAttribute="leading" secondItem="Kd8-Ci-e3e" secondAttribute="leading" constant="8" id="VEJ-td-BzI"/>
                                             <constraint firstAttribute="trailing" secondItem="jrb-52-gGG" secondAttribute="trailing" id="Yh2-Nm-bU2"/>
                                             <constraint firstAttribute="height" constant="50" id="chL-hN-xEQ"/>
-                                            <constraint firstItem="jrb-52-gGG" firstAttribute="leading" secondItem="f0X-S4-RPe" secondAttribute="trailing" constant="8" id="iaZ-Cu-3nA"/>
+                                            <constraint firstItem="jrb-52-gGG" firstAttribute="leading" secondItem="f0X-S4-RPe" secondAttribute="trailing" constant="12" id="iaZ-Cu-3nA"/>
                                             <constraint firstItem="jrb-52-gGG" firstAttribute="centerY" secondItem="Kd8-Ci-e3e" secondAttribute="centerY" id="kxH-Cd-AdO"/>
                                         </constraints>
                                     </view>
@@ -169,6 +169,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Nz3-Pz-4KV"/>
                     <connections>
+                        <outlet property="filterCollectionView" destination="jrb-52-gGG" id="bq1-ZD-OBM"/>
                         <outlet property="filterView" destination="f0X-S4-RPe" id="5C5-Xb-Yvt"/>
                         <outlet property="searchCollectionView" destination="l7u-9h-HEH" id="sH3-CV-eil"/>
                         <outlet property="searchTextField" destination="cyT-eD-4CB" id="0Oi-16-WOF"/>
