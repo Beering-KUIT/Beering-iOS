@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pretendard-Regular.otf">
+            <string>Pretendard-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="searchCell" id="gTV-IL-0wX" customClass="SearchCell" customModule="Beering" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="188" height="260"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="188" height="260"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eUK-2D-ru8">
+                        <rect key="frame" x="0.0" y="0.0" width="188" height="260"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="So7-Bv-ULg">
+                                <rect key="frame" x="0.0" y="0.0" width="188" height="188"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="188" id="WV6-dR-nR7"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0L-ID-LVz">
+                                <rect key="frame" x="0.0" y="188" width="188" height="72"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="맥주명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNA-Xw-MsG">
+                                        <rect key="frame" x="14" y="11.999999999999998" width="144" height="19.333333333333329"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="144" id="teh-Wq-pTd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beer Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fn-Y4-bjb">
+                                        <rect key="frame" x="14" y="34.333333333333343" width="144" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="144" id="69o-ZZ-alv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brewery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfv-m9-zqs">
+                                        <rect key="frame" x="14" y="49.333333333333343" width="144" height="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="144" id="svK-B3-Mkm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="8"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart_blank" translatesAutoresizingMaskIntoConstraints="NO" id="BW7-tU-had">
+                                        <rect key="frame" x="154" y="9.6666666666666572" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="BSb-iH-res"/>
+                                            <constraint firstAttribute="width" constant="24" id="lIu-Ne-U6r"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="BW7-tU-had" secondAttribute="trailing" constant="10" id="XJc-qi-Ozj"/>
+                                    <constraint firstItem="3fn-Y4-bjb" firstAttribute="leading" secondItem="m0L-ID-LVz" secondAttribute="leading" constant="14" id="aN9-5Q-qbu"/>
+                                    <constraint firstItem="qfv-m9-zqs" firstAttribute="top" secondItem="3fn-Y4-bjb" secondAttribute="bottom" constant="3" id="bIe-gN-gK4"/>
+                                    <constraint firstItem="qfv-m9-zqs" firstAttribute="leading" secondItem="m0L-ID-LVz" secondAttribute="leading" constant="14" id="bRu-Ru-Hfo"/>
+                                    <constraint firstItem="dNA-Xw-MsG" firstAttribute="top" secondItem="m0L-ID-LVz" secondAttribute="top" constant="12" id="iyS-Qc-TYu"/>
+                                    <constraint firstItem="3fn-Y4-bjb" firstAttribute="top" secondItem="dNA-Xw-MsG" secondAttribute="bottom" constant="3" id="jco-ll-9Gt"/>
+                                    <constraint firstItem="dNA-Xw-MsG" firstAttribute="leading" secondItem="m0L-ID-LVz" secondAttribute="leading" constant="14" id="pZq-cF-6HN"/>
+                                    <constraint firstItem="BW7-tU-had" firstAttribute="centerY" secondItem="dNA-Xw-MsG" secondAttribute="centerY" id="w9u-Lf-E9a"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="m0L-ID-LVz" secondAttribute="trailing" id="8Tf-Xo-Fm9"/>
+                            <constraint firstAttribute="trailing" secondItem="So7-Bv-ULg" secondAttribute="trailing" id="C8M-tC-xTM"/>
+                            <constraint firstItem="So7-Bv-ULg" firstAttribute="top" secondItem="eUK-2D-ru8" secondAttribute="top" id="Q88-ay-LBb"/>
+                            <constraint firstItem="m0L-ID-LVz" firstAttribute="leading" secondItem="eUK-2D-ru8" secondAttribute="leading" id="Z0D-G5-BIF"/>
+                            <constraint firstAttribute="bottom" secondItem="m0L-ID-LVz" secondAttribute="bottom" id="gb7-24-p2d"/>
+                            <constraint firstItem="m0L-ID-LVz" firstAttribute="top" secondItem="So7-Bv-ULg" secondAttribute="bottom" id="k2W-If-idI"/>
+                            <constraint firstItem="So7-Bv-ULg" firstAttribute="leading" secondItem="eUK-2D-ru8" secondAttribute="leading" id="kUB-iK-9CE"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="eUK-2D-ru8" secondAttribute="trailing" id="Abf-q8-lQd"/>
+                <constraint firstItem="eUK-2D-ru8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cT3-sF-ka8"/>
+                <constraint firstAttribute="bottom" secondItem="eUK-2D-ru8" secondAttribute="bottom" id="kgk-2U-XYR"/>
+                <constraint firstItem="eUK-2D-ru8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lmc-Y4-ydV"/>
+            </constraints>
+            <size key="customSize" width="327" height="277"/>
+            <connections>
+                <outlet property="breweryTitle" destination="qfv-m9-zqs" id="xUZ-Tf-l6z"/>
+                <outlet property="isFavorite" destination="BW7-tU-had" id="aje-o3-poA"/>
+                <outlet property="liquorImage" destination="So7-Bv-ULg" id="wXp-EM-8Sp"/>
+                <outlet property="liquorTitleEng" destination="3fn-Y4-bjb" id="l0E-pk-hL8"/>
+                <outlet property="liquorTitleKor" destination="dNA-Xw-MsG" id="Lfi-w3-Oyj"/>
+            </connections>
+            <point key="canvasLocation" x="317.55725190839695" y="68.309859154929583"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="heart_blank" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

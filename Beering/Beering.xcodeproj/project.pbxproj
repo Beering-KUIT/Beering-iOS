@@ -22,6 +22,8 @@
 		2E309DD12A554C3600B19B2A /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E309DD02A554C3600B19B2A /* UILabel.swift */; };
 		2E309DDA2A55558700B19B2A /* ReviewImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E309DD82A55558700B19B2A /* ReviewImageCell.swift */; };
 		2E309DDB2A55558700B19B2A /* ReviewImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E309DD92A55558700B19B2A /* ReviewImageCell.xib */; };
+		2E80BE872A5F9D97002E8F0E /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80BE852A5F9D97002E8F0E /* SearchCell.swift */; };
+		2E80BE882A5F9D97002E8F0E /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E80BE862A5F9D97002E8F0E /* SearchCell.xib */; };
 		2E9F85D32A5270F10082BC8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F85D22A5270F10082BC8B /* AppDelegate.swift */; };
 		2E9F85D52A5270F10082BC8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F85D42A5270F10082BC8B /* SceneDelegate.swift */; };
 		2E9F85D72A5270F10082BC8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F85D62A5270F10082BC8B /* ViewController.swift */; };
@@ -37,7 +39,6 @@
 		2ED7A18F2A5E76A3009CC66A /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2ED7A1862A5E76A3009CC66A /* Pretendard-SemiBold.otf */; };
 		2ED7A1902A5E76A3009CC66A /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2ED7A1872A5E76A3009CC66A /* Pretendard-Medium.otf */; };
 		2ED7A1932A5E7D85009CC66A /* OoohBaby-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ED7A1922A5E7D85009CC66A /* OoohBaby-Regular.ttf */; };
-		2ED7A1952A5E9AA8009CC66A /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED7A1942A5E9AA8009CC66A /* UITextField.swift */; };
 		2ED7A1992A5E9BE2009CC66A /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED7A1982A5E9BE2009CC66A /* SearchVC.swift */; };
 		2ED7A19B2A5E9E67009CC66A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED7A19A2A5E9E67009CC66A /* UIView.swift */; };
 		CF96CD6F49E151AD33D2DCA8 /* Pods_Beering.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045DA4A813987AF870E47FF4 /* Pods_Beering.framework */; };
@@ -60,6 +61,8 @@
 		2E309DD02A554C3600B19B2A /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		2E309DD82A55558700B19B2A /* ReviewImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewImageCell.swift; sourceTree = "<group>"; };
 		2E309DD92A55558700B19B2A /* ReviewImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewImageCell.xib; sourceTree = "<group>"; };
+		2E80BE852A5F9D97002E8F0E /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		2E80BE862A5F9D97002E8F0E /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 		2E9F85CF2A5270F10082BC8B /* Beering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9F85D22A5270F10082BC8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E9F85D42A5270F10082BC8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,7 +80,6 @@
 		2ED7A1862A5E76A3009CC66A /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		2ED7A1872A5E76A3009CC66A /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		2ED7A1922A5E7D85009CC66A /* OoohBaby-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OoohBaby-Regular.ttf"; sourceTree = "<group>"; };
-		2ED7A1942A5E9AA8009CC66A /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		2ED7A1982A5E9BE2009CC66A /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		2ED7A19A2A5E9E67009CC66A /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		7D62E9E04607F08D67C59DDA /* Pods-Beering.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beering.release.xcconfig"; path = "Target Support Files/Pods-Beering/Pods-Beering.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,7 +113,6 @@
 				2E1D582D2A53ECFD00C1FE9B /* UIViewController.swift */,
 				2E309DD02A554C3600B19B2A /* UILabel.swift */,
 				2E309DCE2A55425000B19B2A /* UIImageView.swift */,
-				2ED7A1942A5E9AA8009CC66A /* UITextField.swift */,
 				2ED7A19A2A5E9E67009CC66A /* UIView.swift */,
 			);
 			path = Extension;
@@ -174,6 +175,8 @@
 			children = (
 				2E309DBB2A550C3E00B19B2A /* Search.storyboard */,
 				2ED7A1982A5E9BE2009CC66A /* SearchVC.swift */,
+				2E80BE852A5F9D97002E8F0E /* SearchCell.swift */,
+				2E80BE862A5F9D97002E8F0E /* SearchCell.xib */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				2E309DBA2A550BCB00B19B2A /* TabBar.storyboard in Resources */,
 				2E9F85DC2A5270F20082BC8B /* Assets.xcassets in Resources */,
 				2ED7A18F2A5E76A3009CC66A /* Pretendard-SemiBold.otf in Resources */,
+				2E80BE882A5F9D97002E8F0E /* SearchCell.xib in Resources */,
 				2ED7A1892A5E76A3009CC66A /* Pretendard-Black.otf in Resources */,
 				2E309DC02A550D0D00B19B2A /* Home.storyboard in Resources */,
 			);
@@ -387,6 +391,7 @@
 				2ED7A19B2A5E9E67009CC66A /* UIView.swift in Sources */,
 				2ED7A1992A5E9BE2009CC66A /* SearchVC.swift in Sources */,
 				2E309DD12A554C3600B19B2A /* UILabel.swift in Sources */,
+				2E80BE872A5F9D97002E8F0E /* SearchCell.swift in Sources */,
 				2E9F85D72A5270F10082BC8B /* ViewController.swift in Sources */,
 				2E309DCF2A55425000B19B2A /* UIImageView.swift in Sources */,
 				2E9F85D32A5270F10082BC8B /* AppDelegate.swift in Sources */,
@@ -395,7 +400,6 @@
 				2E9F85D52A5270F10082BC8B /* SceneDelegate.swift in Sources */,
 				2E1D583F2A53FB2200C1FE9B /* LoginVC.swift in Sources */,
 				2E309DC82A55131F00B19B2A /* ReviewCell.swift in Sources */,
-				2ED7A1952A5E9AA8009CC66A /* UITextField.swift in Sources */,
 				2E309DDA2A55558700B19B2A /* ReviewImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
