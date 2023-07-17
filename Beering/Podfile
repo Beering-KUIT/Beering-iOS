@@ -13,4 +13,6 @@ target 'Beering' do
   # 레이아웃 적용 라이브러리
   pod 'SnapKit'
 
+  # Range Slider 라이브러리
+  
 end

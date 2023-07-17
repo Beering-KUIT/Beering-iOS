@@ -62,6 +62,15 @@ class SearchVC: UIViewController {
         searchCollectionView.delegate = self
         
     }
+    
+    @IBAction func filterBtnTap(_ sender: Any) {
+        
+        let filterVC = UIStoryboard(name: "Filter", bundle: nil).instantiateInitialViewController()
+        
+        self.present(filterVC!, animated: true)
+        
+    }
+    
 }
 
 extension SearchVC{
