@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2E1D582E2A53ECFD00C1FE9B /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1D582D2A53ECFD00C1FE9B /* UIViewController.swift */; };
-		2E1D58342A53F83000C1FE9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1D58332A53F83000C1FE9B /* Main.storyboard */; };
-		2E1D583D2A53FB0D00C1FE9B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1D583C2A53FB0D00C1FE9B /* Login.storyboard */; };
-		2E1D583F2A53FB2200C1FE9B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1D583E2A53FB2200C1FE9B /* LoginVC.swift */; };
+		2E1D583D2A53FB0D00C1FE9B /* LoginRequest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1D583C2A53FB0D00C1FE9B /* LoginRequest.storyboard */; };
+		2E1D583F2A53FB2200C1FE9B /* LoginRequestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1D583E2A53FB2200C1FE9B /* LoginRequestVC.swift */; };
 		2E309DB22A55081600B19B2A /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E309DB12A55081600B19B2A /* HomeVC.swift */; };
 		2E309DBA2A550BCB00B19B2A /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E309DB92A550BCB00B19B2A /* TabBar.storyboard */; };
 		2E309DBC2A550C3E00B19B2A /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E309DBB2A550C3E00B19B2A /* Search.storyboard */; };
@@ -24,18 +23,26 @@
 		2E309DDB2A55558700B19B2A /* ReviewImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E309DD92A55558700B19B2A /* ReviewImageCell.xib */; };
 		2E9F85D32A5270F10082BC8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F85D22A5270F10082BC8B /* AppDelegate.swift */; };
 		2E9F85D52A5270F10082BC8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F85D42A5270F10082BC8B /* SceneDelegate.swift */; };
-		2E9F85D72A5270F10082BC8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F85D62A5270F10082BC8B /* ViewController.swift */; };
 		2E9F85DC2A5270F20082BC8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E9F85DB2A5270F20082BC8B /* Assets.xcassets */; };
 		2E9F85DF2A5270F20082BC8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9F85DD2A5270F20082BC8B /* LaunchScreen.storyboard */; };
+		88B491002A5D341600CEB280 /* NomalJoin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B490FF2A5D341600CEB280 /* NomalJoin.storyboard */; };
+		88B491032A5D344600CEB280 /* KAKAOJoin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B491022A5D344600CEB280 /* KAKAOJoin.storyboard */; };
+		88B491052A5D346B00CEB280 /* NomalJoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B491042A5D346B00CEB280 /* NomalJoinVC.swift */; };
+		88B491072A5D348200CEB280 /* KAKAOJoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B491062A5D348200CEB280 /* KAKAOJoinVC.swift */; };
+		88B491092A5E9A6900CEB280 /* Checkbox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88B491082A5E9A6900CEB280 /* Checkbox.xib */; };
+		88B4910B2A5E9BC500CEB280 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B4910A2A5E9BC500CEB280 /* Checkbox.swift */; };
+		88BEE9C52A69112900B7C279 /* agreementTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BEE9C42A69112900B7C279 /* agreementTable.xib */; };
+		88BEE9C72A6919F800B7C279 /* agreementTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BEE9C62A6919F800B7C279 /* agreementTable.swift */; };
+		88BEE9CB2A696DBB00B7C279 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BEE9CA2A696DBB00B7C279 /* Login.storyboard */; };
+		88BEE9CD2A696DCF00B7C279 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BEE9CC2A696DCF00B7C279 /* LoginVC.swift */; };
 		CF96CD6F49E151AD33D2DCA8 /* Pods_Beering.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045DA4A813987AF870E47FF4 /* Pods_Beering.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		045DA4A813987AF870E47FF4 /* Pods_Beering.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beering.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1D582D2A53ECFD00C1FE9B /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		2E1D58332A53F83000C1FE9B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		2E1D583C2A53FB0D00C1FE9B /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		2E1D583E2A53FB2200C1FE9B /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		2E1D583C2A53FB0D00C1FE9B /* LoginRequest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginRequest.storyboard; sourceTree = "<group>"; };
+		2E1D583E2A53FB2200C1FE9B /* LoginRequestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestVC.swift; sourceTree = "<group>"; };
 		2E309DB12A55081600B19B2A /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		2E309DB92A550BCB00B19B2A /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		2E309DBB2A550C3E00B19B2A /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -50,12 +57,21 @@
 		2E9F85CF2A5270F10082BC8B /* Beering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9F85D22A5270F10082BC8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E9F85D42A5270F10082BC8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2E9F85D62A5270F10082BC8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2E9F85DB2A5270F20082BC8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E9F85DE2A5270F20082BC8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E9F85E02A5270F20082BC8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7D62E9E04607F08D67C59DDA /* Pods-Beering.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beering.release.xcconfig"; path = "Target Support Files/Pods-Beering/Pods-Beering.release.xcconfig"; sourceTree = "<group>"; };
-		D6F412E016012A6E28AC04C7 /* Pods-Beering.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beering.debug.xcconfig"; path = "Target Support Files/Pods-Beering/Pods-Beering.debug.xcconfig"; sourceTree = "<group>"; };
+		577655B94711CB59CAC7EFB0 /* Pods-Beering.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beering.debug.xcconfig"; path = "Target Support Files/Pods-Beering/Pods-Beering.debug.xcconfig"; sourceTree = "<group>"; };
+		6EDB7ACF8C657147BA85F4D5 /* Pods-Beering.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beering.release.xcconfig"; path = "Target Support Files/Pods-Beering/Pods-Beering.release.xcconfig"; sourceTree = "<group>"; };
+		88B490FF2A5D341600CEB280 /* NomalJoin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NomalJoin.storyboard; sourceTree = "<group>"; };
+		88B491022A5D344600CEB280 /* KAKAOJoin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KAKAOJoin.storyboard; sourceTree = "<group>"; };
+		88B491042A5D346B00CEB280 /* NomalJoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomalJoinVC.swift; sourceTree = "<group>"; };
+		88B491062A5D348200CEB280 /* KAKAOJoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAKAOJoinVC.swift; sourceTree = "<group>"; };
+		88B491082A5E9A6900CEB280 /* Checkbox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Checkbox.xib; sourceTree = "<group>"; };
+		88B4910A2A5E9BC500CEB280 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		88BEE9C42A69112900B7C279 /* agreementTable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = agreementTable.xib; sourceTree = "<group>"; };
+		88BEE9C62A6919F800B7C279 /* agreementTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = agreementTable.swift; sourceTree = "<group>"; };
+		88BEE9CA2A696DBB00B7C279 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		88BEE9CC2A696DCF00B7C279 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,15 +86,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		070BF86C7822018D5D4FD26E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D6F412E016012A6E28AC04C7 /* Pods-Beering.debug.xcconfig */,
-				7D62E9E04607F08D67C59DDA /* Pods-Beering.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		2E1D582C2A53EC7300C1FE9B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,8 +114,8 @@
 			children = (
 				2E9F85D12A5270F10082BC8B /* Beering */,
 				2E9F85D02A5270F10082BC8B /* Products */,
-				070BF86C7822018D5D4FD26E /* Pods */,
 				D0580859C666F16728463A04 /* Frameworks */,
+				47672D9D0F95C9EA52FA5116 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,12 +137,10 @@
 				2E1D582C2A53EC7300C1FE9B /* Extension */,
 				2E9F85D22A5270F10082BC8B /* AppDelegate.swift */,
 				2E9F85D42A5270F10082BC8B /* SceneDelegate.swift */,
-				2E9F85D62A5270F10082BC8B /* ViewController.swift */,
 				2E9F85DB2A5270F20082BC8B /* Assets.xcassets */,
 				2E309DB92A550BCB00B19B2A /* TabBar.storyboard */,
 				2E9F85DD2A5270F20082BC8B /* LaunchScreen.storyboard */,
 				2E9F85E02A5270F20082BC8B /* Info.plist */,
-				2E1D58332A53F83000C1FE9B /* Main.storyboard */,
 			);
 			path = Beering;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 		2ED7A1752A5BA6E2009CC66A /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				88B491012A5D342300CEB280 /* JOIN */,
 				2ED7A1762A5BA747009CC66A /* Login */,
 			);
 			path = Account;
@@ -159,8 +165,10 @@
 		2ED7A1762A5BA747009CC66A /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				2E1D583E2A53FB2200C1FE9B /* LoginVC.swift */,
-				2E1D583C2A53FB0D00C1FE9B /* Login.storyboard */,
+				2E1D583E2A53FB2200C1FE9B /* LoginRequestVC.swift */,
+				2E1D583C2A53FB0D00C1FE9B /* LoginRequest.storyboard */,
+				88BEE9CC2A696DCF00B7C279 /* LoginVC.swift */,
+				88BEE9CA2A696DBB00B7C279 /* Login.storyboard */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -171,6 +179,30 @@
 				2E309DBD2A550C5A00B19B2A /* myPage.storyboard */,
 			);
 			path = MyPage;
+			sourceTree = "<group>";
+		};
+		47672D9D0F95C9EA52FA5116 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				577655B94711CB59CAC7EFB0 /* Pods-Beering.debug.xcconfig */,
+				6EDB7ACF8C657147BA85F4D5 /* Pods-Beering.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		88B491012A5D342300CEB280 /* JOIN */ = {
+			isa = PBXGroup;
+			children = (
+				88B490FF2A5D341600CEB280 /* NomalJoin.storyboard */,
+				88B491042A5D346B00CEB280 /* NomalJoinVC.swift */,
+				88B491022A5D344600CEB280 /* KAKAOJoin.storyboard */,
+				88B491062A5D348200CEB280 /* KAKAOJoinVC.swift */,
+				88BEE9C42A69112900B7C279 /* agreementTable.xib */,
+				88BEE9C62A6919F800B7C279 /* agreementTable.swift */,
+				88B491082A5E9A6900CEB280 /* Checkbox.xib */,
+				88B4910A2A5E9BC500CEB280 /* Checkbox.swift */,
+			);
+			path = JOIN;
 			sourceTree = "<group>";
 		};
 		D0580859C666F16728463A04 /* Frameworks */ = {
@@ -192,7 +224,6 @@
 				2E9F85CB2A5270F10082BC8B /* Sources */,
 				2E9F85CC2A5270F10082BC8B /* Frameworks */,
 				2E9F85CD2A5270F10082BC8B /* Resources */,
-				2877D68B01550D5DB4ADA512 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -241,39 +272,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E1D583D2A53FB0D00C1FE9B /* Login.storyboard in Resources */,
-				2E1D58342A53F83000C1FE9B /* Main.storyboard in Resources */,
+				2E1D583D2A53FB0D00C1FE9B /* LoginRequest.storyboard in Resources */,
+				88B491092A5E9A6900CEB280 /* Checkbox.xib in Resources */,
+				88BEE9CB2A696DBB00B7C279 /* Login.storyboard in Resources */,
 				2E309DC92A55131F00B19B2A /* ReviewCell.xib in Resources */,
 				2E309DDB2A55558700B19B2A /* ReviewImageCell.xib in Resources */,
 				2E309DBE2A550C5A00B19B2A /* myPage.storyboard in Resources */,
 				2E9F85DF2A5270F20082BC8B /* LaunchScreen.storyboard in Resources */,
 				2E309DBC2A550C3E00B19B2A /* Search.storyboard in Resources */,
+				88B491002A5D341600CEB280 /* NomalJoin.storyboard in Resources */,
 				2E309DBA2A550BCB00B19B2A /* TabBar.storyboard in Resources */,
 				2E9F85DC2A5270F20082BC8B /* Assets.xcassets in Resources */,
 				2E309DC02A550D0D00B19B2A /* Home.storyboard in Resources */,
+				88B491032A5D344600CEB280 /* KAKAOJoin.storyboard in Resources */,
+				88BEE9C52A69112900B7C279 /* agreementTable.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2877D68B01550D5DB4ADA512 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Beering/Pods-Beering-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Beering/Pods-Beering-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Beering/Pods-Beering-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3D4BB81F81DE04B46FF0E9D6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -303,16 +321,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88B491072A5D348200CEB280 /* KAKAOJoinVC.swift in Sources */,
+				88B491052A5D346B00CEB280 /* NomalJoinVC.swift in Sources */,
+				88BEE9CD2A696DCF00B7C279 /* LoginVC.swift in Sources */,
 				2E309DD12A554C3600B19B2A /* UILabel.swift in Sources */,
-				2E9F85D72A5270F10082BC8B /* ViewController.swift in Sources */,
 				2E309DCF2A55425000B19B2A /* UIImageView.swift in Sources */,
 				2E9F85D32A5270F10082BC8B /* AppDelegate.swift in Sources */,
 				2E1D582E2A53ECFD00C1FE9B /* UIViewController.swift in Sources */,
 				2E309DB22A55081600B19B2A /* HomeVC.swift in Sources */,
 				2E9F85D52A5270F10082BC8B /* SceneDelegate.swift in Sources */,
-				2E1D583F2A53FB2200C1FE9B /* LoginVC.swift in Sources */,
+				2E1D583F2A53FB2200C1FE9B /* LoginRequestVC.swift in Sources */,
+				88B4910B2A5E9BC500CEB280 /* Checkbox.swift in Sources */,
 				2E309DC82A55131F00B19B2A /* ReviewCell.swift in Sources */,
 				2E309DDA2A55558700B19B2A /* ReviewImageCell.swift in Sources */,
+				88BEE9C72A6919F800B7C279 /* agreementTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,7 +468,7 @@
 		};
 		2E9F85E42A5270F20082BC8B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D6F412E016012A6E28AC04C7 /* Pods-Beering.debug.xcconfig */;
+			baseConfigurationReference = 577655B94711CB59CAC7EFB0 /* Pods-Beering.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -458,7 +480,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Beering;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LoginRequest;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -480,7 +502,7 @@
 		};
 		2E9F85E52A5270F20082BC8B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D62E9E04607F08D67C59DDA /* Pods-Beering.release.xcconfig */;
+			baseConfigurationReference = 6EDB7ACF8C657147BA85F4D5 /* Pods-Beering.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -492,7 +514,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Beering;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LoginRequest;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

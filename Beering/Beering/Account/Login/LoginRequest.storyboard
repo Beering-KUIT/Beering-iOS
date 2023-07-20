@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QJk-6X-Y9h">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--main-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="LoginRequest" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="LoginRequestVC" customModule="Beering" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginRequestBg" translatesAutoresizingMaskIntoConstraints="NO" id="519-uK-pF4" userLabel="backgroundImage">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인하고  나만의  주류기록 남기기" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JkH-61-aob">
+                                <rect key="frame" x="40" y="339" width="313" height="172"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxG-Si-YK6" userLabel="loginRequest Button">
+                                <rect key="frame" x="41" y="686" width="311" height="52"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="311" id="Yhk-vA-ik7"/>
+                                    <constraint firstAttribute="height" constant="52" id="bXh-an-Bbo"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="로그인 할게요">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="loginRequestBtnTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="x2Z-M1-GhW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3OE-Vc-YI4" userLabel="loginSkip Button">
+                                <rect key="frame" x="146.33333333333334" y="750" width="100.33333333333334" height="28"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="먼저 둘러볼게요">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="0.0"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="loginSkipBtnTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="pWp-z9-UqA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="3OE-Vc-YI4" secondAttribute="bottom" constant="74" id="1fU-RD-bi6"/>
+                            <constraint firstAttribute="bottom" secondItem="519-uK-pF4" secondAttribute="bottom" id="35X-T2-mAM"/>
+                            <constraint firstItem="519-uK-pF4" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="3zX-Vj-Ev3"/>
+                            <constraint firstItem="3OE-Vc-YI4" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="4Yy-0K-3C0"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="JkH-61-aob" secondAttribute="trailing" constant="40" id="ES9-h3-Zvh"/>
+                            <constraint firstItem="3OE-Vc-YI4" firstAttribute="top" secondItem="qxG-Si-YK6" secondAttribute="bottom" constant="12" id="asA-lI-GwC"/>
+                            <constraint firstItem="519-uK-pF4" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="bw2-2d-XEE"/>
+                            <constraint firstItem="qxG-Si-YK6" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="fow-4N-BtL"/>
+                            <constraint firstAttribute="trailing" secondItem="519-uK-pF4" secondAttribute="trailing" id="gTF-CS-dD0"/>
+                            <constraint firstItem="JkH-61-aob" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="280" id="jWu-Qg-4g4"/>
+                            <constraint firstItem="JkH-61-aob" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="n26-zi-hOX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="main" leftItemsSupplementBackButton="YES" id="8q1-zf-N2M"/>
+                    <connections>
+                        <outlet property="LoginMain" destination="JkH-61-aob" id="eIr-nX-JuQ"/>
+                        <outlet property="loginMain" destination="JkH-61-aob" id="a4d-es-MCo"/>
+                        <outlet property="loginRequestButton" destination="qxG-Si-YK6" id="dm3-S5-lVK"/>
+                        <outlet property="skipButton" destination="3OE-Vc-YI4" id="rpf-O1-iDi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="999.23664122137404" y="-34.507042253521128"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1EN-9P-PqZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="QJk-6X-Y9h" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uTh-GZ-Kk9">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="edU-yk-Rr1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wPw-Pa-aUc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="72.51908396946564" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <resources>
+        <image name="LoginRequestBg" width="375" height="812"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
