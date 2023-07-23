@@ -63,6 +63,11 @@ class SearchVC: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
     @IBAction func filterBtnTap(_ sender: Any) {
         
         let filterVC = UIStoryboard(name: "Filter", bundle: nil).instantiateInitialViewController()
@@ -133,6 +138,22 @@ extension SearchVC: UICollectionViewDataSource, UICollectionViewDelegate, UIColl
         }
         
         return UICollectionViewCell()
+    }
+    
+    // 선택시 move to Detail
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if collectionView == searchCollectionView{
+            print("선택한 item : \(tempData[indexPath.row].titleKor)")
+            
+            let DetailStoryboard = UIStoryboard(name: "Detail", bundle: nil)
+            let DetailVC = DetailStoryboard.instantiateInitialViewController()
+            // 메인 화면을 풀 스크린으로 표시
+            
+            self.tabBarController?.tabBar.isHidden = true
+            self.navigationController?.pushViewController(DetailVC!, animated: true)
+        }
+        // do stuff with image, or with other data that you need
     }
     
     func calculateFilterCellWidth(for filterOption: String) -> CGFloat {
