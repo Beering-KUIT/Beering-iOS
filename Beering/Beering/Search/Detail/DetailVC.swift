@@ -116,6 +116,13 @@ class DetailVC: UIViewController {
         /// API 호출 및 이미지 교체
         print("heart tap")
     }
+    
+    @IBAction func reviewBtnTap(_ sender: Any) {
+        
+        let nextVC = UIStoryboard(name: "Review", bundle: nil).instantiateInitialViewController()
+        self.navigationController?.pushViewController(nextVC!, animated: true)
+    }
+    
 }
 
 
