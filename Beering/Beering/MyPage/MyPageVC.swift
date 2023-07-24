@@ -30,6 +30,7 @@ class MyPageVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     @IBAction func myReviewBtnTap(_ sender: Any) {
@@ -38,5 +39,10 @@ class MyPageVC: UIViewController {
         self.navigationController?.pushViewController(nextVC!, animated: true)
     }
     
-
+    @IBAction func myLiquorBtnTap(_ sender: Any) {
+        
+        let nextVC = UIStoryboard(name: "MyLiquor", bundle: nil).instantiateInitialViewController()
+        self.navigationController?.pushViewController(nextVC!, animated: true)
+    }
+    
 }

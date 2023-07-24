@@ -34,6 +34,8 @@
 		2EAF91C72A6E26C500AF3A8D /* MyPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF91C62A6E26C500AF3A8D /* MyPageVC.swift */; };
 		2EAF91CA2A6E45D900AF3A8D /* MyReview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EAF91C92A6E45D900AF3A8D /* MyReview.storyboard */; };
 		2EAF91CC2A6E461A00AF3A8D /* MyReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF91CB2A6E461A00AF3A8D /* MyReviewVC.swift */; };
+		2EB0206E2A6E53C30022AC17 /* MyLiquorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB0206C2A6E53C30022AC17 /* MyLiquorVC.swift */; };
+		2EB020712A6E53E30022AC17 /* MyLiquor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB020702A6E53E30022AC17 /* MyLiquor.storyboard */; };
 		2ED3C6A92A600C5A00C0836E /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED3C6A82A600C5A00C0836E /* FilterVC.swift */; };
 		2ED3C6AB2A613F3C00C0836E /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ED3C6AA2A613F3C00C0836E /* Filter.storyboard */; };
 		2ED3C6BC2A68419D00C0836E /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ED3C6B82A68419D00C0836E /* Detail.storyboard */; };
@@ -86,6 +88,8 @@
 		2EAF91C62A6E26C500AF3A8D /* MyPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageVC.swift; sourceTree = "<group>"; };
 		2EAF91C92A6E45D900AF3A8D /* MyReview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyReview.storyboard; sourceTree = "<group>"; };
 		2EAF91CB2A6E461A00AF3A8D /* MyReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReviewVC.swift; sourceTree = "<group>"; };
+		2EB0206C2A6E53C30022AC17 /* MyLiquorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLiquorVC.swift; sourceTree = "<group>"; };
+		2EB020702A6E53E30022AC17 /* MyLiquor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyLiquor.storyboard; sourceTree = "<group>"; };
 		2ED3C6A82A600C5A00C0836E /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
 		2ED3C6AA2A613F3C00C0836E /* Filter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
 		2ED3C6B82A68419D00C0836E /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
@@ -201,6 +205,15 @@
 			path = MyReview;
 			sourceTree = "<group>";
 		};
+		2EB0206A2A6E53880022AC17 /* MyLiquor */ = {
+			isa = PBXGroup;
+			children = (
+				2EB020702A6E53E30022AC17 /* MyLiquor.storyboard */,
+				2EB0206C2A6E53C30022AC17 /* MyLiquorVC.swift */,
+			);
+			path = MyLiquor;
+			sourceTree = "<group>";
+		};
 		2ED3C6A52A600B7600C0836E /* Filter */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +269,7 @@
 		2ED7A1772A5BA76E009CC66A /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
+				2EB0206A2A6E53880022AC17 /* MyLiquor */,
 				2EAF91C82A6E43D700AF3A8D /* MyReview */,
 				2E309DBD2A550C5A00B19B2A /* MyPage.storyboard */,
 				2EAF91C62A6E26C500AF3A8D /* MyPageVC.swift */,
@@ -379,6 +393,7 @@
 				2E309DDB2A55558700B19B2A /* ReviewImageCell.xib in Resources */,
 				2ED7A18A2A5E76A3009CC66A /* Pretendard-Regular.otf in Resources */,
 				2E80BE842A5F0A09002E8F0E /* FilterCell.xib in Resources */,
+				2EB020712A6E53E30022AC17 /* MyLiquor.storyboard in Resources */,
 				2E309DBE2A550C5A00B19B2A /* MyPage.storyboard in Resources */,
 				2E9F85DF2A5270F20082BC8B /* LaunchScreen.storyboard in Resources */,
 				2ED7A18E2A5E76A3009CC66A /* Pretendard-Bold.otf in Resources */,
@@ -452,6 +467,7 @@
 			files = (
 				2ED3C6A92A600C5A00C0836E /* FilterVC.swift in Sources */,
 				2ED7A19B2A5E9E67009CC66A /* UIView.swift in Sources */,
+				2EB0206E2A6E53C30022AC17 /* MyLiquorVC.swift in Sources */,
 				2ED7A1992A5E9BE2009CC66A /* SearchVC.swift in Sources */,
 				2E309DD12A554C3600B19B2A /* UILabel.swift in Sources */,
 				2ED3C6BF2A68419D00C0836E /* DetailVC.swift in Sources */,
