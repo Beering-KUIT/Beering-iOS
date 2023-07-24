@@ -84,7 +84,7 @@ class DetailVC: UIViewController {
         }
     }
     
-    func navigationBarInit(){
+    private func navigationBarInit(){
         
         // 네비게이션 바를 투명하게 설정
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -99,7 +99,7 @@ class DetailVC: UIViewController {
         
         self.navigationController?.navigationBar.tintColor = UIColor(named: "Beering_Black")
                 
-        let leftBarButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "left_arrow"), style: .done, target: self, action: #selector(goBack))
+        let leftBarButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "arrow_left"), style: .done, target: self, action: #selector(goBack))
         navigationItem.leftBarButtonItem = leftBarButton
         
         /// TODO 상태에 따른 이미지 교체
@@ -108,7 +108,7 @@ class DetailVC: UIViewController {
 //        let rightBarButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "heart_filled"), style: .plain, target: self, action: #selector(tapLikeBtn))
 
     }
-    @objc func goBack(){
+    @objc private func goBack(){
         self.navigationController?.popViewController(animated: true)
     }
     @objc func tapLikeBtn(){

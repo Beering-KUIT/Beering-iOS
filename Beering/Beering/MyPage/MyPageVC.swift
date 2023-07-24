@@ -23,9 +23,20 @@ class MyPageVC: UIViewController {
         }
         
         profileImage.makeCircular()
-        profileImage.loadImage(from: "https://picsum.photos/347")
+//        profileImage.loadImage(from: "https://picsum.photos/347")
+        profileImage.image = UIImage(named: "user_profile_default")
+        
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    @IBAction func myReviewBtnTap(_ sender: Any) {
+        
+        let nextVC = UIStoryboard(name: "MyReview", bundle: nil).instantiateInitialViewController()
+        self.navigationController?.pushViewController(nextVC!, animated: true)
+    }
+    
 
 }
