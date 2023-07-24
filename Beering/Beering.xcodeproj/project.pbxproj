@@ -32,6 +32,8 @@
 		2E9F85DC2A5270F20082BC8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E9F85DB2A5270F20082BC8B /* Assets.xcassets */; };
 		2E9F85DF2A5270F20082BC8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9F85DD2A5270F20082BC8B /* LaunchScreen.storyboard */; };
 		2EAF91C72A6E26C500AF3A8D /* MyPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF91C62A6E26C500AF3A8D /* MyPageVC.swift */; };
+		2EAF91CA2A6E45D900AF3A8D /* MyReview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EAF91C92A6E45D900AF3A8D /* MyReview.storyboard */; };
+		2EAF91CC2A6E461A00AF3A8D /* MyReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF91CB2A6E461A00AF3A8D /* MyReviewVC.swift */; };
 		2ED3C6A92A600C5A00C0836E /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED3C6A82A600C5A00C0836E /* FilterVC.swift */; };
 		2ED3C6AB2A613F3C00C0836E /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ED3C6AA2A613F3C00C0836E /* Filter.storyboard */; };
 		2ED3C6BC2A68419D00C0836E /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ED3C6B82A68419D00C0836E /* Detail.storyboard */; };
@@ -82,6 +84,8 @@
 		2E9F85DE2A5270F20082BC8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E9F85E02A5270F20082BC8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EAF91C62A6E26C500AF3A8D /* MyPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageVC.swift; sourceTree = "<group>"; };
+		2EAF91C92A6E45D900AF3A8D /* MyReview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyReview.storyboard; sourceTree = "<group>"; };
+		2EAF91CB2A6E461A00AF3A8D /* MyReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReviewVC.swift; sourceTree = "<group>"; };
 		2ED3C6A82A600C5A00C0836E /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
 		2ED3C6AA2A613F3C00C0836E /* Filter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
 		2ED3C6B82A68419D00C0836E /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
@@ -188,6 +192,15 @@
 			path = Beering;
 			sourceTree = "<group>";
 		};
+		2EAF91C82A6E43D700AF3A8D /* MyReview */ = {
+			isa = PBXGroup;
+			children = (
+				2EAF91C92A6E45D900AF3A8D /* MyReview.storyboard */,
+				2EAF91CB2A6E461A00AF3A8D /* MyReviewVC.swift */,
+			);
+			path = MyReview;
+			sourceTree = "<group>";
+		};
 		2ED3C6A52A600B7600C0836E /* Filter */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +256,7 @@
 		2ED7A1772A5BA76E009CC66A /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
+				2EAF91C82A6E43D700AF3A8D /* MyReview */,
 				2E309DBD2A550C5A00B19B2A /* MyPage.storyboard */,
 				2EAF91C62A6E26C500AF3A8D /* MyPageVC.swift */,
 			);
@@ -374,6 +388,7 @@
 				2ED7A1902A5E76A3009CC66A /* Pretendard-Medium.otf in Resources */,
 				2ED3C6BE2A68419D00C0836E /* ReviewPreviewCell.xib in Resources */,
 				2ED7A18C2A5E76A3009CC66A /* Pretendard-Light.otf in Resources */,
+				2EAF91CA2A6E45D900AF3A8D /* MyReview.storyboard in Resources */,
 				2E309DBC2A550C3E00B19B2A /* Search.storyboard in Resources */,
 				2ED7A18B2A5E76A3009CC66A /* Pretendard-Thin.otf in Resources */,
 				2E309DBA2A550BCB00B19B2A /* TabBar.storyboard in Resources */,
@@ -442,6 +457,7 @@
 				2ED3C6BF2A68419D00C0836E /* DetailVC.swift in Sources */,
 				2E80BE872A5F9D97002E8F0E /* SearchCell.swift in Sources */,
 				2E9F85D72A5270F10082BC8B /* ViewController.swift in Sources */,
+				2EAF91CC2A6E461A00AF3A8D /* MyReviewVC.swift in Sources */,
 				2ED3C6BD2A68419D00C0836E /* ReviewPreviewCell.swift in Sources */,
 				2E309DCF2A55425000B19B2A /* UIImageView.swift in Sources */,
 				2E80BE832A5F0A09002E8F0E /* FilterCell.swift in Sources */,
