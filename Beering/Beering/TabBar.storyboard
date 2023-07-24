@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,6 +13,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Wna-NC-7A8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kip-Wh-Xk0">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -36,10 +37,10 @@
             </objects>
             <point key="canvasLocation" x="59" y="513"/>
         </scene>
-        <!--myPage-->
+        <!--MyPage-->
         <scene sceneID="syL-Or-1r9">
             <objects>
-                <viewControllerPlaceholder storyboardName="myPage" id="5BX-2u-YFp" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="MyPage" id="5BX-2u-YFp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="1VG-OD-Yki"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j1X-a3-S5Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
