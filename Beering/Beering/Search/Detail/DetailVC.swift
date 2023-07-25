@@ -123,6 +123,11 @@ class DetailVC: UIViewController {
         self.navigationController?.pushViewController(nextVC!, animated: true)
     }
     
+    @IBAction func reviewWritingBtnTap(_ sender: Any) {
+        
+        let nextVC = UIStoryboard(name: "ReviewWriting", bundle: nil).instantiateInitialViewController()
+        self.navigationController?.pushViewController(nextVC!, animated: true)
+    }
 }
 
 
