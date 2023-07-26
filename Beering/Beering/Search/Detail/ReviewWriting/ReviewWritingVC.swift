@@ -11,10 +11,34 @@ class ReviewWritingVC: UIViewController {
 
     @IBOutlet weak var reviewWritingTextView: UITextView!
     
+    @IBOutlet weak var reviewPictureCollectionView: UICollectionView!
+    
+    var tempData = [
+        "https://picsum.photos/100/300",
+        "https://picsum.photos/200/3000",
+        "https://picsum.photos/200/200",
+        "https://picsum.photos/50/50",
+        "https://picsum.photos/200/300",
+        "https://picsum.photos/200/300",
+        "https://picsum.photos/100/300",
+        "https://picsum.photos/200/3000",
+        "https://picsum.photos/200/200",
+        "https://picsum.photos/50/50",
+        "https://picsum.photos/200/300",
+        "https://picsum.photos/200/300"
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         textViewInit(reviewWritingTextView)
+        
+        reviewPictureCollectionView.dataSource = self
+        reviewPictureCollectionView.delegate = self
+        
+        let reviewPictureCell = UINib(nibName: "ReviewPictureCell", bundle: nil)
+        reviewPictureCollectionView.register(reviewPictureCell, forCellWithReuseIdentifier: "reviewPictureCell")
+        
     }
 }
 
@@ -59,4 +83,27 @@ extension ReviewWritingVC: UITextViewDelegate{
         // Text contentInset
         myTextView.contentInset = .init(top: 20, left: 20, bottom: 20, right: 20)
     }
+}
+
+extension ReviewWritingVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return tempData.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reviewPictureCell", for: indexPath) as! ReviewPictureCell
+        
+        cell.reviewImage.loadImage(from: tempData[indexPath.row])
+        
+        return cell
+    }
+    
+    
+    // CollectionView Cell의 Size
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            return CGSize(width: collectionView.frame.height, height: collectionView.frame.height)
+    }
+    
 }
