@@ -38,6 +38,8 @@
 		2EB020712A6E53E30022AC17 /* MyLiquor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB020702A6E53E30022AC17 /* MyLiquor.storyboard */; };
 		2EB020752A6EB2700022AC17 /* Review.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB020742A6EB2700022AC17 /* Review.storyboard */; };
 		2EB020772A6EB27A0022AC17 /* ReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB020762A6EB27A0022AC17 /* ReviewVC.swift */; };
+		2EB020832A6FBE2E0022AC17 /* ReviewWriting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB020822A6FBE2E0022AC17 /* ReviewWriting.storyboard */; };
+		2EB020852A6FF4460022AC17 /* ReviewWritingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB020842A6FF4460022AC17 /* ReviewWritingVC.swift */; };
 		2ED3C6A92A600C5A00C0836E /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED3C6A82A600C5A00C0836E /* FilterVC.swift */; };
 		2ED3C6AB2A613F3C00C0836E /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ED3C6AA2A613F3C00C0836E /* Filter.storyboard */; };
 		2ED3C6BC2A68419D00C0836E /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ED3C6B82A68419D00C0836E /* Detail.storyboard */; };
@@ -94,6 +96,8 @@
 		2EB020702A6E53E30022AC17 /* MyLiquor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyLiquor.storyboard; sourceTree = "<group>"; };
 		2EB020742A6EB2700022AC17 /* Review.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Review.storyboard; sourceTree = "<group>"; };
 		2EB020762A6EB27A0022AC17 /* ReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVC.swift; sourceTree = "<group>"; };
+		2EB020822A6FBE2E0022AC17 /* ReviewWriting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReviewWriting.storyboard; sourceTree = "<group>"; };
+		2EB020842A6FF4460022AC17 /* ReviewWritingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWritingVC.swift; sourceTree = "<group>"; };
 		2ED3C6A82A600C5A00C0836E /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
 		2ED3C6AA2A613F3C00C0836E /* Filter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
 		2ED3C6B82A68419D00C0836E /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
@@ -227,6 +231,15 @@
 			path = Review;
 			sourceTree = "<group>";
 		};
+		2EB020812A6FBDDA0022AC17 /* ReviewWriting */ = {
+			isa = PBXGroup;
+			children = (
+				2EB020822A6FBE2E0022AC17 /* ReviewWriting.storyboard */,
+				2EB020842A6FF4460022AC17 /* ReviewWritingVC.swift */,
+			);
+			path = ReviewWriting;
+			sourceTree = "<group>";
+		};
 		2ED3C6A52A600B7600C0836E /* Filter */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +252,7 @@
 		2ED3C6AF2A66344D00C0836E /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				2EB020812A6FBDDA0022AC17 /* ReviewWriting */,
 				2EB020732A6EB2460022AC17 /* Review */,
 				2ED3C6B82A68419D00C0836E /* Detail.storyboard */,
 				2ED3C6BB2A68419D00C0836E /* DetailVC.swift */,
@@ -405,6 +419,7 @@
 				2ED7A18D2A5E76A3009CC66A /* Pretendard-ExtraLight.otf in Resources */,
 				2E309DC92A55131F00B19B2A /* ReviewCell.xib in Resources */,
 				2E309DDB2A55558700B19B2A /* ReviewImageCell.xib in Resources */,
+				2EB020832A6FBE2E0022AC17 /* ReviewWriting.storyboard in Resources */,
 				2ED7A18A2A5E76A3009CC66A /* Pretendard-Regular.otf in Resources */,
 				2EB020752A6EB2700022AC17 /* Review.storyboard in Resources */,
 				2E80BE842A5F0A09002E8F0E /* FilterCell.xib in Resources */,
@@ -493,6 +508,7 @@
 				2E309DCF2A55425000B19B2A /* UIImageView.swift in Sources */,
 				2E80BE832A5F0A09002E8F0E /* FilterCell.swift in Sources */,
 				2E9F85D32A5270F10082BC8B /* AppDelegate.swift in Sources */,
+				2EB020852A6FF4460022AC17 /* ReviewWritingVC.swift in Sources */,
 				2E1D582E2A53ECFD00C1FE9B /* UIViewController.swift in Sources */,
 				2E309DB22A55081600B19B2A /* HomeVC.swift in Sources */,
 				2EAF91C72A6E26C500AF3A8D /* MyPageVC.swift in Sources */,
