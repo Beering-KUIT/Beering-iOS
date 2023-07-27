@@ -6,27 +6,13 @@
 //
 
 import UIKit
+import PhotosUI
 
 class ReviewWritingVC: UIViewController {
 
     @IBOutlet weak var reviewWritingTextView: UITextView!
     
     @IBOutlet weak var reviewPictureCollectionView: UICollectionView!
-    
-    var tempData = [
-        "https://picsum.photos/100/300",
-        "https://picsum.photos/200/3000",
-        "https://picsum.photos/200/200",
-        "https://picsum.photos/50/50",
-        "https://picsum.photos/200/300",
-        "https://picsum.photos/200/300",
-        "https://picsum.photos/100/300",
-        "https://picsum.photos/200/3000",
-        "https://picsum.photos/200/200",
-        "https://picsum.photos/50/50",
-        "https://picsum.photos/200/300",
-        "https://picsum.photos/200/300"
-    ]
     
     var myReviewImages: [UIImage] = []
     
@@ -40,7 +26,6 @@ class ReviewWritingVC: UIViewController {
         
         let reviewPictureCell = UINib(nibName: "ReviewPictureCell", bundle: nil)
         reviewPictureCollectionView.register(reviewPictureCell, forCellWithReuseIdentifier: "reviewPictureCell")
-        
     }
     
     // 컬렉션 뷰 셀 삭제 처리
@@ -71,7 +56,13 @@ class ReviewWritingVC: UIViewController {
         let cameraAction =  UIAlertAction(title: "카메라로 촬영", style: UIAlertAction.Style.default){ [weak self] _ in
             self?.pictureUploadByCamera()
         }
-        let galleryAction =  UIAlertAction(title: "사진첩에서 선택", style: UIAlertAction.Style.default)
+        let galleryAction =  UIAlertAction(title: "사진첩에서 선택", style: UIAlertAction.Style.default){ [weak self] _ in
+            if #available(iOS 14.0, *) {
+                self?.presentImagePicker()
+            }else{
+                self?.pictureUploadByGallery()
+            }
+        }
         let cancelAction = UIAlertAction(title: "취소", style: UIAlertAction.Style.cancel, handler: nil)
 
         //메시지 창 컨트롤러에 버튼 액션을 추가
@@ -165,8 +156,9 @@ extension ReviewWritingVC: ReviewPictureCellDelegate {
 }
 
 //MARK: - 리뷰 이미지 선택 by 카메라 촬영 / 사진첩 선택
-extension ReviewWritingVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+extension ReviewWritingVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate, PHPickerViewControllerDelegate{
     
+    //MARK: - 카메라 촬영
     func pictureUploadByCamera(){
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .camera
@@ -191,5 +183,54 @@ extension ReviewWritingVC: UIImagePickerControllerDelegate, UINavigationControll
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
-}
 
+    //MARK: - 사진첩 선택 (ios 13 ~)
+    func pictureUploadByGallery(){
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
+    }
+        
+    //MARK: - 사진첩 선택 (ios 14 ~)
+    
+    // 리뷰 이미지 선택 (사진첩 선택)
+    @available(iOS 14.0, *)
+    func presentImagePicker() {
+        // configuration 정의
+        var config = PHPickerConfiguration()
+        
+        config.selectionLimit = 10
+
+        if #available(iOS 15.0, *) {
+            config.filter = .any(of: [.images, .screenshots])
+        } else {
+            config.filter = .any(of: [.images]) // images 에 live photos 포함
+        }
+        
+        // picker Present
+        let picker = PHPickerViewController(configuration: config)
+        picker.delegate = self
+        present(picker, animated: true, completion: nil)
+    }
+    
+    @available(iOS 14.0, *)
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        picker.dismiss(animated: true, completion: nil)
+        
+        // 이미지 처리 로직 추가
+        for result in results {
+            if result.itemProvider.canLoadObject(ofClass: UIImage.self) {
+                result.itemProvider.loadObject(ofClass: UIImage.self) { [weak self] (image, error) in
+                    DispatchQueue.main.async {
+                        if let image = image as? UIImage {
+                            self?.myReviewImages.append(image)
+                            self?.reviewPictureCollectionView.reloadData()
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
