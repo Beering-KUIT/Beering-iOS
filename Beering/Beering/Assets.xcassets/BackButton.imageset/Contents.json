@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "CancelButton1.png",
+      "filename" : "backButton_1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "backButton_2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "backButton_3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
