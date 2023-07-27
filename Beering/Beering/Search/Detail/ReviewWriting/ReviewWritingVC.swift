@@ -15,6 +15,7 @@ class ReviewWritingVC: UIViewController {
     @IBOutlet weak var reviewPictureCollectionView: UICollectionView!
     
     var myReviewImages: [UIImage] = []
+    @IBOutlet weak var myReviewImageCountLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,7 @@ class ReviewWritingVC: UIViewController {
         myReviewImages.remove(at: indexPath.item)
         reviewPictureCollectionView.deleteItems(at: [indexPath])
         print("remove : \(indexPath.item)")
+        myReviewImageCountLabel.text = String(myReviewImages.count) + "/10"
         
         updateCellIndexPaths()
     }
@@ -174,6 +176,7 @@ extension ReviewWritingVC: UIImagePickerControllerDelegate, UINavigationControll
         
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
             myReviewImages.append(image)
+            myReviewImageCountLabel.text = String(myReviewImages.count) + "/10"
         }
 
         picker.dismiss(animated: true, completion: nil)
@@ -226,6 +229,8 @@ extension ReviewWritingVC: UIImagePickerControllerDelegate, UINavigationControll
                     DispatchQueue.main.async {
                         if let image = image as? UIImage {
                             self?.myReviewImages.append(image)
+                            self?.myReviewImageCountLabel.text = String(self!.myReviewImages.count) + "/10"
+                            
                             self?.reviewPictureCollectionView.reloadData()
                         }
                     }
