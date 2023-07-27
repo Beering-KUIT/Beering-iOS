@@ -28,6 +28,8 @@ class ReviewWritingVC: UIViewController {
         "https://picsum.photos/200/300"
     ]
     
+    var myReviewImages: [UIImage] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,7 +45,7 @@ class ReviewWritingVC: UIViewController {
     
     // 컬렉션 뷰 셀 삭제 처리
     func removeCell(at indexPath: IndexPath) {
-        tempData.remove(at: indexPath.item)
+        myReviewImages.remove(at: indexPath.item)
         reviewPictureCollectionView.deleteItems(at: [indexPath])
         print("remove : \(indexPath.item)")
         
@@ -61,13 +63,14 @@ class ReviewWritingVC: UIViewController {
     }
     
     //MARK: - 카메라 이미지 클릭시 Alert
-    
     @IBAction func pictureUploadBtnTap(_ sender: Any) {
         // 메시지창 컨트롤러 인스턴스 생성
         let alert = UIAlertController(title: "사진 업로드", message: "업로드 방식을 선택해주세요", preferredStyle: UIAlertController.Style.actionSheet)
 
         // 메시지 창 컨트롤러에 들어갈 버튼 액션 객체 생성
-        let cameraAction =  UIAlertAction(title: "카메라로 촬영", style: UIAlertAction.Style.default)
+        let cameraAction =  UIAlertAction(title: "카메라로 촬영", style: UIAlertAction.Style.default){ [weak self] _ in
+            self?.pictureUploadByCamera()
+        }
         let galleryAction =  UIAlertAction(title: "사진첩에서 선택", style: UIAlertAction.Style.default)
         let cancelAction = UIAlertAction(title: "취소", style: UIAlertAction.Style.cancel, handler: nil)
 
@@ -79,6 +82,7 @@ class ReviewWritingVC: UIViewController {
         //메시지 창 컨트롤러를 표시
         self.present(alert, animated: true)
     }
+
     
 }
 
@@ -128,14 +132,15 @@ extension ReviewWritingVC: UITextViewDelegate{
 extension ReviewWritingVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return tempData.count
+        return myReviewImages.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reviewPictureCell", for: indexPath) as! ReviewPictureCell
         
-        cell.reviewImage.loadImage(from: tempData[indexPath.row])
+//        cell.reviewImage.loadImage(from: tempData[indexPath.row])
+        cell.reviewImage.image = myReviewImages[indexPath.row]
         
         // cell에 indexPath와 delegate 설정
         cell.indexPath = indexPath
@@ -158,3 +163,33 @@ extension ReviewWritingVC: ReviewPictureCellDelegate {
         removeCell(at: indexPath)
     }
 }
+
+//MARK: - 리뷰 이미지 선택 by 카메라 촬영 / 사진첩 선택
+extension ReviewWritingVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    func pictureUploadByCamera(){
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .camera
+        imagePicker.allowsEditing = true
+        imagePicker.cameraDevice = .rear
+        imagePicker.cameraCaptureMode = .photo
+        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    // Use Photo Btn
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+            myReviewImages.append(image)
+        }
+
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    // cancel Btn
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+}
+
