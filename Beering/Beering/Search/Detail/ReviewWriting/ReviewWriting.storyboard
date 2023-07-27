@@ -119,6 +119,9 @@
                                                                 </constraints>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" image="camera"/>
+                                                                <connections>
+                                                                    <action selector="pictureUploadBtnTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="jTp-db-f4N"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3/10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kil-UC-6Df">
                                                                 <rect key="frame" x="0.0" y="80" width="80" height="10"/>

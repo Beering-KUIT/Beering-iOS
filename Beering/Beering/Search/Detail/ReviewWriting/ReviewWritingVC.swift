@@ -60,6 +60,26 @@ class ReviewWritingVC: UIViewController {
         }
     }
     
+    //MARK: - 카메라 이미지 클릭시 Alert
+    
+    @IBAction func pictureUploadBtnTap(_ sender: Any) {
+        // 메시지창 컨트롤러 인스턴스 생성
+        let alert = UIAlertController(title: "사진 업로드", message: "업로드 방식을 선택해주세요", preferredStyle: UIAlertController.Style.actionSheet)
+
+        // 메시지 창 컨트롤러에 들어갈 버튼 액션 객체 생성
+        let cameraAction =  UIAlertAction(title: "카메라로 촬영", style: UIAlertAction.Style.default)
+        let galleryAction =  UIAlertAction(title: "사진첩에서 선택", style: UIAlertAction.Style.default)
+        let cancelAction = UIAlertAction(title: "취소", style: UIAlertAction.Style.cancel, handler: nil)
+
+        //메시지 창 컨트롤러에 버튼 액션을 추가
+        alert.addAction(cameraAction)
+        alert.addAction(galleryAction)
+        alert.addAction(cancelAction)
+
+        //메시지 창 컨트롤러를 표시
+        self.present(alert, animated: true)
+    }
+    
 }
 
 extension ReviewWritingVC: UITextViewDelegate{
