@@ -40,6 +40,26 @@ class ReviewWritingVC: UIViewController {
         reviewPictureCollectionView.register(reviewPictureCell, forCellWithReuseIdentifier: "reviewPictureCell")
         
     }
+    
+    // 컬렉션 뷰 셀 삭제 처리
+    func removeCell(at indexPath: IndexPath) {
+        tempData.remove(at: indexPath.item)
+        reviewPictureCollectionView.deleteItems(at: [indexPath])
+        print("remove : \(indexPath.item)")
+        
+        updateCellIndexPaths()
+    }
+    
+    // 셀들의 indexPath 업데이트
+    func updateCellIndexPaths() {
+        let visibleCells = reviewPictureCollectionView.visibleCells
+        for (index, cell) in visibleCells.enumerated() {
+            if let indexPath = reviewPictureCollectionView.indexPath(for: cell) {
+                (cell as? ReviewPictureCell)?.indexPath = indexPath
+            }
+        }
+    }
+    
 }
 
 extension ReviewWritingVC: UITextViewDelegate{
@@ -97,6 +117,10 @@ extension ReviewWritingVC: UICollectionViewDelegate, UICollectionViewDataSource,
         
         cell.reviewImage.loadImage(from: tempData[indexPath.row])
         
+        // cell에 indexPath와 delegate 설정
+        cell.indexPath = indexPath
+        cell.delegate = self
+        
         return cell
     }
     
@@ -106,4 +130,11 @@ extension ReviewWritingVC: UICollectionViewDelegate, UICollectionViewDataSource,
             return CGSize(width: collectionView.frame.height, height: collectionView.frame.height)
     }
     
+}
+
+extension ReviewWritingVC: ReviewPictureCellDelegate {
+    
+    func didTapRemoveButton(at indexPath: IndexPath) {
+        removeCell(at: indexPath)
+    }
 }

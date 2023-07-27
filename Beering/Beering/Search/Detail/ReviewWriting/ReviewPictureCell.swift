@@ -10,6 +10,8 @@ import UIKit
 class ReviewPictureCell: UICollectionViewCell {
 
     @IBOutlet weak var reviewImage: UIImageView!
+    var indexPath: IndexPath?
+    weak var delegate: ReviewPictureCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,7 +22,14 @@ class ReviewPictureCell: UICollectionViewCell {
     @IBAction func removeReviewImageBtnTap(_ sender: Any) {
         
         print("removeReviewImageBtnTap")
+        print("indexPath : \(indexPath)")
+        if let indexPath = indexPath {
+            delegate?.didTapRemoveButton(at: indexPath)
+        }
     }
     
+}
 
+protocol ReviewPictureCellDelegate: AnyObject {
+    func didTapRemoveButton(at indexPath: IndexPath)
 }
