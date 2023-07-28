@@ -17,6 +17,8 @@ class ReviewWritingVC: UIViewController {
     var myReviewImages: [UIImage] = []
     @IBOutlet weak var myReviewImageCountLabel: UILabel!
     
+    @IBOutlet weak var starRateLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,6 +29,8 @@ class ReviewWritingVC: UIViewController {
         
         let reviewPictureCell = UINib(nibName: "ReviewPictureCell", bundle: nil)
         reviewPictureCollectionView.register(reviewPictureCell, forCellWithReuseIdentifier: "reviewPictureCell")
+        
+        starRateLabel.makeCircular()
     }
     
     // 컬렉션 뷰 셀 삭제 처리
@@ -76,6 +80,34 @@ class ReviewWritingVC: UIViewController {
         self.present(alert, animated: true)
     }
 
+    //MARK: - Star Slider
+    @IBAction func onDragStarSlider(_ sender: UISlider) {
+        let floatValue = floor(sender.value * 10) / 10
+        
+        let intValue = Int(floor(sender.value))
+        
+        let roundedNumber = (floatValue * 2).rounded() / 2 // .5 단위 반올림
+        
+        print("sender.value : \(sender.value)")
+        print("floatValue : \(floatValue)")
+        print("intValue : \(intValue)")
+        print("roundedNumber : \(roundedNumber)")
+
+        for index in 0...5 { // 여기서 index는 우리가 설정한 'Tag'로 매치시킬 것이다.
+            if let starImage = view.viewWithTag(index) as? UIImageView {
+                if Float(index) <= roundedNumber {
+                    starImage.image = UIImage(named: "star_filled")
+                } else {
+                    if roundedNumber - Float(index - 1) == 0.5{
+                        starImage.image = UIImage(named: "star_half")
+                    }else{
+                        starImage.image = UIImage(named: "star_blank")
+                    }
+                }
+            }
+            self.starRateLabel?.text = String(roundedNumber)
+        }
+    }
     
 }
 
