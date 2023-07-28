@@ -81,7 +81,8 @@ class ReviewWritingVC: UIViewController {
     }
 
     //MARK: - Star Slider
-    @IBAction func onDragStarSlider(_ sender: UISlider) {
+    @IBAction func onSliderValueChanged(_ sender: UISlider) {
+        
         let floatValue = floor(sender.value * 10) / 10
         
         let intValue = Int(floor(sender.value))
@@ -108,6 +109,7 @@ class ReviewWritingVC: UIViewController {
             self.starRateLabel?.text = String(roundedNumber)
         }
     }
+    
     
 }
 
