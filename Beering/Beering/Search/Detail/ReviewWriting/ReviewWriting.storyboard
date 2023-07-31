@@ -826,11 +826,18 @@
                         <outletCollection property="starSliders" destination="FFq-KP-2WM" collectionClass="NSMutableArray" id="LCq-vH-2T3"/>
                         <outletCollection property="starSliders" destination="QS5-Mh-8Ew" collectionClass="NSMutableArray" id="5TD-ne-BrZ"/>
                         <outletCollection property="starSliders" destination="B64-sy-Eij" collectionClass="NSMutableArray" id="kVv-fd-Rh3"/>
+                        <outletCollection property="titleViews" destination="Etp-OP-3Sx" collectionClass="NSMutableArray" id="TMm-yM-ZM0"/>
+                        <outletCollection property="titleViews" destination="L4C-or-ufR" collectionClass="NSMutableArray" id="TvK-D4-Bsg"/>
+                        <outletCollection property="titleViews" destination="6ir-PN-MY5" collectionClass="NSMutableArray" id="Jfb-hH-4cp"/>
+                        <outletCollection property="titleViews" destination="w4Q-yy-TlG" collectionClass="NSMutableArray" id="zBa-Sj-RWn"/>
+                        <outletCollection property="titleViews" destination="9by-om-3iY" collectionClass="NSMutableArray" id="vGh-O4-jNs"/>
+                        <outletCollection property="titleViews" destination="0oc-cO-X07" collectionClass="NSMutableArray" id="BKd-G9-SXx"/>
+                        <outletCollection property="titleViews" destination="xcI-rW-whe" collectionClass="NSMutableArray" id="YxH-eH-tf9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-37.404580152671755" y="239.08450704225353"/>
+            <point key="canvasLocation" x="-37.404580152671755" y="238.73239436619718"/>
         </scene>
     </scenes>
     <resources>

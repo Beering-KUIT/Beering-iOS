@@ -23,6 +23,7 @@ class ReviewWritingVC: UIViewController {
     
     @IBOutlet var starSliderRateLabel: [UILabel]!
     
+    @IBOutlet var titleViews: [UIView]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,10 @@ class ReviewWritingVC: UIViewController {
         
         for labelView in starSliderRateLabel{
             labelView.makeCircular()
+        }
+        
+        for view in titleViews{
+            view.titleViewInit()
         }
     }
     

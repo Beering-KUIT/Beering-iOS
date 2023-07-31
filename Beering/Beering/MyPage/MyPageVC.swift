@@ -19,7 +19,7 @@ class MyPageVC: UIViewController {
         super.viewDidLoad()
         
         for view in settingItemViews{
-            view.addBottomBorderWithColor(color: .black, width: 1.0)
+            view.titleViewInit()
         }
         
         profileImage.makeCircular()

@@ -38,8 +38,7 @@ class DetailVC: UIViewController {
         detailViewInit()
         navigationBarInit()
         
-        reviewPreviewTitleView.backgroundColor = UIColor(named: "Beering_White")
-        reviewPreviewTitleView.addBottomBorderWithColor(color: UIColor.black, width: 1)
+        reviewPreviewTitleView.titleViewInit()
         
         
         let reviewPreviewCell = UINib(nibName: "ReviewPreviewCell", bundle: nil)

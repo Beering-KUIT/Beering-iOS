@@ -44,4 +44,8 @@ extension UIView {
         self.clipsToBounds = true
     }
     
+    func titleViewInit(){
+        self.backgroundColor = UIColor(named: "Beering_White")
+        self.addBottomBorderWithColor(color: .black, width: 1.0)
+    }
 }
