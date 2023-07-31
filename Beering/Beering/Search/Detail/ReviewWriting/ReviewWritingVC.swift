@@ -17,7 +17,12 @@ class ReviewWritingVC: UIViewController {
     var myReviewImages: [UIImage] = []
     @IBOutlet weak var myReviewImageCountLabel: UILabel!
     
-    @IBOutlet weak var starRateLabel: UILabel!
+    @IBOutlet var starSliders: [StarSlider]!
+    
+    @IBOutlet var starSliderStars: [UIImageView]!
+    
+    @IBOutlet var starSliderRateLabel: [UILabel]!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +35,9 @@ class ReviewWritingVC: UIViewController {
         let reviewPictureCell = UINib(nibName: "ReviewPictureCell", bundle: nil)
         reviewPictureCollectionView.register(reviewPictureCell, forCellWithReuseIdentifier: "reviewPictureCell")
         
-        starRateLabel.makeCircular()
+        for labelView in starSliderRateLabel{
+            labelView.makeCircular()
+        }
     }
     
     // 컬렉션 뷰 셀 삭제 처리
@@ -83,33 +90,49 @@ class ReviewWritingVC: UIViewController {
     //MARK: - Star Slider
     @IBAction func onSliderValueChanged(_ sender: UISlider) {
         
-        let floatValue = floor(sender.value * 10) / 10
+        var sliderIdx: Int?
+        
+        switch sender{
+        case starSliders[0]:
+            sliderIdx = 0
+        case starSliders[1]:
+            sliderIdx = 1
+        case starSliders[2]:
+            sliderIdx = 2
+        case starSliders[3]:
+            sliderIdx = 3
+        case starSliders[4]:
+            sliderIdx = 4
+        default:
+            return
+        }
+        
+        // label 표시 숫자. 소수점 1자리
+        let floatValue = floor(sender.value * 100) / 100
         
         let intValue = Int(floor(sender.value))
         
         let roundedNumber = (floatValue * 2).rounded() / 2 // .5 단위 반올림
         
-        print("sender.value : \(sender.value)")
-        print("floatValue : \(floatValue)")
-        print("intValue : \(intValue)")
-        print("roundedNumber : \(roundedNumber)")
-
-        for index in 0...5 { // 여기서 index는 우리가 설정한 'Tag'로 매치시킬 것이다.
-            if let starImage = view.viewWithTag(index) as? UIImageView {
-                if Float(index) <= roundedNumber {
-                    starImage.image = UIImage(named: "star_filled")
-                } else {
-                    if roundedNumber - Float(index - 1) == 0.5{
-                        starImage.image = UIImage(named: "star_half")
-                    }else{
-                        starImage.image = UIImage(named: "star_blank")
-                    }
-                }
+        starSliderRateLabel[sliderIdx!].text = String(roundedNumber)
+        
+        for index in 0..<Int(floor(roundedNumber)){
+            if let starImage = starSliderStars[(5 * sliderIdx!) + index] as? UIImageView {
+                starImage.image = UIImage(named: "star_filled")
             }
-            self.starRateLabel?.text = String(roundedNumber)
         }
+        for index in Int(floor(roundedNumber))..<5{
+            if let starImage = starSliderStars[(5 * sliderIdx!) + index] as? UIImageView {
+                starImage.image = UIImage(named: "star_blank")
+            }
+        }
+        if roundedNumber - Float(intValue) == 0.5{
+            if let starImage = starSliderStars[(5 * sliderIdx!) + Int(floor(roundedNumber))] as? UIImageView {
+                starImage.image = UIImage(named: "star_half")
+            }
+        }
+        
     }
-    
     
 }
 
@@ -121,7 +144,7 @@ extension ReviewWritingVC: UITextViewDelegate{
             reviewWritingTextView.textColor = .black
         }
     }
-
+    
     func textViewDidEndEditing (_ textView: UITextView) {
         if reviewWritingTextView.text.isEmpty || reviewWritingTextView.text == "" {
             reviewWritingTextView.textColor = .lightGray
@@ -134,20 +157,20 @@ extension ReviewWritingVC: UITextViewDelegate{
         reviewWritingTextView.delegate = self
         reviewWritingTextView.textColor = .lightGray
         reviewWritingTextView.text = "시음한 뒤 감상을 적어주세요."
-//        reviewWritingTextView.font = UIFont(name: "Pretendard", size: 30)
+        //        reviewWritingTextView.font = UIFont(name: "Pretendard", size: 30)
         
         // 먼저 행간 조절 스타일 설정
         let style = NSMutableParagraphStyle()
         style.lineSpacing = 10
-
+        
         let attributedString = NSMutableAttributedString(string: myTextView.text)
-
+        
         // 자간 조절 설정
         attributedString.addAttribute(NSAttributedString.Key.kern, value: CGFloat(1), range: NSRange(location: 0, length: attributedString.length))
-
+        
         // 행간 스타일 추가
         attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value: style, range: NSRange(location: 0, length: attributedString.length))
-
+        
         // TextView에 세팅
         myTextView.attributedText = attributedString
         
@@ -166,7 +189,7 @@ extension ReviewWritingVC: UICollectionViewDelegate, UICollectionViewDataSource,
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reviewPictureCell", for: indexPath) as! ReviewPictureCell
         
-//        cell.reviewImage.loadImage(from: tempData[indexPath.row])
+        //        cell.reviewImage.loadImage(from: tempData[indexPath.row])
         cell.reviewImage.image = myReviewImages[indexPath.row]
         
         // cell에 indexPath와 delegate 설정
@@ -179,7 +202,7 @@ extension ReviewWritingVC: UICollectionViewDelegate, UICollectionViewDataSource,
     
     // CollectionView Cell의 Size
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: collectionView.frame.height, height: collectionView.frame.height)
+        return CGSize(width: collectionView.frame.height, height: collectionView.frame.height)
     }
     
 }
@@ -212,7 +235,7 @@ extension ReviewWritingVC: UIImagePickerControllerDelegate, UINavigationControll
             myReviewImages.append(image)
             myReviewImageCountLabel.text = String(myReviewImages.count) + "/10"
         }
-
+        
         picker.dismiss(animated: true, completion: nil)
     }
     
@@ -220,7 +243,7 @@ extension ReviewWritingVC: UIImagePickerControllerDelegate, UINavigationControll
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
-
+    
     //MARK: - 사진첩 선택 (ios 13 ~)
     func pictureUploadByGallery(){
         let imagePicker = UIImagePickerController()
@@ -229,7 +252,7 @@ extension ReviewWritingVC: UIImagePickerControllerDelegate, UINavigationControll
         imagePicker.delegate = self
         present(imagePicker, animated: true, completion: nil)
     }
-        
+    
     //MARK: - 사진첩 선택 (ios 14 ~)
     
     // 리뷰 이미지 선택 (사진첩 선택)
@@ -239,7 +262,7 @@ extension ReviewWritingVC: UIImagePickerControllerDelegate, UINavigationControll
         var config = PHPickerConfiguration()
         
         config.selectionLimit = 10
-
+        
         if #available(iOS 15.0, *) {
             config.filter = .any(of: [.images, .screenshots])
         } else {
