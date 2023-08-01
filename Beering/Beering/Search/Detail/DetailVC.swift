@@ -148,6 +148,12 @@ extension DetailVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let nextVC = UIStoryboard(name: "ReviewDetail", bundle: nil).instantiateInitialViewController()
+        self.navigationController?.pushViewController(nextVC!, animated: true)
+    }
 
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 //

@@ -112,5 +112,12 @@ extension MyReviewVC: UITableViewDelegate, UITableViewDataSource{
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let nextVC = UIStoryboard(name: "ReviewDetail", bundle: nil).instantiateInitialViewController()
+        self.navigationController?.pushViewController(nextVC!, animated: true)
+    }
+
 }
 

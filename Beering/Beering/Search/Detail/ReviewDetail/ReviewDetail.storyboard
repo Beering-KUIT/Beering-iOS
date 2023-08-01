@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91s-II-ZBU">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="1117"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="1217"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aHA-BG-qtk">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="800"/>
@@ -117,52 +117,20 @@
                                     <constraint firstItem="aHA-BG-qtk" firstAttribute="width" secondItem="91s-II-ZBU" secondAttribute="width" id="Zqf-Q3-mW8"/>
                                 </constraints>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8U6-GC-L3S">
-                                <rect key="frame" x="0.0" y="1117" width="393" height="100"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1d-pB-ELo">
-                                        <rect key="frame" x="40" y="8" width="313" height="52"/>
-                                        <color key="backgroundColor" name="Beering_Black"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="52" id="4kK-Uo-IWB"/>
-                                        </constraints>
-                                        <color key="tintColor" name="Beering_White"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="리뷰 등록하기">
-                                            <fontDescription key="titleFontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="16"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="reviewWritingBtnTap:" destination="t6d-xr-1d3" eventType="touchUpInside" id="Cd0-8p-KB0"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="F1d-pB-ELo" secondAttribute="bottom" constant="40" id="qGD-ae-dHq"/>
-                                    <constraint firstAttribute="trailing" secondItem="F1d-pB-ELo" secondAttribute="trailing" constant="40" id="ugW-Vp-wTR"/>
-                                    <constraint firstItem="F1d-pB-ELo" firstAttribute="leading" secondItem="8U6-GC-L3S" secondAttribute="leading" constant="40" id="xW2-oB-Bv7"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iRe-1Z-xo1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="8U6-GC-L3S" firstAttribute="top" secondItem="91s-II-ZBU" secondAttribute="bottom" id="0Gp-Gb-KSW"/>
-                            <constraint firstAttribute="bottom" secondItem="91s-II-ZBU" secondAttribute="bottom" constant="100" id="Mkh-Z7-3aW"/>
-                            <constraint firstAttribute="trailing" secondItem="8U6-GC-L3S" secondAttribute="trailing" id="juz-Ts-qhT"/>
+                            <constraint firstAttribute="bottom" secondItem="91s-II-ZBU" secondAttribute="bottom" id="Mkh-Z7-3aW"/>
                             <constraint firstItem="91s-II-ZBU" firstAttribute="trailing" secondItem="fk4-gw-udj" secondAttribute="trailing" id="p8E-fl-VL5"/>
-                            <constraint firstAttribute="bottom" secondItem="8U6-GC-L3S" secondAttribute="bottom" id="pyX-In-jWV"/>
                             <constraint firstItem="91s-II-ZBU" firstAttribute="leading" secondItem="fk4-gw-udj" secondAttribute="leading" id="t8O-EE-RXU"/>
                             <constraint firstItem="91s-II-ZBU" firstAttribute="top" secondItem="fk4-gw-udj" secondAttribute="top" id="tCP-Sg-pBR"/>
-                            <constraint firstItem="8U6-GC-L3S" firstAttribute="leading" secondItem="fk4-gw-udj" secondAttribute="leading" id="x1R-K0-6HS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="meb-9m-aBx"/>
                     <size key="freeformSize" width="393" height="1217"/>
                     <connections>
-                        <outlet property="beerImage" destination="A4A-uh-LKS" id="n2j-rz-6kK"/>
                         <outlet property="reviewDetailText" destination="9KU-HG-wuJ" id="nlF-0x-Cs3"/>
-                        <outlet property="scrollView" destination="91s-II-ZBU" id="ylL-6P-24b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rP3-oy-42V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -172,12 +140,6 @@
     </scenes>
     <resources>
         <image name="light.max" catalog="system" width="128" height="72"/>
-        <namedColor name="Beering_Black">
-            <color red="0.063000001013278961" green="0.059000000357627869" blue="0.059000000357627869" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Beering_White">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="Gray01">
             <color red="0.65499997138977051" green="0.65499997138977051" blue="0.65499997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
