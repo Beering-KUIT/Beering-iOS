@@ -67,6 +67,10 @@ class HomeVC: UIViewController {
         homeProfileImage.loadImage(from: "https://picsum.photos/333")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
 }
 
 // Review Table View Cell 데이터 삽입

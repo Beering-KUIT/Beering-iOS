@@ -15,6 +15,8 @@ class ReviewDetailVC: UIViewController {
         super.viewDidLoad()
         
         reviewDetailText.textViewInit()
+        
+        self.tabBarController?.tabBar.isHidden = true
 
     }
     
