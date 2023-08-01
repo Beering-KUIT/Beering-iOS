@@ -17,8 +17,7 @@ class FilterVC: UIViewController {
 
         // Do any additional setup after loading the view.
         for view in filterOptionTitleViews{
-            view.backgroundColor = UIColor(named: "Beering_White")
-            view.addBottomBorderWithColor(color: UIColor.black, width: 1.0)
+            view.titleViewInit()
         }
         
         for buttonView in sortOptions{

@@ -38,8 +38,7 @@ class DetailVC: UIViewController {
         detailViewInit()
         navigationBarInit()
         
-        reviewPreviewTitleView.backgroundColor = UIColor(named: "Beering_White")
-        reviewPreviewTitleView.addBottomBorderWithColor(color: UIColor.black, width: 1)
+        reviewPreviewTitleView.titleViewInit()
         
         
         let reviewPreviewCell = UINib(nibName: "ReviewPreviewCell", bundle: nil)
@@ -123,6 +122,11 @@ class DetailVC: UIViewController {
         self.navigationController?.pushViewController(nextVC!, animated: true)
     }
     
+    @IBAction func reviewWritingBtnTap(_ sender: Any) {
+        
+        let nextVC = UIStoryboard(name: "ReviewWriting", bundle: nil).instantiateInitialViewController()
+        self.navigationController?.pushViewController(nextVC!, animated: true)
+    }
 }
 
 
