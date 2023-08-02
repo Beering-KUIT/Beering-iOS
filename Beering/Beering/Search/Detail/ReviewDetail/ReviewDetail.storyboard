@@ -76,15 +76,15 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTg-Ac-eTK">
                                                         <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o86-fI-YBA">
-                                                                <rect key="frame" x="20" y="10" width="40" height="40"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_profile_default" translatesAutoresizingMaskIntoConstraints="NO" id="o86-fI-YBA">
+                                                                <rect key="frame" x="20" y="5" width="50" height="50"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="40" id="hce-9Q-KAg"/>
+                                                                    <constraint firstAttribute="width" constant="50" id="hce-9Q-KAg"/>
                                                                     <constraint firstAttribute="width" secondItem="o86-fI-YBA" secondAttribute="height" multiplier="1:1" id="lxq-Zw-wBf"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="맥믈리에" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Nr-vk-Y5C">
-                                                                <rect key="frame" x="74" y="20.333333333333314" width="199" height="19.333333333333329"/>
+                                                                <rect key="frame" x="84" y="20.333333333333314" width="189" height="19.333333333333329"/>
                                                                 <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -688,6 +688,7 @@
         <image name="background_tasting note" width="175.66667175292969" height="45.666667938232422"/>
         <image name="dislike_blank" width="16" height="15"/>
         <image name="like_blank" width="16" height="14.666666984558105"/>
+        <image name="user_profile_default" width="136.33332824707031" height="136"/>
         <namedColor name="Beering_White">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
