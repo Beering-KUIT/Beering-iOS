@@ -31,7 +31,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="1117"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aHA-BG-qtk">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="936"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="926"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XJ1-RG-hk5">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="300"/>
@@ -71,26 +71,26 @@
                                                 </cells>
                                             </collectionView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEt-fT-4nq">
-                                                <rect key="frame" x="0.0" y="300" width="393" height="230"/>
+                                                <rect key="frame" x="0.0" y="300" width="393" height="220"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTg-Ac-eTK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="70"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_profile_default" translatesAutoresizingMaskIntoConstraints="NO" id="o86-fI-YBA">
-                                                                <rect key="frame" x="20" y="5" width="50" height="50"/>
+                                                                <rect key="frame" x="20" y="15" width="40" height="40"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="50" id="hce-9Q-KAg"/>
+                                                                    <constraint firstAttribute="width" constant="40" id="hce-9Q-KAg"/>
                                                                     <constraint firstAttribute="width" secondItem="o86-fI-YBA" secondAttribute="height" multiplier="1:1" id="lxq-Zw-wBf"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="맥믈리에" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Nr-vk-Y5C">
-                                                                <rect key="frame" x="84" y="20.333333333333314" width="189" height="19.333333333333329"/>
+                                                                <rect key="frame" x="74" y="25.333333333333314" width="199" height="19.333333333333329"/>
                                                                 <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2023년 7월 13일" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZN4-F1-cQk">
-                                                                <rect key="frame" x="287" y="23" width="96" height="14.333333333333336"/>
+                                                                <rect key="frame" x="287" y="27.999999999999996" width="96" height="14.333333333333332"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="96" id="ymL-BP-iln"/>
                                                                 </constraints>
@@ -105,7 +105,7 @@
                                                             <constraint firstItem="ZN4-F1-cQk" firstAttribute="centerY" secondItem="FTg-Ac-eTK" secondAttribute="centerY" id="78q-ye-ir9"/>
                                                             <constraint firstItem="1Nr-vk-Y5C" firstAttribute="centerY" secondItem="FTg-Ac-eTK" secondAttribute="centerY" id="Jd0-0W-tl1"/>
                                                             <constraint firstItem="ZN4-F1-cQk" firstAttribute="leading" secondItem="1Nr-vk-Y5C" secondAttribute="trailing" constant="14" id="PoG-xZ-6uT"/>
-                                                            <constraint firstAttribute="height" constant="60" id="XQW-T2-dK2"/>
+                                                            <constraint firstAttribute="height" constant="70" id="XQW-T2-dK2"/>
                                                             <constraint firstAttribute="trailing" secondItem="ZN4-F1-cQk" secondAttribute="trailing" constant="10" id="atG-S2-Kmy"/>
                                                             <constraint firstItem="o86-fI-YBA" firstAttribute="leading" secondItem="FTg-Ac-eTK" secondAttribute="leading" constant="20" id="cz6-ao-IHY"/>
                                                             <constraint firstItem="o86-fI-YBA" firstAttribute="centerY" secondItem="FTg-Ac-eTK" secondAttribute="centerY" id="sD4-jc-jeh"/>
@@ -127,15 +127,15 @@
                                                 <constraints>
                                                     <constraint firstItem="FTg-Ac-eTK" firstAttribute="top" secondItem="hEt-fT-4nq" secondAttribute="top" id="CiE-hV-LpN"/>
                                                     <constraint firstAttribute="trailing" secondItem="9lN-qi-ZAM" secondAttribute="trailing" constant="18" id="EcG-og-jQW"/>
-                                                    <constraint firstAttribute="bottom" secondItem="9lN-qi-ZAM" secondAttribute="bottom" constant="10" id="PBD-2F-Udi"/>
+                                                    <constraint firstAttribute="bottom" secondItem="9lN-qi-ZAM" secondAttribute="bottom" id="PBD-2F-Udi"/>
                                                     <constraint firstAttribute="trailing" secondItem="FTg-Ac-eTK" secondAttribute="trailing" id="UsJ-Fv-zog"/>
-                                                    <constraint firstItem="9lN-qi-ZAM" firstAttribute="top" secondItem="FTg-Ac-eTK" secondAttribute="bottom" constant="10" id="eJN-Qd-EYc"/>
+                                                    <constraint firstItem="9lN-qi-ZAM" firstAttribute="top" secondItem="FTg-Ac-eTK" secondAttribute="bottom" id="eJN-Qd-EYc"/>
                                                     <constraint firstItem="FTg-Ac-eTK" firstAttribute="leading" secondItem="hEt-fT-4nq" secondAttribute="leading" id="ma4-fT-cko"/>
                                                     <constraint firstItem="9lN-qi-ZAM" firstAttribute="leading" secondItem="hEt-fT-4nq" secondAttribute="leading" constant="18" id="v0T-Wn-tp7"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yjo-Wc-wh2">
-                                                <rect key="frame" x="0.0" y="530" width="393" height="156"/>
+                                                <rect key="frame" x="0.0" y="520" width="393" height="156"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="69w-ko-kEX">
                                                         <rect key="frame" x="118.66666666666669" y="0.0" width="156" height="156"/>
@@ -238,7 +238,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeF-NR-Gxw">
-                                                <rect key="frame" x="0.0" y="686" width="393" height="250"/>
+                                                <rect key="frame" x="0.0" y="676" width="393" height="250"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KAi-mM-cC1">
                                                         <rect key="frame" x="18" y="10" width="357" height="50"/>
@@ -675,8 +675,41 @@
                     <navigationItem key="navigationItem" id="meb-9m-aBx"/>
                     <size key="freeformSize" width="393" height="1217"/>
                     <connections>
+                        <outlet property="aromaScoreLabel" destination="03L-CC-pTV" id="feT-7p-Ema"/>
+                        <outlet property="colorScoreLabel" destination="VIK-cD-Qux" id="jtv-cR-H1y"/>
+                        <outlet property="createdAtLabel" destination="ZN4-F1-cQk" id="YsO-ar-NhV"/>
                         <outlet property="reviewDetailText" destination="9lN-qi-ZAM" id="QtP-W2-lDe"/>
                         <outlet property="reviewImageCollectionView" destination="XJ1-RG-hk5" id="ng0-ac-f59"/>
+                        <outlet property="swallowingScoreLabel" destination="foA-aa-gS6" id="VVd-RF-b1N"/>
+                        <outlet property="tasteScoreLabel" destination="4do-ph-u8i" id="x3L-h2-Pkg"/>
+                        <outlet property="totalScoreLabel" destination="CFY-Ec-SWl" id="czb-jT-YOs"/>
+                        <outlet property="userNicknameLabel" destination="1Nr-vk-Y5C" id="gFM-uK-wDg"/>
+                        <outlet property="userProfileImage" destination="o86-fI-YBA" id="47h-a9-n2R"/>
+                        <outletCollection property="totalScoreStars" destination="eQU-9T-dk3" collectionClass="NSMutableArray" id="ABb-4V-YdY"/>
+                        <outletCollection property="totalScoreStars" destination="ZTV-VS-yiT" collectionClass="NSMutableArray" id="rX5-Pt-gHz"/>
+                        <outletCollection property="totalScoreStars" destination="A9m-fV-frC" collectionClass="NSMutableArray" id="BCS-oa-SeR"/>
+                        <outletCollection property="totalScoreStars" destination="zJi-q4-TKX" collectionClass="NSMutableArray" id="OQv-hE-Tn2"/>
+                        <outletCollection property="totalScoreStars" destination="yro-25-dpa" collectionClass="NSMutableArray" id="0li-ts-pks"/>
+                        <outletCollection property="tasteScoreStars" destination="Xcb-lK-ga9" collectionClass="NSMutableArray" id="mBK-Tc-iyX"/>
+                        <outletCollection property="tasteScoreStars" destination="1Pq-jI-i0M" collectionClass="NSMutableArray" id="Tr6-lo-cQw"/>
+                        <outletCollection property="tasteScoreStars" destination="sFC-es-jUN" collectionClass="NSMutableArray" id="4Qr-Cg-GfX"/>
+                        <outletCollection property="tasteScoreStars" destination="kB4-Wq-xY7" collectionClass="NSMutableArray" id="h5Q-sd-39s"/>
+                        <outletCollection property="tasteScoreStars" destination="Ikz-jh-f3k" collectionClass="NSMutableArray" id="R4H-Oe-ERB"/>
+                        <outletCollection property="aromaScoreStars" destination="00P-uh-r6r" collectionClass="NSMutableArray" id="SjR-ry-CmL"/>
+                        <outletCollection property="aromaScoreStars" destination="PeU-5h-Kyp" collectionClass="NSMutableArray" id="UlA-jJ-6nf"/>
+                        <outletCollection property="aromaScoreStars" destination="vie-dZ-OVz" collectionClass="NSMutableArray" id="6nY-gC-KMt"/>
+                        <outletCollection property="aromaScoreStars" destination="2Ye-9y-e7I" collectionClass="NSMutableArray" id="dO4-88-qfg"/>
+                        <outletCollection property="aromaScoreStars" destination="bb8-zi-DVo" collectionClass="NSMutableArray" id="zcn-yr-GiE"/>
+                        <outletCollection property="colorScoreStars" destination="HAX-vl-kA3" collectionClass="NSMutableArray" id="26h-59-7ee"/>
+                        <outletCollection property="colorScoreStars" destination="DLq-G1-1Ef" collectionClass="NSMutableArray" id="vGm-rd-TaD"/>
+                        <outletCollection property="colorScoreStars" destination="PtY-Rf-aVk" collectionClass="NSMutableArray" id="nwc-UR-4IZ"/>
+                        <outletCollection property="colorScoreStars" destination="nvu-ub-Mri" collectionClass="NSMutableArray" id="QjP-3h-eyQ"/>
+                        <outletCollection property="colorScoreStars" destination="XE8-Ip-X89" collectionClass="NSMutableArray" id="CZz-MR-JJW"/>
+                        <outletCollection property="swallowingScoreStars" destination="cbl-d2-cXs" collectionClass="NSMutableArray" id="qFg-Bi-qGc"/>
+                        <outletCollection property="swallowingScoreStars" destination="0mL-b4-XOA" collectionClass="NSMutableArray" id="U2r-lh-q01"/>
+                        <outletCollection property="swallowingScoreStars" destination="2mc-fY-HyY" collectionClass="NSMutableArray" id="8ch-2o-SbO"/>
+                        <outletCollection property="swallowingScoreStars" destination="eGt-Hm-i8e" collectionClass="NSMutableArray" id="g9S-Vz-615"/>
+                        <outletCollection property="swallowingScoreStars" destination="9Hb-dO-Jfv" collectionClass="NSMutableArray" id="azI-ax-QzM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rP3-oy-42V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

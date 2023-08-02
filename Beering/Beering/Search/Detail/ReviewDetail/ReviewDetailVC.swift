@@ -9,16 +9,39 @@ import UIKit
 
 class ReviewDetailVC: UIViewController {
     
-    var tempImageData:[String] = ["https://picsum.photos/347",
-                                  "https://picsum.photos/347",
-                                  "https://picsum.photos/347",
-                                  "https://picsum.photos/347",
-                                  "https://picsum.photos/347"]
+    var tempReviewDatas: tempReviewData = tempReviewData(imageUrl: ["https://picsum.photos/347",
+                                                                    "https://picsum.photos/347",
+                                                                    "https://picsum.photos/347",
+                                                                    "https://picsum.photos/347",
+                                                                    "https://picsum.photos/347"], userProfileImageUrl: "https://picsum.photos/347",
+                                                         userNickName: "비어링 유저", createdAt: "2023년 8월 11일", reviewText: "맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 ", totalScore: 4.5, tasteScore: 4.0, aromaScore: 0.5, colorScore: 0.0, swallowingScore: 3.0)
     
-
     @IBOutlet weak var reviewImageCollectionView: UICollectionView!
     
+    @IBOutlet weak var userProfileImage: UIImageView!
+    @IBOutlet weak var userNicknameLabel: UILabel!
+    @IBOutlet weak var createdAtLabel: UILabel!
     @IBOutlet weak var reviewDetailText: UITextView!
+    
+    
+    @IBOutlet var totalScoreStars: [UIImageView]!
+    @IBOutlet weak var totalScoreLabel: UILabel!
+    
+    
+    @IBOutlet var tasteScoreStars: [UIImageView]!
+    @IBOutlet weak var tasteScoreLabel: UILabel!
+    
+    @IBOutlet var aromaScoreStars: [UIImageView]!
+    @IBOutlet weak var aromaScoreLabel: UILabel!
+    
+    
+    @IBOutlet var colorScoreStars: [UIImageView]!
+    @IBOutlet weak var colorScoreLabel: UILabel!
+    
+    
+    @IBOutlet var swallowingScoreStars: [UIImageView]!
+    @IBOutlet weak var swallowingScoreLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +49,64 @@ class ReviewDetailVC: UIViewController {
         reviewImageCollectionView.dataSource = self
         reviewImageCollectionView.delegate = self
         
+        layoutInit()
+        
         reviewDetailText.textViewInit()
         navigationBarInit()
         
         self.tabBarController?.tabBar.isHidden = true
 
+    }
+    
+    func layoutInit(){
+        
+        if let userProfileImageUrl = tempReviewDatas.userProfileImageUrl{
+            userProfileImage.makeCircular()
+            userProfileImage.loadImage(from: userProfileImageUrl)
+        }else{
+            userProfileImage.image = UIImage(named: "user_profile_default")
+        }
+        
+        userNicknameLabel.text = tempReviewDatas.userNickName
+        createdAtLabel.text = tempReviewDatas.createdAt
+        reviewDetailText.text = tempReviewDatas.reviewText
+        
+        /// TODO
+        /// 배열 등으로 관리하기
+        starInit(totalScoreStars, tempReviewDatas.totalScore)
+        starInit(tasteScoreStars, tempReviewDatas.tasteScore)
+        starInit(aromaScoreStars, tempReviewDatas.aromaScore)
+        starInit(colorScoreStars, tempReviewDatas.colorScore)
+        starInit(swallowingScoreStars, tempReviewDatas.swallowingScore)
+        
+        
+        totalScoreLabel.text = String(tempReviewDatas.totalScore)
+        tasteScoreLabel.text = String(tempReviewDatas.tasteScore)
+        aromaScoreLabel.text = String(tempReviewDatas.aromaScore)
+        colorScoreLabel.text = String(tempReviewDatas.colorScore)
+        swallowingScoreLabel.text = String(tempReviewDatas.swallowingScore)
+        
+    }
+    
+    func starInit(_ imageViews: [UIImageView], _ score: Float){
+
+        for index in 0..<Int(floor(score)){
+            if let starImage = imageViews[index] as? UIImageView {
+                starImage.image = UIImage(named: "star_filled")
+            }
+        }
+        for index in Int(floor(score))..<5{
+            if let starImage = imageViews[index] as? UIImageView {
+                starImage.image = UIImage(named: "star_blank")
+            }
+        }
+        if score - floor(score) == 0.5{
+            if let starImage = imageViews[ Int(floor(score))] as? UIImageView {
+                starImage.image = UIImage(named: "star_half")
+            }
+        }
+        
+    
     }
     
     private func navigationBarInit(){
@@ -105,14 +181,14 @@ class ReviewDetailVC: UIViewController {
 extension ReviewDetailVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return tempImageData.count
+        return tempReviewDatas.imageUrl.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 //        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reviewImageCell", for: indexPath) as! ReviewImageCell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reviewDetailImageCell", for: indexPath) as! ReviewDetailImageCell
         
-        let imageUrl = tempImageData[indexPath.row]
+        let imageUrl = tempReviewDatas.imageUrl[indexPath.row]
         cell.reviewDetailImageView.loadImage(from: imageUrl)
         
         return cell
@@ -127,4 +203,17 @@ extension ReviewDetailVC: UICollectionViewDelegate, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
+}
+
+struct tempReviewData{
+    var imageUrl: [String]
+    var userProfileImageUrl: String?
+    var userNickName: String
+    var createdAt: String
+    var reviewText: String
+    var totalScore: Float
+    var tasteScore: Float
+    var aromaScore: Float
+    var colorScore: Float
+    var swallowingScore: Float
 }
