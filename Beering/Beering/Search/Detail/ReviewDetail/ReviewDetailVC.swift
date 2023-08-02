@@ -74,8 +74,30 @@ class ReviewDetailVC: UIViewController {
     
     @objc func ellipsisBtnTap(){
         /// TODO
-        /// API 호출 및 이미지 교체
-        print("ellipsisBtn tap")
+        /// API 호출
+        
+        // 메시지창 컨트롤러 인스턴스 생성
+//        let alert = UIAlertController(title: "사진 업로드", message: "업로드 방식을 선택해주세요", preferredStyle: UIAlertController.Style.actionSheet)
+        let alert = UIAlertController()
+
+        // 메시지 창 컨트롤러에 들어갈 버튼 액션 객체 생성
+        let editReviewAction =  UIAlertAction(title: "수정하기", style: UIAlertAction.Style.default){ [weak self] _ in
+            print("수정하기 API 호출 요청")
+        }
+        let deleteReviewAction =  UIAlertAction(title: "삭제하기", style: UIAlertAction.Style.destructive){ [weak self] _ in
+            print("삭제하기 API 호출 요청")
+        }
+        let cancleAction =  UIAlertAction(title: "취소", style: UIAlertAction.Style.cancel){ [weak self] _ in
+            print("취소")
+        }
+        
+        //메시지 창 컨트롤러에 버튼 액션을 추가
+        alert.addAction(editReviewAction)
+        alert.addAction(deleteReviewAction)
+        alert.addAction(cancleAction)
+
+        //메시지 창 컨트롤러를 표시
+        self.present(alert, animated: true)
     }
     
 }
