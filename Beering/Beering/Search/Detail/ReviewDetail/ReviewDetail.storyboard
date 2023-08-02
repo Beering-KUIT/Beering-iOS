@@ -7,6 +7,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -32,12 +33,43 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aHA-BG-qtk">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="996"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="light.max" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="A4A-uh-LKS">
-                                                <rect key="frame" x="0.0" y="3.3333333333333428" width="393" height="293"/>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XJ1-RG-hk5">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="300"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="300" id="ySD-Kt-mWi"/>
+                                                    <constraint firstAttribute="height" constant="300" id="mLw-5O-Ezt"/>
                                                 </constraints>
-                                            </imageView>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fsO-75-iSr">
+                                                    <size key="itemSize" width="128" height="128"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reviewDetailImageCell" id="2g5-0H-kDi" customClass="ReviewDetailImageCell" customModule="Beering" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Xaw-8C-WVy">
+                                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zCg-VK-l3l">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="zCg-VK-l3l" secondAttribute="trailing" id="0JO-X3-iCs"/>
+                                                                <constraint firstItem="zCg-VK-l3l" firstAttribute="leading" secondItem="Xaw-8C-WVy" secondAttribute="leading" id="6Yy-Q1-18X"/>
+                                                                <constraint firstItem="zCg-VK-l3l" firstAttribute="top" secondItem="Xaw-8C-WVy" secondAttribute="top" id="70O-KS-uhw"/>
+                                                                <constraint firstAttribute="bottom" secondItem="zCg-VK-l3l" secondAttribute="bottom" id="aO8-vn-Nzl"/>
+                                                            </constraints>
+                                                        </collectionViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="reviewDetailImageView" destination="zCg-VK-l3l" id="tKu-to-0dH"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEt-fT-4nq">
                                                 <rect key="frame" x="0.0" y="300" width="393" height="290"/>
                                                 <subviews>
@@ -557,10 +589,10 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="hEt-fT-4nq" firstAttribute="leading" secondItem="aHA-BG-qtk" secondAttribute="leading" id="3au-TK-379"/>
+                                            <constraint firstItem="XJ1-RG-hk5" firstAttribute="top" secondItem="aHA-BG-qtk" secondAttribute="top" id="5Ls-Yc-7I0"/>
                                             <constraint firstAttribute="trailing" secondItem="hEt-fT-4nq" secondAttribute="trailing" id="Jga-gH-Bli"/>
-                                            <constraint firstItem="A4A-uh-LKS" firstAttribute="top" secondItem="aHA-BG-qtk" secondAttribute="top" id="eVC-YL-1yA"/>
-                                            <constraint firstAttribute="trailing" secondItem="A4A-uh-LKS" secondAttribute="trailing" id="jtg-Bx-cbE"/>
-                                            <constraint firstItem="A4A-uh-LKS" firstAttribute="leading" secondItem="aHA-BG-qtk" secondAttribute="leading" id="oDr-Y0-yri"/>
+                                            <constraint firstAttribute="trailing" secondItem="XJ1-RG-hk5" secondAttribute="trailing" id="kE3-vA-bca"/>
+                                            <constraint firstItem="XJ1-RG-hk5" firstAttribute="leading" secondItem="aHA-BG-qtk" secondAttribute="leading" id="tqg-qo-S5g"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -648,6 +680,7 @@
                     <size key="freeformSize" width="393" height="1217"/>
                     <connections>
                         <outlet property="reviewDetailText" destination="9KU-HG-wuJ" id="nlF-0x-Cs3"/>
+                        <outlet property="reviewImageCollectionView" destination="XJ1-RG-hk5" id="ng0-ac-f59"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rP3-oy-42V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -658,7 +691,6 @@
     <resources>
         <image name="background_tasting note" width="175.66667175292969" height="45.666667938232422"/>
         <image name="dislike_blank" width="16" height="15"/>
-        <image name="light.max" catalog="system" width="128" height="72"/>
         <image name="like_blank" width="16" height="14.666666984558105"/>
         <namedColor name="Beering_White">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
