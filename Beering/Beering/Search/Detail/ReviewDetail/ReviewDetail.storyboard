@@ -679,7 +679,11 @@
                         <outlet property="colorScoreLabel" destination="VIK-cD-Qux" id="jtv-cR-H1y"/>
                         <outlet property="createdAtLabel" destination="ZN4-F1-cQk" id="YsO-ar-NhV"/>
                         <outlet property="reviewDetailText" destination="9lN-qi-ZAM" id="QtP-W2-lDe"/>
+                        <outlet property="reviewDislikeBtn" destination="SZk-qu-Ol8" id="wao-zY-O7J"/>
+                        <outlet property="reviewDislikeCountLabel" destination="h7u-lP-0wS" id="suM-vZ-eWI"/>
                         <outlet property="reviewImageCollectionView" destination="XJ1-RG-hk5" id="ng0-ac-f59"/>
+                        <outlet property="reviewLikeBtn" destination="Npx-8b-NRp" id="6Z8-j1-J8A"/>
+                        <outlet property="reviewLikeCountLabel" destination="4HY-et-QyP" id="5F3-fd-msJ"/>
                         <outlet property="swallowingScoreLabel" destination="foA-aa-gS6" id="VVd-RF-b1N"/>
                         <outlet property="tasteScoreLabel" destination="4do-ph-u8i" id="x3L-h2-Pkg"/>
                         <outlet property="totalScoreLabel" destination="CFY-Ec-SWl" id="czb-jT-YOs"/>

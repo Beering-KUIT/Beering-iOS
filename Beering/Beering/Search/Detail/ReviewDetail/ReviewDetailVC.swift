@@ -14,7 +14,10 @@ class ReviewDetailVC: UIViewController {
                                                                     "https://picsum.photos/347",
                                                                     "https://picsum.photos/347",
                                                                     "https://picsum.photos/347"], userProfileImageUrl: "https://picsum.photos/347",
-                                                         userNickName: "비어링 유저", createdAt: "2023년 8월 11일", reviewText: "맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 ", totalScore: 4.5, tasteScore: 4.0, aromaScore: 0.5, colorScore: 0.0, swallowingScore: 3.0)
+                                                         userNickName: "비어링 유저", createdAt: "2023년 8월 11일", reviewText: "맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 ", totalScore: 4.5, tasteScore: 4.0, aromaScore: 0.5, colorScore: 0.0, swallowingScore: 3.0,
+                                                         tabomIsUp: true,
+                                                         likeCount: 2312,
+                                                         dislikeCount: 20)
     
     @IBOutlet weak var reviewImageCollectionView: UICollectionView!
     
@@ -41,6 +44,12 @@ class ReviewDetailVC: UIViewController {
     
     @IBOutlet var swallowingScoreStars: [UIImageView]!
     @IBOutlet weak var swallowingScoreLabel: UILabel!
+    
+    @IBOutlet weak var reviewLikeBtn: UIButton!
+    @IBOutlet weak var reviewLikeCountLabel: UILabel!
+    
+    @IBOutlet weak var reviewDislikeBtn: UIButton!
+    @IBOutlet weak var reviewDislikeCountLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -85,6 +94,17 @@ class ReviewDetailVC: UIViewController {
         aromaScoreLabel.text = String(tempReviewDatas.aromaScore)
         colorScoreLabel.text = String(tempReviewDatas.colorScore)
         swallowingScoreLabel.text = String(tempReviewDatas.swallowingScore)
+        
+        if let tabom = tempReviewDatas.tabomIsUp{
+            if tabom == true{
+                reviewLikeBtn.setImage(UIImage(named: "like_filled"), for: .normal)
+            }else{
+                reviewLikeBtn.setImage(UIImage(named: "dislike_filled"), for: .normal)
+            }
+        }
+        
+        reviewLikeCountLabel.text = String(tempReviewDatas.likeCount)
+        reviewDislikeCountLabel.text = String(tempReviewDatas.dislikeCount)
         
     }
     
@@ -216,4 +236,7 @@ struct tempReviewData{
     var aromaScore: Float
     var colorScore: Float
     var swallowingScore: Float
+    var tabomIsUp: Bool?
+    var likeCount: Int
+    var dislikeCount: Int
 }
