@@ -40,8 +40,13 @@ extension FilterVC: UITextFieldDelegate{
         
         // 현재 입력된 문자열과 새로운 문자열을 합친 최종 문자열
         let updatedString = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? string
-        
-        // 최종 문자열에서 숫자 부분만 추출
+                
+        if updatedString == "" {
+            textField.text = updatedString
+            return false
+        }
+
+        // 최종 문자열에서 숫자 부분만 추출 (콤마도 제거)
         let filteredString = updatedString.filter { "0123456789".contains($0) }
         
         if Int(filteredString) == 0{
