@@ -458,11 +458,11 @@
             </objects>
             <point key="canvasLocation" x="2278.6259541984732" y="767.25352112676057"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="xhm-tw-kG0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ohD-6x-qJa" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="2js-ev-SEl"/>
+                    <tabBarItem key="tabBarItem" title="" image="mypage_blank" selectedImage="mypage_filled" id="2js-ev-SEl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vc5-xS-59x">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -480,6 +480,8 @@
     </scenes>
     <resources>
         <image name="arrow_right" width="10.333333015441895" height="7.6666665077209473"/>
+        <image name="mypage_blank" width="26.333333969116211" height="26.333333969116211"/>
+        <image name="mypage_filled" width="27.666666030883789" height="27.333333969116211"/>
         <namedColor name="Gray01">
             <color red="0.65499997138977051" green="0.65499997138977051" blue="0.65499997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

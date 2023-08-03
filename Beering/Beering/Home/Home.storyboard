@@ -79,11 +79,11 @@
             </objects>
             <point key="canvasLocation" x="536.64122137404581" y="650"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="gdR-p9-aZX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iwb-IB-94C" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="q1q-23-mZ4"/>
+                    <tabBarItem key="tabBarItem" title="" image="home_blank" selectedImage="home_filled" id="q1q-23-mZ4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9KK-DO-TCI">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -100,6 +100,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="home_blank" width="22" height="23"/>
+        <image name="home_filled" width="128" height="128"/>
         <namedColor name="Beering_White">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

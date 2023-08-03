@@ -194,13 +194,6 @@
 			path = ReviewDetail;
 			sourceTree = "<group>";
 		};
-		2E44D2FC2A7A65C1004F8A3F /* U */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = U;
-			sourceTree = "<group>";
-		};
 		2E44D2FD2A7B85C0004F8A3F /* LikedReview */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,7 +224,6 @@
 		2E9F85D12A5270F10082BC8B /* Beering */ = {
 			isa = PBXGroup;
 			children = (
-				2E44D2FC2A7A65C1004F8A3F /* U */,
 				2ED7A17C2A5E767A009CC66A /* Resources */,
 				2ED7A1752A5BA6E2009CC66A /* Account */,
 				2E309DC32A550FE400B19B2A /* Home */,
