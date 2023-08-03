@@ -94,8 +94,13 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource{
 //        cell.reviewImageCollectionView.reloadData()
         
 //        print("## reviewImages[indexPath.row] is \(reviewImages[indexPath.row])")
-        cell.setReviewImages(reviewImages[indexPath.row])
-        cell.setCollectionViewHeight()
+        
+        if reviewImages[indexPath.row].count > 0{
+            cell.setReviewImages(reviewImages[indexPath.row])
+            cell.setCollectionViewHeight()
+        }else{
+            cell.reviewImageCollectionView.isHidden = true
+        }
         
 //        print("## " + cell.nickname.text!)
 //        print("## indexPath.row : " + String(indexPath.row))

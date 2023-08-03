@@ -108,8 +108,12 @@ extension MyReviewVC: UITableViewDelegate, UITableViewDataSource{
         cell.reviewImageCollectionView.delegate = cell
         cell.reviewImageCollectionView.dataSource = cell
         
-        cell.setReviewImages(reviewImages[indexPath.row])
-        cell.setCollectionViewHeight()
+        if reviewImages[indexPath.row].count > 0{
+            cell.setReviewImages(reviewImages[indexPath.row])
+            cell.setCollectionViewHeight()
+        }else{
+            cell.reviewImageCollectionView.isHidden = true
+        }
         
         return cell
     }
