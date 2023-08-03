@@ -27,6 +27,8 @@
 		2E3A3E292A78091800B2C98A /* ReviewDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3A3E282A78091800B2C98A /* ReviewDetailVC.swift */; };
 		2E3A3E2B2A780F8200B2C98A /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3A3E2A2A780F8200B2C98A /* UITextView.swift */; };
 		2E3A3E2F2A79455F00B2C98A /* ReviewDetailImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3A3E2E2A79455F00B2C98A /* ReviewDetailImageCell.swift */; };
+		2E44D2FF2A7B85ED004F8A3F /* LikedReview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E44D2FE2A7B85ED004F8A3F /* LikedReview.storyboard */; };
+		2E44D3012A7B8632004F8A3F /* LikedReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E44D3002A7B8632004F8A3F /* LikedReviewVC.swift */; };
 		2E80BE832A5F0A09002E8F0E /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80BE812A5F0A09002E8F0E /* FilterCell.swift */; };
 		2E80BE842A5F0A09002E8F0E /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E80BE822A5F0A09002E8F0E /* FilterCell.xib */; };
 		2E80BE872A5F9D97002E8F0E /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80BE852A5F9D97002E8F0E /* SearchCell.swift */; };
@@ -90,6 +92,8 @@
 		2E3A3E282A78091800B2C98A /* ReviewDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailVC.swift; sourceTree = "<group>"; };
 		2E3A3E2A2A780F8200B2C98A /* UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		2E3A3E2E2A79455F00B2C98A /* ReviewDetailImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailImageCell.swift; sourceTree = "<group>"; };
+		2E44D2FE2A7B85ED004F8A3F /* LikedReview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LikedReview.storyboard; sourceTree = "<group>"; };
+		2E44D3002A7B8632004F8A3F /* LikedReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedReviewVC.swift; sourceTree = "<group>"; };
 		2E80BE812A5F0A09002E8F0E /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		2E80BE822A5F0A09002E8F0E /* FilterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
 		2E80BE852A5F9D97002E8F0E /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
@@ -195,6 +199,15 @@
 			children = (
 			);
 			path = U;
+			sourceTree = "<group>";
+		};
+		2E44D2FD2A7B85C0004F8A3F /* LikedReview */ = {
+			isa = PBXGroup;
+			children = (
+				2E44D2FE2A7B85ED004F8A3F /* LikedReview.storyboard */,
+				2E44D3002A7B8632004F8A3F /* LikedReviewVC.swift */,
+			);
+			path = LikedReview;
 			sourceTree = "<group>";
 		};
 		2E9F85C62A5270F10082BC8B = {
@@ -334,6 +347,7 @@
 		2ED7A1772A5BA76E009CC66A /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
+				2E44D2FD2A7B85C0004F8A3F /* LikedReview */,
 				2EB0206A2A6E53880022AC17 /* MyLiquor */,
 				2EAF91C82A6E43D700AF3A8D /* MyReview */,
 				2E309DBD2A550C5A00B19B2A /* MyPage.storyboard */,
@@ -459,6 +473,7 @@
 				2EB020832A6FBE2E0022AC17 /* ReviewWriting.storyboard in Resources */,
 				2ED7A18A2A5E76A3009CC66A /* Pretendard-Regular.otf in Resources */,
 				2EB020752A6EB2700022AC17 /* Review.storyboard in Resources */,
+				2E44D2FF2A7B85ED004F8A3F /* LikedReview.storyboard in Resources */,
 				2EBD7C122A70F18400D84767 /* ReviewPictureCell.xib in Resources */,
 				2E80BE842A5F0A09002E8F0E /* FilterCell.xib in Resources */,
 				2EB020712A6E53E30022AC17 /* MyLiquor.storyboard in Resources */,
@@ -561,6 +576,7 @@
 				2E1D583F2A53FB2200C1FE9B /* LoginVC.swift in Sources */,
 				2E309DC82A55131F00B19B2A /* ReviewCell.swift in Sources */,
 				2E309DDA2A55558700B19B2A /* ReviewImageCell.swift in Sources */,
+				2E44D3012A7B8632004F8A3F /* LikedReviewVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

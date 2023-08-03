@@ -41,6 +41,12 @@ class MyPageVC: UIViewController {
         self.navigationController?.pushViewController(nextVC!, animated: true)
     }
     
+    @IBAction func likedReviewBtnTap(_ sender: Any) {
+        
+        let nextVC = UIStoryboard(name: "LikedReview", bundle: nil).instantiateInitialViewController()
+        self.navigationController?.pushViewController(nextVC!, animated: true)
+    }
+    
     @IBAction func myLiquorBtnTap(_ sender: Any) {
         
         let nextVC = UIStoryboard(name: "MyLiquor", bundle: nil).instantiateInitialViewController()
