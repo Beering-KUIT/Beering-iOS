@@ -12,8 +12,12 @@ class FilterVC: UIViewController {
     @IBOutlet var sortOptions: [UIButton]!
     @IBOutlet var filterOptionTitleViews: [UIView]!
     
-    @IBOutlet weak var minimumPriceTextField: UITextField!
-    @IBOutlet weak var maximumPriceTextField: UITextField!
+    @IBOutlet weak var minimumPriceTextField: UITextField! {
+        didSet { minimumPriceTextField?.addDoneButtonOnKeyboard() }
+    }
+    @IBOutlet weak var maximumPriceTextField: UITextField! {
+        didSet { maximumPriceTextField?.addDoneButtonOnKeyboard() }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
