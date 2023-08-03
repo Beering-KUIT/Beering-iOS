@@ -291,7 +291,7 @@
                                         </constraints>
                                         <color key="textColor" name="Beering_Black"/>
                                         <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="99,999+" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="88B-91-wjS">
                                         <rect key="frame" x="269" y="53" width="100" height="34"/>
@@ -302,7 +302,7 @@
                                         </constraints>
                                         <color key="textColor" name="Beering_Black"/>
                                         <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OKF-zg-plf">
                                         <rect key="frame" x="144" y="69.666666666666629" width="105" height="1"/>
@@ -359,6 +359,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="maximumPriceTextField" destination="88B-91-wjS" id="xMO-BL-CdY"/>
+                        <outlet property="minimumPriceTextField" destination="Blk-an-Ujc" id="0do-3a-Pbx"/>
                         <outletCollection property="filterOptionTitleViews" destination="HrN-P6-3FS" collectionClass="NSMutableArray" id="E5n-ru-rOe"/>
                         <outletCollection property="filterOptionTitleViews" destination="Y0L-ZO-2zM" collectionClass="NSMutableArray" id="gkZ-12-fuD"/>
                         <outletCollection property="filterOptionTitleViews" destination="mRv-EQ-uar" collectionClass="NSMutableArray" id="OQ6-1I-HUM"/>
