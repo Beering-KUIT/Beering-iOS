@@ -258,7 +258,7 @@
                                         <rect key="frame" x="24" y="10" width="345" height="25"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격대" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95k-hF-ex0">
-                                                <rect key="frame" x="8" y="0.0" width="329" height="20"/>
+                                                <rect key="frame" x="8" y="0.0" width="41.666666666666664" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="54v-Fx-neP"/>
                                                 </constraints>
@@ -266,22 +266,66 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="단위 : 원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqJ-nx-Exg">
+                                                <rect key="frame" x="57.666666666666671" y="3.0000000000000009" width="40.333333333333329" height="14.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="12"/>
+                                                <color key="textColor" name="Gray02"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBrownColor"/>
                                         <constraints>
                                             <constraint firstItem="95k-hF-ex0" firstAttribute="leading" secondItem="mRv-EQ-uar" secondAttribute="leading" constant="8" id="BfC-Yy-s1C"/>
-                                            <constraint firstAttribute="trailing" secondItem="95k-hF-ex0" secondAttribute="trailing" constant="8" id="UbE-Dc-K1T"/>
+                                            <constraint firstItem="xqJ-nx-Exg" firstAttribute="centerY" secondItem="95k-hF-ex0" secondAttribute="centerY" id="Hcf-7q-EOU"/>
+                                            <constraint firstItem="xqJ-nx-Exg" firstAttribute="leading" secondItem="95k-hF-ex0" secondAttribute="trailing" constant="8" id="NPP-fa-ZVM"/>
                                             <constraint firstAttribute="bottom" secondItem="95k-hF-ex0" secondAttribute="bottom" constant="5" id="WOL-5c-VN3"/>
                                             <constraint firstItem="95k-hF-ex0" firstAttribute="top" secondItem="mRv-EQ-uar" secondAttribute="top" id="eZ7-Pg-J6I"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Blk-an-Ujc">
+                                        <rect key="frame" x="24" y="53" width="100" height="34"/>
+                                        <color key="backgroundColor" name="Grau00"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="5fF-cy-kTH"/>
+                                            <constraint firstAttribute="height" constant="34" id="xd7-kL-qe5"/>
+                                        </constraints>
+                                        <color key="textColor" name="Beering_Black"/>
+                                        <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="99,999+" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="88B-91-wjS">
+                                        <rect key="frame" x="269" y="53" width="100" height="34"/>
+                                        <color key="backgroundColor" name="Grau00"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="Fxm-D0-9el"/>
+                                            <constraint firstAttribute="width" constant="100" id="O34-dn-Ozl"/>
+                                        </constraints>
+                                        <color key="textColor" name="Beering_Black"/>
+                                        <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OKF-zg-plf">
+                                        <rect key="frame" x="144" y="69.666666666666629" width="105" height="1"/>
+                                        <color key="backgroundColor" name="Gray01"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="x1t-Qo-COg"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="88B-91-wjS" secondAttribute="trailing" constant="24" id="3Q9-8V-re5"/>
                                     <constraint firstItem="mRv-EQ-uar" firstAttribute="top" secondItem="5cV-R4-8dQ" secondAttribute="top" constant="10" id="4xi-sw-MtX"/>
+                                    <constraint firstItem="Blk-an-Ujc" firstAttribute="top" secondItem="mRv-EQ-uar" secondAttribute="bottom" constant="18" id="7yG-y5-S47"/>
+                                    <constraint firstItem="Blk-an-Ujc" firstAttribute="leading" secondItem="5cV-R4-8dQ" secondAttribute="leading" constant="24" id="AZ5-ow-7mc"/>
+                                    <constraint firstItem="Blk-an-Ujc" firstAttribute="centerY" secondItem="OKF-zg-plf" secondAttribute="centerY" id="Kdo-M3-a1B"/>
                                     <constraint firstItem="mRv-EQ-uar" firstAttribute="leading" secondItem="5cV-R4-8dQ" secondAttribute="leading" constant="24" id="MPD-AR-yhI"/>
                                     <constraint firstAttribute="trailing" secondItem="mRv-EQ-uar" secondAttribute="trailing" constant="24" id="UHz-Ey-1RX"/>
                                     <constraint firstAttribute="height" constant="185" id="WE9-Vk-8EC"/>
+                                    <constraint firstItem="88B-91-wjS" firstAttribute="leading" secondItem="OKF-zg-plf" secondAttribute="trailing" constant="20" id="dK5-Wo-sh8"/>
+                                    <constraint firstItem="OKF-zg-plf" firstAttribute="centerY" secondItem="88B-91-wjS" secondAttribute="centerY" id="ho7-16-G0d"/>
+                                    <constraint firstItem="88B-91-wjS" firstAttribute="top" secondItem="mRv-EQ-uar" secondAttribute="bottom" constant="18" id="ikt-FO-g2B"/>
+                                    <constraint firstItem="OKF-zg-plf" firstAttribute="leading" secondItem="Blk-an-Ujc" secondAttribute="trailing" constant="20" id="rSI-ae-2dD"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhR-ta-Co3">
@@ -338,6 +382,15 @@
         </namedColor>
         <namedColor name="Beering_White">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Grau00">
+            <color red="0.95300000905990601" green="0.95300000905990601" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Gray01">
+            <color red="0.65499997138977051" green="0.65499997138977051" blue="0.65499997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Gray02">
+            <color red="0.44699999690055847" green="0.42399999499320984" blue="0.46700000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
