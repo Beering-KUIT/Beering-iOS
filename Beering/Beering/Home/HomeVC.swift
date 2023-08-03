@@ -95,11 +95,12 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource{
         
 //        print("## reviewImages[indexPath.row] is \(reviewImages[indexPath.row])")
         
+        /// TODO CollectionView 의 높이를 조정하는 것이 아닌, 아예 사라지도록 Refactoring
         if reviewImages[indexPath.row].count > 0{
             cell.setReviewImages(reviewImages[indexPath.row])
-            cell.setCollectionViewHeight()
+            cell.setCollectionViewHeight(208)
         }else{
-            cell.reviewImageCollectionView.isHidden = true
+            cell.setCollectionViewHeight(0)
         }
         
 //        print("## " + cell.nickname.text!)

@@ -38,8 +38,8 @@ class ReviewCell: UITableViewCell {
     
     // 이미지뷰 크기 지정
     /// TODO 이미지 개수 0개이면 높이 0으로
-    func setCollectionViewHeight(){
-        self.reviewImageCollectionView.heightAnchor.constraint(equalToConstant: 208).isActive = true
+    func setCollectionViewHeight(_ constant: CGFloat){
+        self.reviewImageCollectionView.heightAnchor.constraint(equalToConstant: constant).isActive = true
     }
     
 }
