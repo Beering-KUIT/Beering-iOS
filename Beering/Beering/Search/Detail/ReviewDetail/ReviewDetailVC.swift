@@ -9,11 +9,13 @@ import UIKit
 
 class ReviewDetailVC: UIViewController {
     
-    var tempReviewDatas: tempReviewData = tempReviewData(imageUrl: ["https://picsum.photos/347",
+    var tempReviewDatas: tempReviewData = tempReviewData(imageUrl: [
+        "https://picsum.photos/347",
                                                                     "https://picsum.photos/347",
                                                                     "https://picsum.photos/347",
                                                                     "https://picsum.photos/347",
-                                                                    "https://picsum.photos/347"], userProfileImageUrl: "https://picsum.photos/347",
+                                                                    "https://picsum.photos/347"
+    ], userProfileImageUrl: "https://picsum.photos/347",
                                                          userNickName: "비어링 유저", createdAt: "2023년 8월 11일", reviewText: "맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 ", totalScore: 4.5, tasteScore: 4.0, aromaScore: 0.5, colorScore: 0.0, swallowingScore: 3.0,
                                                          tabomIsUp: true,
                                                          likeCount: 2312,
@@ -68,6 +70,10 @@ class ReviewDetailVC: UIViewController {
     }
     
     func layoutInit(){
+        
+        if tempReviewDatas.imageUrl.count == 0{
+            reviewImageCollectionView.isHidden = true
+        }
         
         if let userProfileImageUrl = tempReviewDatas.userProfileImageUrl{
             userProfileImage.makeCircular()

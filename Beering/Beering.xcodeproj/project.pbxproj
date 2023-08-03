@@ -27,7 +27,6 @@
 		2E3A3E292A78091800B2C98A /* ReviewDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3A3E282A78091800B2C98A /* ReviewDetailVC.swift */; };
 		2E3A3E2B2A780F8200B2C98A /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3A3E2A2A780F8200B2C98A /* UITextView.swift */; };
 		2E3A3E2F2A79455F00B2C98A /* ReviewDetailImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3A3E2E2A79455F00B2C98A /* ReviewDetailImageCell.swift */; };
-		2E44D2FB2A7A5ED3004F8A3F /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E44D2FA2A7A5ED3004F8A3F /* UIButton.swift */; };
 		2E80BE832A5F0A09002E8F0E /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80BE812A5F0A09002E8F0E /* FilterCell.swift */; };
 		2E80BE842A5F0A09002E8F0E /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E80BE822A5F0A09002E8F0E /* FilterCell.xib */; };
 		2E80BE872A5F9D97002E8F0E /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80BE852A5F9D97002E8F0E /* SearchCell.swift */; };
@@ -91,7 +90,6 @@
 		2E3A3E282A78091800B2C98A /* ReviewDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailVC.swift; sourceTree = "<group>"; };
 		2E3A3E2A2A780F8200B2C98A /* UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		2E3A3E2E2A79455F00B2C98A /* ReviewDetailImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailImageCell.swift; sourceTree = "<group>"; };
-		2E44D2FA2A7A5ED3004F8A3F /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		2E80BE812A5F0A09002E8F0E /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		2E80BE822A5F0A09002E8F0E /* FilterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
 		2E80BE852A5F9D97002E8F0E /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 				2E309DCE2A55425000B19B2A /* UIImageView.swift */,
 				2ED7A19A2A5E9E67009CC66A /* UIView.swift */,
 				2E3A3E2A2A780F8200B2C98A /* UITextView.swift */,
-				2E44D2FA2A7A5ED3004F8A3F /* UIButton.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -548,7 +545,6 @@
 				2E80BE872A5F9D97002E8F0E /* SearchCell.swift in Sources */,
 				2E3A3E242A729B3E00B2C98A /* StarSlider.swift in Sources */,
 				2E9F85D72A5270F10082BC8B /* ViewController.swift in Sources */,
-				2E44D2FB2A7A5ED3004F8A3F /* UIButton.swift in Sources */,
 				2E3A3E2F2A79455F00B2C98A /* ReviewDetailImageCell.swift in Sources */,
 				2EAF91CC2A6E461A00AF3A8D /* MyReviewVC.swift in Sources */,
 				2ED3C6BD2A68419D00C0836E /* ReviewPreviewCell.swift in Sources */,
