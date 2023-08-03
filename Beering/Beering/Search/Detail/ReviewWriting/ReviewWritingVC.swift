@@ -28,6 +28,8 @@ class ReviewWritingVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationBarInit()
+        
         /// TODO : textColor / font
         /// 적용은 되는데, 그렇게 보이지 않음
         reviewWritingTextView.delegate = self
@@ -50,6 +52,31 @@ class ReviewWritingVC: UIViewController {
         for view in titleViews{
             view.titleViewInit()
         }
+    }
+    
+    private func navigationBarInit(){
+
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "Beering_Black")
+                
+        let leftBarButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "arrow_left"), style: .done, target: self, action: #selector(goBack))
+        self.navigationItem.leftBarButtonItem = leftBarButton
+        
+        self.navigationItem.title = "리뷰 작성"
+        
+        // 커스텀 폰트를 가져옴
+        if let customFont = UIFont(name: "Pretendard", size: 16) {
+            // 타이틀 텍스트를 NSAttributedString으로 생성하고 폰트를 적용
+            let titleTextAttributes: [NSAttributedString.Key: Any] = [
+                .font: customFont,
+                .foregroundColor: UIColor(named: "Beering_Black") ?? .black // 폰트 색상 설정
+            ]
+            self.navigationController?.navigationBar.titleTextAttributes = titleTextAttributes
+        }
+        
+    }
+    
+    @objc private func goBack(){
+        self.navigationController?.popViewController(animated: true)
     }
     
     // 컬렉션 뷰 셀 삭제 처리
