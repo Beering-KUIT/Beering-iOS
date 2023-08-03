@@ -56,6 +56,7 @@ class HomeVC: UIViewController {
 
         // Do any additional setup after loading the view.
         print("## HomeVC 진입")
+        self.navigationController?.navigationBar.barTintColor = UIColor(named: "Beering_White")
         
         reviewTableView.delegate = self
         reviewTableView.dataSource = self
@@ -65,6 +66,10 @@ class HomeVC: UIViewController {
         
         homeProfileImage.makeCircular()
         homeProfileImage.loadImage(from: "https://picsum.photos/333")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
     }
     
 }
@@ -96,6 +101,12 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource{
 //        print("## indexPath.row : " + String(indexPath.row))
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let nextVC = UIStoryboard(name: "ReviewDetail", bundle: nil).instantiateInitialViewController()
+        self.navigationController?.pushViewController(nextVC!, animated: true)
     }
 }
 

@@ -86,10 +86,10 @@ class DetailVC: UIViewController {
     private func navigationBarInit(){
         
         // 네비게이션 바를 투명하게 설정
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.isTranslucent = true
-        navigationController?.view.backgroundColor = .clear
+//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+//        navigationController?.navigationBar.shadowImage = UIImage()
+//        navigationController?.navigationBar.isTranslucent = true
+//        navigationController?.view.backgroundColor = .clear
 
 //        // Safe Area의 Top을 0으로 설정하여 네비게이션 바가 스크롤 뷰를 밀어내지 않도록 함
 //        additionalSafeAreaInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
@@ -147,6 +147,12 @@ extension DetailVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         cell.reviewText.text = reviewPreviewData[indexPath.row].reviewText
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let nextVC = UIStoryboard(name: "ReviewDetail", bundle: nil).instantiateInitialViewController()
+        self.navigationController?.pushViewController(nextVC!, animated: true)
     }
 
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

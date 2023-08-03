@@ -22,6 +22,8 @@ class MyPageVC: UIViewController {
             view.titleViewInit()
         }
         
+        self.navigationController?.navigationBar.barTintColor = UIColor(named: "Beering_White")
+        
         profileImage.makeCircular()
 //        profileImage.loadImage(from: "https://picsum.photos/347")
         profileImage.image = UIImage(named: "user_profile_default")

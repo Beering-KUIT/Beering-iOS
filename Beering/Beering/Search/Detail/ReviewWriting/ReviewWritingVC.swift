@@ -28,7 +28,14 @@ class ReviewWritingVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textViewInit(reviewWritingTextView)
+        /// TODO : textColor / font
+        /// 적용은 되는데, 그렇게 보이지 않음
+        reviewWritingTextView.delegate = self
+        reviewWritingTextView.textColor = .lightGray
+        reviewWritingTextView.text = "시음한 뒤 감상을 적어주세요."
+        //        reviewWritingTextView.font = UIFont(name: "Pretendard", size: 30)
+
+        reviewWritingTextView.textViewInit()
         
         reviewPictureCollectionView.dataSource = self
         reviewPictureCollectionView.delegate = self
@@ -157,31 +164,6 @@ extension ReviewWritingVC: UITextViewDelegate{
         }
     }
     
-    func textViewInit(_ myTextView: UITextView){
-        
-        reviewWritingTextView.delegate = self
-        reviewWritingTextView.textColor = .lightGray
-        reviewWritingTextView.text = "시음한 뒤 감상을 적어주세요."
-        //        reviewWritingTextView.font = UIFont(name: "Pretendard", size: 30)
-        
-        // 먼저 행간 조절 스타일 설정
-        let style = NSMutableParagraphStyle()
-        style.lineSpacing = 10
-        
-        let attributedString = NSMutableAttributedString(string: myTextView.text)
-        
-        // 자간 조절 설정
-        attributedString.addAttribute(NSAttributedString.Key.kern, value: CGFloat(1), range: NSRange(location: 0, length: attributedString.length))
-        
-        // 행간 스타일 추가
-        attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value: style, range: NSRange(location: 0, length: attributedString.length))
-        
-        // TextView에 세팅
-        myTextView.attributedText = attributedString
-        
-        // Text contentInset
-        myTextView.contentInset = .init(top: 20, left: 20, bottom: 20, right: 20)
-    }
 }
 
 extension ReviewWritingVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
