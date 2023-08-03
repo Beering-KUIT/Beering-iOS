@@ -81,6 +81,8 @@ class SearchVC: UIViewController {
 extension SearchVC{
     
     func layoutInit(){
+        self.navigationController?.navigationBar.barTintColor = UIColor(named: "Beering_White")
+        
         searchTextField.borderStyle = .none
         searchView.addBottomBorderWithColor(color: UIColor.black, width: 1)
         filterView.makeCircular()

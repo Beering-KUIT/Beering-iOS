@@ -56,6 +56,7 @@ class HomeVC: UIViewController {
 
         // Do any additional setup after loading the view.
         print("## HomeVC 진입")
+        self.navigationController?.navigationBar.barTintColor = UIColor(named: "Beering_White")
         
         reviewTableView.delegate = self
         reviewTableView.dataSource = self

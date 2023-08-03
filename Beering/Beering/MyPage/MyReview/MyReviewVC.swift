@@ -52,6 +52,7 @@ class MyReviewVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tabBarController?.tabBar.isHidden = true
         self.navigationController?.navigationBar.isHidden = false
         
         myReviewTableView.delegate = self
