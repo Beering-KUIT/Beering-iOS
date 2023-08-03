@@ -66,4 +66,38 @@ extension FilterVC: UITextFieldDelegate{
 
         return false
     }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        //MARK: - minimum <= maximum ? Validation
+        // minimum 입력시, minimum > maximum 이라면 maximum 을 99999+
+        if textField == minimumPriceTextField{
+            if var minimumPriceText = minimumPriceTextField.text, var maximumPriceText = maximumPriceTextField.text{
+                
+                minimumPriceText = minimumPriceText.filter { "0123456789".contains($0) }
+                maximumPriceText = maximumPriceText.filter { "0123456789".contains($0) }
+                
+                if let minimumPrice = Int(minimumPriceText), let maximumPrice = Int(maximumPriceText) {
+                    if minimumPrice > maximumPrice {
+                        maximumPriceTextField.text = ""
+                    }
+                }
+            }
+        }
+        // maximum 입력시, minimum > maximum 이라면 minimum 을 0
+        else if textField == maximumPriceTextField{
+            if var minimumPriceText = minimumPriceTextField.text, var maximumPriceText = textField.text {
+                
+                minimumPriceText = minimumPriceText.filter { "0123456789".contains($0) }
+                maximumPriceText = maximumPriceText.filter { "0123456789".contains($0) }
+                
+                if let minimumPrice = Int(minimumPriceText), let maximumPrice = Int(maximumPriceText) {
+                    if maximumPrice < minimumPrice {
+                        minimumPriceTextField.text = ""
+                    }
+                }
+            }
+        }
+        
+    }
 }
