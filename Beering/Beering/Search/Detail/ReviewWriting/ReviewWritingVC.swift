@@ -235,7 +235,7 @@ extension ReviewWritingVC: UIImagePickerControllerDelegate, UINavigationControll
     func pictureUploadByCamera(){
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .camera
-        imagePicker.allowsEditing = true
+        imagePicker.allowsEditing = false
         imagePicker.cameraDevice = .rear
         imagePicker.cameraCaptureMode = .photo
         imagePicker.delegate = self
@@ -245,7 +245,7 @@ extension ReviewWritingVC: UIImagePickerControllerDelegate, UINavigationControll
     // Use Photo Btn
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             myReviewImages.append(image)
             myReviewImageCountLabel.text = String(myReviewImages.count) + "/10"
             
