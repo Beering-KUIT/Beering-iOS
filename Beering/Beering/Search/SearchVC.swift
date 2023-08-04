@@ -78,6 +78,12 @@ class SearchVC: UIViewController {
         
     }
     
+    @IBAction func clearSearchTextfieldBtnTap(_ sender: Any) {
+        
+        searchTextField.text = ""
+    }
+    
+    
 }
 
 extension SearchVC{
