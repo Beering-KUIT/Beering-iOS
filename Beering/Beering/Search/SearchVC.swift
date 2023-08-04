@@ -61,6 +61,8 @@ class SearchVC: UIViewController {
         searchCollectionView.dataSource = self
         searchCollectionView.delegate = self
         
+        searchTextField.delegate = self
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -202,4 +204,15 @@ extension SearchVC: UICollectionViewDataSource, UICollectionViewDelegate, UIColl
         }
     }
     
+}
+
+extension SearchVC: UITextFieldDelegate{
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // 키보드를 사라지게 하는 코드
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    /// TODO 글자 입력시마다 검색 API 호출
 }
