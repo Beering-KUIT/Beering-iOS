@@ -248,6 +248,8 @@ extension ReviewWritingVC: UIImagePickerControllerDelegate, UINavigationControll
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
             myReviewImages.append(image)
             myReviewImageCountLabel.text = String(myReviewImages.count) + "/10"
+            
+            self.reviewPictureCollectionView.reloadData()
         }
         
         picker.dismiss(animated: true, completion: nil)
