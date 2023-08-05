@@ -8,7 +8,16 @@
 import UIKit
 import SwiftUI
 
-class SearchVC: UIViewController {
+class SearchVC: UIViewController, SendFilterDataDelegate {
+    
+    func receiveData(data: String) {
+        filterOptions.append(data)
+        self.filterCollectionView.reloadData()
+    }
+    
+    func clearFilterOptionData() {
+        filterOptions.removeAll()
+    }
 
     @IBOutlet weak var searchTextField: UITextField!
     
@@ -30,14 +39,8 @@ class SearchVC: UIViewController {
         searchCellInfo(imageUrl: "https://picsum.photos/100/100", titleKor: "클라우드6", titleEng: "Kloud6", brewery: "Lotte6", isFavorite: false)
     ]
     
-    var selectedFilterOptions: [String] = [
-        "맥주",
-        "리뷰많은순",
-        "0~20000원",
-        "와인",
-        "리뷰많은순",
-        "0~20000원"
-    ]
+    /// TODO Refactoring
+    var filterOptions: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,9 +76,10 @@ class SearchVC: UIViewController {
     
     @IBAction func filterBtnTap(_ sender: Any) {
         
-        let filterVC = UIStoryboard(name: "Filter", bundle: nil).instantiateInitialViewController()
+        let filterVC = UIStoryboard(name: "Filter", bundle: nil).instantiateInitialViewController() as! FilterVC
+        filterVC.delegate = self
         
-        self.present(filterVC!, animated: true)
+        self.present(filterVC, animated: true)
         
     }
     
@@ -112,7 +116,7 @@ extension SearchVC: UICollectionViewDataSource, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if collectionView == filterCollectionView{
-            return selectedFilterOptions.count
+            return filterOptions.count
         }else if collectionView == searchCollectionView{
             return tempData.count
         }
@@ -125,7 +129,7 @@ extension SearchVC: UICollectionViewDataSource, UICollectionViewDelegate, UIColl
         if collectionView == filterCollectionView{
             let cell = filterCollectionView.dequeueReusableCell(withReuseIdentifier: "filterCell", for: indexPath) as! FilterCell
             
-            cell.filterLabel.text = selectedFilterOptions[indexPath.row]
+            cell.filterLabel.text = filterOptions[indexPath.row]
             cell.makeCircular()
             
             return cell
@@ -181,7 +185,7 @@ extension SearchVC: UICollectionViewDataSource, UICollectionViewDelegate, UIColl
                 
         if collectionView == filterCollectionView{
             
-            let filterOption = selectedFilterOptions[indexPath.item]
+            let filterOption = filterOptions[indexPath.item]
             let cellWidth = calculateFilterCellWidth(for: filterOption)
             
             print("Width : \(cellWidth), Height : \(collectionView.frame.height)")

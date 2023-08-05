@@ -8,7 +8,14 @@
 import UIKit
 import SwiftUI
 
+protocol SendFilterDataDelegate: AnyObject{
+    func receiveData(data: String)
+    func clearFilterOptionData()
+}
+
 class FilterVC: UIViewController {
+    
+    weak var delegate: SendFilterDataDelegate?
     
     var filterOption = selectedFilterOption()
     
@@ -122,6 +129,44 @@ class FilterVC: UIViewController {
             filterApplyBtn.backgroundColor = UIColor(named: "Gray01")
         }
     }
+    
+    @IBAction func filterApplyBtnTap(_ sender: Any) {
+        
+        delegate?.clearFilterOptionData()
+        
+        if filterOption.sortBy != ""{
+            delegate?.receiveData(data: filterOption.sortBy)
+        }
+        if !filterOption.liquorType.isEmpty{
+            for typeEng in filterOption.liquorType{
+                var typeKor: String?
+                
+                switch typeEng{
+                case "beer":
+                    typeKor = "맥주"
+                case "wine":
+                    typeKor = "와인"
+                case "traditional_liquor":
+                    typeKor = "전통주"
+                default: break
+                }
+                
+                delegate?.receiveData(data: typeKor!)
+            }
+        }
+        if filterOption.minPrice != "" && filterOption.maxPrice != ""{
+            delegate?.receiveData(data: filterOption.minPrice + "원 ~ " + filterOption.maxPrice + "원")
+        }else if filterOption.minPrice != ""{
+            delegate?.receiveData(data: filterOption.minPrice + "원 이상")
+        }else if filterOption.maxPrice != ""{
+            delegate?.receiveData(data: filterOption.maxPrice + "원 이하")
+        }
+        
+        /// TODO API 호출하여, 검색 결과 주류들 반영하기
+        
+        dismiss(animated: true)
+    }
+    
 }
 
 extension FilterVC: UITextFieldDelegate{
@@ -150,9 +195,9 @@ extension FilterVC: UITextFieldDelegate{
         }
         
         if textField == minimumPriceTextField{
-            filterOption.minPrice = textField.text?.filter { "0123456789".contains($0) } ?? ""
+            filterOption.minPrice = textField.text ?? ""
         }else if textField == maximumPriceTextField{
-            filterOption.maxPrice = textField.text?.filter { "0123456789".contains($0) } ?? ""
+            filterOption.maxPrice = textField.text ?? ""
         }
         
         updateFilterApplyBtn()

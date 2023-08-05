@@ -339,6 +339,9 @@
                                 <state key="normal" title="주류 보기">
                                     <color key="titleColor" name="Beering_White"/>
                                 </state>
+                                <connections>
+                                    <action selector="filterApplyBtnTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="z6J-NW-rFD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Oix-xo-dzH"/>
