@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class SearchVC: UIViewController {
 
@@ -221,4 +222,10 @@ extension SearchVC: UITextFieldDelegate{
     }
     
     /// TODO 글자 입력시마다 검색 API 호출
+}
+
+struct SearchSBPreView:PreviewProvider {
+    static var previews: some View {
+        UIStoryboard(name: "Search", bundle: nil).instantiateInitialViewController()!.toPreview()
+    }
 }

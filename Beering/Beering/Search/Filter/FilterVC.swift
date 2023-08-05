@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class FilterVC: UIViewController {
     
@@ -103,5 +104,11 @@ extension FilterVC: UITextFieldDelegate{
             }
         }
         
+    }
+}
+
+struct FilterSBPreView:PreviewProvider {
+    static var previews: some View {
+        UIStoryboard(name: "Filter", bundle: nil).instantiateInitialViewController()!.toPreview()
     }
 }
