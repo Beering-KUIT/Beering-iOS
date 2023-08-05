@@ -36,9 +36,9 @@
                                 <rect key="frame" x="0.0" y="188" width="188" height="72"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="맥주명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNA-Xw-MsG">
-                                        <rect key="frame" x="14" y="11.999999999999998" width="144" height="19.333333333333329"/>
+                                        <rect key="frame" x="14" y="11.999999999999998" width="140" height="19.333333333333329"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="144" id="teh-Wq-pTd"/>
+                                            <constraint firstAttribute="width" constant="140" id="teh-Wq-pTd"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -62,24 +62,26 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart_blank" translatesAutoresizingMaskIntoConstraints="NO" id="BW7-tU-had">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsc-G5-RFz">
                                         <rect key="frame" x="154" y="9.6666666666666572" width="24" height="24"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="BSb-iH-res"/>
-                                            <constraint firstAttribute="width" constant="24" id="lIu-Ne-U6r"/>
+                                            <constraint firstAttribute="height" constant="24" id="YTM-Z3-HUn"/>
+                                            <constraint firstAttribute="width" constant="24" id="YTf-bU-NQr"/>
                                         </constraints>
-                                    </imageView>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="heart_blank"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="BW7-tU-had" secondAttribute="trailing" constant="10" id="XJc-qi-Ozj"/>
+                                    <constraint firstItem="rsc-G5-RFz" firstAttribute="centerY" secondItem="dNA-Xw-MsG" secondAttribute="centerY" id="0Yk-dx-vNY"/>
+                                    <constraint firstAttribute="trailing" secondItem="rsc-G5-RFz" secondAttribute="trailing" constant="10" id="YM4-q3-kxY"/>
                                     <constraint firstItem="3fn-Y4-bjb" firstAttribute="leading" secondItem="m0L-ID-LVz" secondAttribute="leading" constant="14" id="aN9-5Q-qbu"/>
                                     <constraint firstItem="qfv-m9-zqs" firstAttribute="top" secondItem="3fn-Y4-bjb" secondAttribute="bottom" constant="3" id="bIe-gN-gK4"/>
                                     <constraint firstItem="qfv-m9-zqs" firstAttribute="leading" secondItem="m0L-ID-LVz" secondAttribute="leading" constant="14" id="bRu-Ru-Hfo"/>
                                     <constraint firstItem="dNA-Xw-MsG" firstAttribute="top" secondItem="m0L-ID-LVz" secondAttribute="top" constant="12" id="iyS-Qc-TYu"/>
                                     <constraint firstItem="3fn-Y4-bjb" firstAttribute="top" secondItem="dNA-Xw-MsG" secondAttribute="bottom" constant="3" id="jco-ll-9Gt"/>
                                     <constraint firstItem="dNA-Xw-MsG" firstAttribute="leading" secondItem="m0L-ID-LVz" secondAttribute="leading" constant="14" id="pZq-cF-6HN"/>
-                                    <constraint firstItem="BW7-tU-had" firstAttribute="centerY" secondItem="dNA-Xw-MsG" secondAttribute="centerY" id="w9u-Lf-E9a"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -106,7 +108,7 @@
             <size key="customSize" width="327" height="277"/>
             <connections>
                 <outlet property="breweryTitle" destination="qfv-m9-zqs" id="xUZ-Tf-l6z"/>
-                <outlet property="isFavorite" destination="BW7-tU-had" id="aje-o3-poA"/>
+                <outlet property="isFavorite" destination="rsc-G5-RFz" id="XLB-xV-Zv2"/>
                 <outlet property="liquorImage" destination="So7-Bv-ULg" id="wXp-EM-8Sp"/>
                 <outlet property="liquorTitleEng" destination="3fn-Y4-bjb" id="l0E-pk-hL8"/>
                 <outlet property="liquorTitleKor" destination="dNA-Xw-MsG" id="Lfi-w3-Oyj"/>

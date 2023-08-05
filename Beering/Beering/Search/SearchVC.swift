@@ -144,9 +144,11 @@ extension SearchVC: UICollectionViewDataSource, UICollectionViewDelegate, UIColl
             cell.breweryTitle.text = tempData[indexPath.row].brewery
             
             if tempData[indexPath.row].isFavorite{
-                cell.isFavorite.image = UIImage(named: "heart_filled")
+                cell.isFavorite.isSelected = true
+                cell.updateIsFavoriteImage()
             }else{
-                cell.isFavorite.image = UIImage(named: "heart_blank")
+                cell.isFavorite.isSelected = false
+                cell.updateIsFavoriteImage()
             }
             
             return cell
