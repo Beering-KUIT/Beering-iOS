@@ -11,6 +11,8 @@ import SwiftUI
 class FilterVC: UIViewController {
     
     @IBOutlet var sortOptions: [UIButton]!
+    @IBOutlet var liquorTypes: [UIButton]!
+    
     @IBOutlet var filterOptionTitleViews: [UIView]!
     
     @IBOutlet weak var minimumPriceTextField: UITextField! {
@@ -32,14 +34,16 @@ class FilterVC: UIViewController {
             buttonView.makeCircular()
         }
         
+        for liquorBtn in liquorTypes{
+            liquorBtn.addTarget(self, action: #selector(liquorTypeBtnTap), for: .touchUpInside)
+        }
+        
         minimumPriceTextField.delegate = self
         maximumPriceTextField.delegate = self
     }
     
-    @IBAction func buttonTapped(_ sender: UIButton) {
-        // 클릭 이벤트에 대한 처리 로직을 여기에 작성합니다.
-        // sender를 통해 어떤 버튼이 클릭되었는지 확인할 수 있습니다.
-        print("Button tapped: \(sender.titleLabel?.text ?? "")")
+    @IBAction func sortByBtnTapped(_ sender: UIButton) {
+        print("sortByBtnTapped: \(sender.titleLabel?.text ?? "")")
         
         for sortBtn in sortOptions{
             sortBtn.backgroundColor = UIColor(named: "Gray03")
@@ -47,7 +51,34 @@ class FilterVC: UIViewController {
         sender.backgroundColor = UIColor(named: "Beering_Black")
     }
     
-    
+    /// TODO index 방식 Refactoring
+    @objc func liquorTypeBtnTap(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        
+        print("liquorTypeBtnTap")
+        switch sender{
+        case liquorTypes[0]:
+            if sender.isSelected{
+                sender.setImage(UIImage(named: "beer_filled"), for: .normal)
+            }else{
+                sender.setImage(UIImage(named: "beer_blank"), for: .normal)
+            }
+        case liquorTypes[1]:
+            if sender.isSelected{
+                sender.setImage(UIImage(named: "wine_filled"), for: .normal)
+            }else{
+                sender.setImage(UIImage(named: "wine_blank"), for: .normal)
+            }
+        case liquorTypes[2]:
+            if sender.isSelected{
+                sender.setImage(UIImage(named: "traditional_liquor_filled"), for: .normal)
+            }else{
+                sender.setImage(UIImage(named: "traditional_liquor_blank"), for: .normal)
+            }
+        default:
+            print("default")
+        }
+    }
 }
 
 extension FilterVC: UITextFieldDelegate{

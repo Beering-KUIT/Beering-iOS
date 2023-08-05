@@ -60,7 +60,7 @@
                                             <color key="titleColor" name="Beering_White"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tPF-sx-E43"/>
+                                            <action selector="sortByBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2Oo-GJ-skV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxP-j8-kgO">
@@ -76,7 +76,7 @@
                                             <color key="titleColor" name="Beering_White"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5pL-gt-rQC"/>
+                                            <action selector="sortByBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bBI-YN-xDs"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaM-20-0Yh">
@@ -92,7 +92,7 @@
                                             <color key="titleColor" name="Beering_White"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yug-eS-cE6"/>
+                                            <action selector="sortByBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="e5b-ki-cTB"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mx7-t4-xKM">
@@ -108,7 +108,7 @@
                                             <color key="titleColor" name="Beering_White"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="pCn-zR-M9D"/>
+                                            <action selector="sortByBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1nD-Wo-M6q"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -380,6 +380,9 @@
                         <outletCollection property="sortOptions" destination="rxP-j8-kgO" collectionClass="NSMutableArray" id="Uhd-Xl-OMB"/>
                         <outletCollection property="sortOptions" destination="yaM-20-0Yh" collectionClass="NSMutableArray" id="RlW-4F-4oT"/>
                         <outletCollection property="sortOptions" destination="Mx7-t4-xKM" collectionClass="NSMutableArray" id="PPx-Ld-fsf"/>
+                        <outletCollection property="liquorTypes" destination="Ymf-vS-FeI" collectionClass="NSMutableArray" id="nTh-2k-LMT"/>
+                        <outletCollection property="liquorTypes" destination="1AZ-UZ-84R" collectionClass="NSMutableArray" id="Pyr-Lk-5IF"/>
+                        <outletCollection property="liquorTypes" destination="9ee-cf-P1F" collectionClass="NSMutableArray" id="yVF-tf-dGW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
