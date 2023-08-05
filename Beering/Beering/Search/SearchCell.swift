@@ -7,7 +7,14 @@
 
 import UIKit
 
+protocol SearchCellDelegate: AnyObject {
+    func reloadFavoriteData(_ index: Int, _ isSelected: Bool)
+}
+
 class SearchCell: UICollectionViewCell {
+    
+    weak var delegate: SearchCellDelegate?
+    var index: Int?
 
     @IBOutlet weak var liquorImage: UIImageView!
     @IBOutlet weak var liquorTitleKor: UILabel!
@@ -23,10 +30,19 @@ class SearchCell: UICollectionViewCell {
     func updateIsFavoriteImage(){
         
         if isFavorite.isSelected{
-            self.isFavorite.setImage(UIImage(named: "heart_filled"), for: .normal)
+            isFavorite.setImage(UIImage(named: "heart_filled"), for: .normal)
         }else{
-            self.isFavorite.setImage(UIImage(named: "heart_blank"), for: .normal)
+            isFavorite.setImage(UIImage(named: "heart_blank"), for: .normal)
         }
+    }
+    
+    @IBAction func isFavoriteBtnTap(_ sender: Any) {
+        
+        print("who is delegate ? : \(delegate)")
+        isFavorite.isSelected = !isFavorite.isSelected
+        updateIsFavoriteImage()
+        
+        delegate?.reloadFavoriteData(index!, isFavorite.isSelected)
     }
 
 }

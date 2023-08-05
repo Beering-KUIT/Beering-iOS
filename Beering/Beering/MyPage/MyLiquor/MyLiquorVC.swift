@@ -11,7 +11,7 @@ class MyLiquorVC: UIViewController {
     
     @IBOutlet weak var myLiquorCollectionView: UICollectionView!
     
-    let tempData: [searchCellInfo] = [
+    var tempData: [searchCellInfo] = [
         searchCellInfo(imageUrl: "https://picsum.photos/347", titleKor: "클라우드", titleEng: "Kloud", brewery: "Lotte", isFavorite: false),
         searchCellInfo(imageUrl: "https://picsum.photos/347/200", titleKor: "클라우드1", titleEng: "Kloud1", brewery: "Lotte1", isFavorite: false),
         searchCellInfo(imageUrl: "https://picsum.photos/333/600", titleKor: "클라우드2", titleEng: "Kloud2", brewery: "Lotte2", isFavorite: true),
@@ -71,7 +71,7 @@ class MyLiquorVC: UIViewController {
 }
 
 
-extension MyLiquorVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension MyLiquorVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, SearchCellDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return tempData.count
@@ -81,6 +81,9 @@ extension MyLiquorVC: UICollectionViewDataSource, UICollectionViewDelegate, UICo
         
         // 사용할 Cell dequeue
         let cell = myLiquorCollectionView.dequeueReusableCell(withReuseIdentifier: "searchCell", for: indexPath) as! SearchCell
+        
+        cell.delegate = self
+        cell.index = indexPath.row
         
         cell.liquorImage.loadImage(from: tempData[indexPath.row].imageUrl)
         cell.liquorTitleKor.text = tempData[indexPath.row].titleKor
@@ -97,6 +100,12 @@ extension MyLiquorVC: UICollectionViewDataSource, UICollectionViewDelegate, UICo
         
         return cell
         
+    }
+    
+    // Heart Click 시의, SearchCellDelegate 구현 메서드
+    func reloadFavoriteData(_ index: Int, _ isSelected: Bool){
+        tempData[index].isFavorite = isSelected
+//        searchCollectionView.reloadData()
     }
     
     // 선택시 move to Detail
