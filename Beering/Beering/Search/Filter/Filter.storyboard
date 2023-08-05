@@ -328,9 +328,9 @@
                                     <constraint firstItem="OKF-zg-plf" firstAttribute="leading" secondItem="Blk-an-Ujc" secondAttribute="trailing" constant="20" id="rSI-ae-2dD"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhR-ta-Co3">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhR-ta-Co3">
                                 <rect key="frame" x="24" y="723" width="345" height="45"/>
-                                <color key="backgroundColor" name="Beering_Black"/>
+                                <color key="backgroundColor" name="Gray01"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Idg-Sq-FGV"/>
                                 </constraints>
@@ -359,6 +359,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="filterApplyBtn" destination="DhR-ta-Co3" id="5PE-yI-uoy"/>
                         <outlet property="maximumPriceTextField" destination="88B-91-wjS" id="xMO-BL-CdY"/>
                         <outlet property="minimumPriceTextField" destination="Blk-an-Ujc" id="0do-3a-Pbx"/>
                         <outletCollection property="filterOptionTitleViews" destination="HrN-P6-3FS" collectionClass="NSMutableArray" id="E5n-ru-rOe"/>

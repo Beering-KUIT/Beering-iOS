@@ -10,12 +10,7 @@ import SwiftUI
 
 class FilterVC: UIViewController {
     
-    var selectedFilterOption: [String : String] = [
-        "sortBy" : "",
-        "liquorType" : "",
-        "minPrice" : "",
-        "maxPrice" : ""
-    ]
+    var filterOption = selectedFilterOption()
     
     @IBOutlet var sortOptions: [UIButton]!
     @IBOutlet var liquorTypes: [UIButton]!
@@ -29,9 +24,11 @@ class FilterVC: UIViewController {
         didSet { maximumPriceTextField?.addDoneButtonOnKeyboard() }
     }
     
+    @IBOutlet var filterApplyBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         for view in filterOptionTitleViews{
             view.titleViewInit()
@@ -39,22 +36,27 @@ class FilterVC: UIViewController {
         
         for sortByBtn in sortOptions{
             sortByBtn.addTarget(self, action: #selector(sortByBtnTap), for: .touchUpInside)
+            sortByBtn.addTarget(self, action: #selector(updateFilterApplyBtn), for: .touchUpInside)
             sortByBtn.makeCircular()
         }
         
         for liquorBtn in liquorTypes{
             liquorBtn.addTarget(self, action: #selector(liquorTypeBtnTap), for: .touchUpInside)
+            liquorBtn.addTarget(self, action: #selector(updateFilterApplyBtn), for: .touchUpInside)
         }
         
         minimumPriceTextField.delegate = self
+        minimumPriceTextField.addTarget(self, action: #selector(updateFilterApplyBtn), for: .valueChanged)
+        
         maximumPriceTextField.delegate = self
+        maximumPriceTextField.addTarget(self, action: #selector(updateFilterApplyBtn), for: .valueChanged)
+        
     }
     
     @objc func sortByBtnTap(_ sender: UIButton) {
-        print("sortByBtnTapped: \(sender.titleLabel?.text ?? "")")
         
-        if sender.titleLabel?.text != selectedFilterOption["sortBy"] {
-            selectedFilterOption["sortBy"] = sender.titleLabel?.text
+        if sender.titleLabel?.text != filterOption.sortBy {
+            filterOption.sortBy = (sender.titleLabel?.text)!
             
             for sortBtn in sortOptions{
                 sortBtn.isSelected = false
@@ -63,14 +65,13 @@ class FilterVC: UIViewController {
             sender.isSelected = true
             sender.backgroundColor = UIColor(named: "Beering_Black")
         }else{
-            selectedFilterOption["sortBy"] = ""
+            filterOption.sortBy = ""
             
             for sortBtn in sortOptions{
                 sortBtn.isSelected = false
                 sortBtn.backgroundColor = UIColor(named: "Gray03")
             }
         }
-        print("selectedFilterOption[\"sortBy\"] : \(selectedFilterOption["sortBy"])")
         
     }
     
@@ -78,28 +79,47 @@ class FilterVC: UIViewController {
     @objc func liquorTypeBtnTap(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
         
-        print("liquorTypeBtnTap")
         switch sender{
         case liquorTypes[0]:
             if sender.isSelected{
                 sender.setImage(UIImage(named: "beer_filled"), for: .normal)
+                filterOption.liquorType.append("beer")
             }else{
                 sender.setImage(UIImage(named: "beer_blank"), for: .normal)
+                filterOption.liquorType.removeAll{ $0 == "beer" }
             }
         case liquorTypes[1]:
             if sender.isSelected{
                 sender.setImage(UIImage(named: "wine_filled"), for: .normal)
+                filterOption.liquorType.append("wine")
             }else{
                 sender.setImage(UIImage(named: "wine_blank"), for: .normal)
+                filterOption.liquorType.removeAll{ $0 == "wine" }
             }
         case liquorTypes[2]:
             if sender.isSelected{
                 sender.setImage(UIImage(named: "traditional_liquor_filled"), for: .normal)
+                filterOption.liquorType.append("traditional_liquor")
             }else{
                 sender.setImage(UIImage(named: "traditional_liquor_blank"), for: .normal)
+                filterOption.liquorType.removeAll{ $0 == "traditional_liquor" }
             }
         default:
             print("default")
+        }
+    }
+    
+    @objc func updateFilterApplyBtn() {
+        
+        print(filterOption)
+        
+        if filterOption.sortBy != "" || !filterOption.liquorType.isEmpty || filterOption.maxPrice != "" || filterOption.minPrice != "" {
+            
+            filterApplyBtn.isEnabled = true
+            filterApplyBtn.backgroundColor = UIColor(named: "Beering_Black")
+        }else{
+            filterApplyBtn.isEnabled = false
+            filterApplyBtn.backgroundColor = UIColor(named: "Gray01")
         }
     }
 }
@@ -110,30 +130,33 @@ extension FilterVC: UITextFieldDelegate{
         
         // 현재 입력된 문자열과 새로운 문자열을 합친 최종 문자열
         let updatedString = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? string
-                
-        if updatedString == "" {
-            textField.text = updatedString
-            return false
-        }
-
+        
         // 최종 문자열에서 숫자 부분만 추출 (콤마도 제거)
         let filteredString = updatedString.filter { "0123456789".contains($0) }
         
-        if Int(filteredString) == 0{
-            return false
-        }
+        if filteredString != "" && Int(filteredString) != 0{
+            // 숫자 포맷팅
+            // 콤마를 추가하여 새로운 텍스트 설정
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .decimal
+            formatter.groupingSeparator = ","
+            formatter.groupingSize = 3
             
-        // 숫자 포맷팅
-        // 콤마를 추가하여 새로운 텍스트 설정
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        formatter.groupingSeparator = ","
-        formatter.groupingSize = 3
-
-        if let number = Int(filteredString), let formattedText = formatter.string(from: NSNumber(value: number)) {
-            textField.text = formattedText
+            if let number = Int(filteredString), let formattedText = formatter.string(from: NSNumber(value: number)) {
+                textField.text = formattedText
+            }
+        }else{
+            textField.text = ""
         }
-
+        
+        if textField == minimumPriceTextField{
+            filterOption.minPrice = textField.text?.filter { "0123456789".contains($0) } ?? ""
+        }else if textField == maximumPriceTextField{
+            filterOption.maxPrice = textField.text?.filter { "0123456789".contains($0) } ?? ""
+        }
+        
+        updateFilterApplyBtn()
+        
         return false
     }
     
@@ -176,4 +199,11 @@ struct FilterSBPreView:PreviewProvider {
     static var previews: some View {
         UIStoryboard(name: "Filter", bundle: nil).instantiateInitialViewController()!.toPreview()
     }
+}
+
+struct selectedFilterOption{
+    var sortBy: String = ""
+    var liquorType: [String] = []
+    var minPrice: String = ""
+    var maxPrice: String = ""
 }
