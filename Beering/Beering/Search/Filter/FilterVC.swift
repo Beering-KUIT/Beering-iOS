@@ -36,7 +36,18 @@ class FilterVC: UIViewController {
         maximumPriceTextField.delegate = self
     }
     
-
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        // 클릭 이벤트에 대한 처리 로직을 여기에 작성합니다.
+        // sender를 통해 어떤 버튼이 클릭되었는지 확인할 수 있습니다.
+        print("Button tapped: \(sender.titleLabel?.text ?? "")")
+        
+        for sortBtn in sortOptions{
+            sortBtn.backgroundColor = UIColor(named: "Gray03")
+        }
+        sender.backgroundColor = UIColor(named: "Beering_Black")
+    }
+    
+    
 }
 
 extension FilterVC: UITextFieldDelegate{

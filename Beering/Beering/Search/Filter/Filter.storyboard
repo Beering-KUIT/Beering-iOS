@@ -49,7 +49,7 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rtp-JT-x9q">
                                         <rect key="frame" x="24" y="53" width="56" height="32"/>
-                                        <color key="backgroundColor" name="Beering_Black"/>
+                                        <color key="backgroundColor" name="Gray03"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="NnP-FK-EH0"/>
                                             <constraint firstAttribute="width" constant="56" id="o2N-P4-blQ"/>
@@ -59,10 +59,13 @@
                                         <state key="normal" title="이름순">
                                             <color key="titleColor" name="Beering_White"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tPF-sx-E43"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxP-j8-kgO">
                                         <rect key="frame" x="94" y="53" width="70" height="32"/>
-                                        <color key="backgroundColor" name="Beering_Black"/>
+                                        <color key="backgroundColor" name="Gray03"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="Soh-FT-oIo"/>
                                             <constraint firstAttribute="width" constant="70" id="rWp-b9-J3y"/>
@@ -72,10 +75,13 @@
                                         <state key="normal" title="리뷰많은순">
                                             <color key="titleColor" name="Beering_White"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5pL-gt-rQC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaM-20-0Yh">
                                         <rect key="frame" x="178" y="53" width="65" height="32"/>
-                                        <color key="backgroundColor" name="Beering_Black"/>
+                                        <color key="backgroundColor" name="Gray03"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="59l-Kv-8Rj"/>
                                             <constraint firstAttribute="width" constant="65" id="ga3-4U-UZV"/>
@@ -85,10 +91,13 @@
                                         <state key="normal" title="최저가순">
                                             <color key="titleColor" name="Beering_White"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yug-eS-cE6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mx7-t4-xKM">
                                         <rect key="frame" x="257" y="53" width="56" height="32"/>
-                                        <color key="backgroundColor" name="Beering_Black"/>
+                                        <color key="backgroundColor" name="Gray03"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="56" id="O0f-kW-QlC"/>
                                             <constraint firstAttribute="height" constant="32" id="sM7-k6-Mhs"/>
@@ -98,6 +107,9 @@
                                         <state key="normal" title="평점순">
                                             <color key="titleColor" name="Beering_White"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="pCn-zR-M9D"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -267,7 +279,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="단위 : 원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqJ-nx-Exg">
-                                                <rect key="frame" x="57.666666666666671" y="3.0000000000000009" width="40.333333333333329" height="14.333333333333336"/>
+                                                <rect key="frame" x="57.666666666666671" y="3" width="41.333333333333329" height="14"/>
                                                 <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="12"/>
                                                 <color key="textColor" name="Gray02"/>
                                                 <nil key="highlightedColor"/>
@@ -393,6 +405,9 @@
         </namedColor>
         <namedColor name="Gray02">
             <color red="0.44699999690055847" green="0.42399999499320984" blue="0.46700000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Gray03">
+            <color red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
