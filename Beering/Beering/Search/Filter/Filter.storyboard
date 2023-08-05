@@ -47,7 +47,7 @@
                                             <constraint firstAttribute="bottom" secondItem="KEn-PK-9pj" secondAttribute="bottom" constant="5" id="wfy-MJ-hvO"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rtp-JT-x9q">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rtp-JT-x9q">
                                         <rect key="frame" x="24" y="53" width="56" height="32"/>
                                         <color key="backgroundColor" name="Gray03"/>
                                         <constraints>
@@ -59,11 +59,8 @@
                                         <state key="normal" title="이름순">
                                             <color key="titleColor" name="Beering_White"/>
                                         </state>
-                                        <connections>
-                                            <action selector="sortByBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2Oo-GJ-skV"/>
-                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxP-j8-kgO">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxP-j8-kgO">
                                         <rect key="frame" x="94" y="53" width="70" height="32"/>
                                         <color key="backgroundColor" name="Gray03"/>
                                         <constraints>
@@ -75,11 +72,8 @@
                                         <state key="normal" title="리뷰많은순">
                                             <color key="titleColor" name="Beering_White"/>
                                         </state>
-                                        <connections>
-                                            <action selector="sortByBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bBI-YN-xDs"/>
-                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaM-20-0Yh">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaM-20-0Yh">
                                         <rect key="frame" x="178" y="53" width="65" height="32"/>
                                         <color key="backgroundColor" name="Gray03"/>
                                         <constraints>
@@ -91,11 +85,8 @@
                                         <state key="normal" title="최저가순">
                                             <color key="titleColor" name="Beering_White"/>
                                         </state>
-                                        <connections>
-                                            <action selector="sortByBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="e5b-ki-cTB"/>
-                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mx7-t4-xKM">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mx7-t4-xKM">
                                         <rect key="frame" x="257" y="53" width="56" height="32"/>
                                         <color key="backgroundColor" name="Gray03"/>
                                         <constraints>
@@ -107,9 +98,6 @@
                                         <state key="normal" title="평점순">
                                             <color key="titleColor" name="Beering_White"/>
                                         </state>
-                                        <connections>
-                                            <action selector="sortByBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1nD-Wo-M6q"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>

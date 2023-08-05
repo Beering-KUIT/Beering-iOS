@@ -10,6 +10,13 @@ import SwiftUI
 
 class FilterVC: UIViewController {
     
+    var selectedFilterOption: [String : String] = [
+        "sortBy" : "",
+        "liquorType" : "",
+        "minPrice" : "",
+        "maxPrice" : ""
+    ]
+    
     @IBOutlet var sortOptions: [UIButton]!
     @IBOutlet var liquorTypes: [UIButton]!
     
@@ -30,8 +37,9 @@ class FilterVC: UIViewController {
             view.titleViewInit()
         }
         
-        for buttonView in sortOptions{
-            buttonView.makeCircular()
+        for sortByBtn in sortOptions{
+            sortByBtn.addTarget(self, action: #selector(sortByBtnTap), for: .touchUpInside)
+            sortByBtn.makeCircular()
         }
         
         for liquorBtn in liquorTypes{
@@ -42,13 +50,28 @@ class FilterVC: UIViewController {
         maximumPriceTextField.delegate = self
     }
     
-    @IBAction func sortByBtnTapped(_ sender: UIButton) {
+    @objc func sortByBtnTap(_ sender: UIButton) {
         print("sortByBtnTapped: \(sender.titleLabel?.text ?? "")")
         
-        for sortBtn in sortOptions{
-            sortBtn.backgroundColor = UIColor(named: "Gray03")
+        if sender.titleLabel?.text != selectedFilterOption["sortBy"] {
+            selectedFilterOption["sortBy"] = sender.titleLabel?.text
+            
+            for sortBtn in sortOptions{
+                sortBtn.isSelected = false
+                sortBtn.backgroundColor = UIColor(named: "Gray03")
+            }
+            sender.isSelected = true
+            sender.backgroundColor = UIColor(named: "Beering_Black")
+        }else{
+            selectedFilterOption["sortBy"] = ""
+            
+            for sortBtn in sortOptions{
+                sortBtn.isSelected = false
+                sortBtn.backgroundColor = UIColor(named: "Gray03")
+            }
         }
-        sender.backgroundColor = UIColor(named: "Beering_Black")
+        print("selectedFilterOption[\"sortBy\"] : \(selectedFilterOption["sortBy"])")
+        
     }
     
     /// TODO index 방식 Refactoring
