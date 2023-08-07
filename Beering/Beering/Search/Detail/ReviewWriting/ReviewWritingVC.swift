@@ -9,6 +9,8 @@ import UIKit
 import PhotosUI
 
 class ReviewWritingVC: UIViewController {
+    
+    var reviewData = reviewEssentialContent()
 
     @IBOutlet weak var reviewWritingTextView: UITextView!
     
@@ -25,8 +27,12 @@ class ReviewWritingVC: UIViewController {
     
     @IBOutlet var titleViews: [UIView]!
     
+    @IBOutlet weak var reviewWriteBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("viewDidLoad and reviewData is : \(reviewData)")
         
         navigationBarInit()
         
@@ -129,29 +135,34 @@ class ReviewWritingVC: UIViewController {
     //MARK: - Star Slider
     @IBAction func onSliderValueChanged(_ sender: UISlider) {
         
-        var sliderIdx: Int?
-        
-        switch sender{
-        case starSliders[0]:
-            sliderIdx = 0
-        case starSliders[1]:
-            sliderIdx = 1
-        case starSliders[2]:
-            sliderIdx = 2
-        case starSliders[3]:
-            sliderIdx = 3
-        case starSliders[4]:
-            sliderIdx = 4
-        default:
-            return
-        }
-        
         // label 표시 숫자. 소수점 1자리
         let floatValue = floor(sender.value * 100) / 100
         
         let intValue = Int(floor(sender.value))
         
         let roundedNumber = (floatValue * 2).rounded() / 2 // .5 단위 반올림
+        
+        var sliderIdx: Int?
+        
+        switch sender{
+        case starSliders[0]:
+            reviewData.tasteRating = roundedNumber
+            sliderIdx = 0
+        case starSliders[1]:
+            reviewData.aromaRating = roundedNumber
+            sliderIdx = 1
+        case starSliders[2]:
+            reviewData.colorRating = roundedNumber
+            sliderIdx = 2
+        case starSliders[3]:
+            reviewData.swallowingRating = roundedNumber
+            sliderIdx = 3
+        case starSliders[4]:
+            reviewData.totalRating = roundedNumber
+            sliderIdx = 4
+        default:
+            return
+        }
         
         starSliderRateLabel[sliderIdx!].text = String(roundedNumber)
         
@@ -171,6 +182,25 @@ class ReviewWritingVC: UIViewController {
             }
         }
         
+        updateReviewApplyBtn()
+    }
+    
+    @objc func updateReviewApplyBtn() {
+        
+        print("updateReviewApply and reviewData : \(reviewData)")
+        
+        if reviewData.reviewText != "" && reviewData.tasteRating != nil && reviewData.aromaRating != nil && reviewData.colorRating != nil && reviewData.swallowingRating != nil && reviewData.totalRating != nil{
+            reviewWriteBtn.isEnabled = true
+            reviewWriteBtn.backgroundColor = UIColor(named: "Beering_Black")
+        }else{
+            reviewWriteBtn.isEnabled = false
+            reviewWriteBtn.backgroundColor = UIColor(named: "Gray01")
+        }
+    }
+    
+    @IBAction func reviewWritingBtnTap(_ sender: Any) {
+        /// TODO review 작성 API 호출
+        print("리뷰작성 버튼 클릭")
     }
     
 }
@@ -188,6 +218,9 @@ extension ReviewWritingVC: UITextViewDelegate{
         if reviewWritingTextView.text.isEmpty || reviewWritingTextView.text == "" {
             reviewWritingTextView.textColor = .lightGray
             reviewWritingTextView.text = "시음한 뒤 감상을 적어주세요."
+        }else{
+            reviewData.reviewText = reviewWritingTextView.text
+            updateReviewApplyBtn()
         }
     }
     
@@ -311,4 +344,13 @@ extension ReviewWritingVC: UIImagePickerControllerDelegate, UINavigationControll
             }
         }
     }
+}
+
+struct reviewEssentialContent{
+    var reviewText: String = ""
+    var tasteRating: Float?
+    var aromaRating: Float?
+    var colorRating: Float?
+    var swallowingRating: Float?
+    var totalRating: Float?
 }
