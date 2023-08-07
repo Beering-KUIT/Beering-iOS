@@ -6,8 +6,18 @@
 //
 
 import UIKit
+import SwiftUI
 
-class SearchVC: UIViewController {
+class SearchVC: UIViewController, SendFilterDataDelegate {
+    
+    func receiveData(data: String) {
+        filterOptions.append(data)
+        self.filterCollectionView.reloadData()
+    }
+    
+    func clearFilterOptionData() {
+        filterOptions.removeAll()
+    }
 
     @IBOutlet weak var searchTextField: UITextField!
     
@@ -19,7 +29,7 @@ class SearchVC: UIViewController {
 
     @IBOutlet weak var searchCollectionView: UICollectionView!
     
-    let tempData: [searchCellInfo] = [
+    var tempData: [searchCellInfo] = [
         searchCellInfo(imageUrl: "https://picsum.photos/347", titleKor: "클라우드", titleEng: "Kloud", brewery: "Lotte", isFavorite: false),
         searchCellInfo(imageUrl: "https://picsum.photos/347/200", titleKor: "클라우드1", titleEng: "Kloud1", brewery: "Lotte1", isFavorite: false),
         searchCellInfo(imageUrl: "https://picsum.photos/333/600", titleKor: "클라우드2", titleEng: "Kloud2", brewery: "Lotte2", isFavorite: true),
@@ -29,14 +39,8 @@ class SearchVC: UIViewController {
         searchCellInfo(imageUrl: "https://picsum.photos/100/100", titleKor: "클라우드6", titleEng: "Kloud6", brewery: "Lotte6", isFavorite: false)
     ]
     
-    var selectedFilterOptions: [String] = [
-        "맥주",
-        "리뷰많은순",
-        "0~20000원",
-        "와인",
-        "리뷰많은순",
-        "0~20000원"
-    ]
+    /// TODO Refactoring
+    var filterOptions: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +65,8 @@ class SearchVC: UIViewController {
         searchCollectionView.dataSource = self
         searchCollectionView.delegate = self
         
+        searchTextField.delegate = self
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,11 +76,18 @@ class SearchVC: UIViewController {
     
     @IBAction func filterBtnTap(_ sender: Any) {
         
-        let filterVC = UIStoryboard(name: "Filter", bundle: nil).instantiateInitialViewController()
+        let filterVC = UIStoryboard(name: "Filter", bundle: nil).instantiateInitialViewController() as! FilterVC
+        filterVC.delegate = self
         
-        self.present(filterVC!, animated: true)
+        self.present(filterVC, animated: true)
         
     }
+    
+    @IBAction func clearSearchTextfieldBtnTap(_ sender: Any) {
+        
+        searchTextField.text = ""
+    }
+    
     
 }
 
@@ -98,12 +111,12 @@ struct searchCellInfo{
     var isFavorite: Bool
 }
 
-extension SearchVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension SearchVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, SearchCellDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if collectionView == filterCollectionView{
-            return selectedFilterOptions.count
+            return filterOptions.count
         }else if collectionView == searchCollectionView{
             return tempData.count
         }
@@ -116,7 +129,7 @@ extension SearchVC: UICollectionViewDataSource, UICollectionViewDelegate, UIColl
         if collectionView == filterCollectionView{
             let cell = filterCollectionView.dequeueReusableCell(withReuseIdentifier: "filterCell", for: indexPath) as! FilterCell
             
-            cell.filterLabel.text = selectedFilterOptions[indexPath.row]
+            cell.filterLabel.text = filterOptions[indexPath.row]
             cell.makeCircular()
             
             return cell
@@ -125,21 +138,32 @@ extension SearchVC: UICollectionViewDataSource, UICollectionViewDelegate, UIColl
             // 사용할 Cell dequeue
             let cell = searchCollectionView.dequeueReusableCell(withReuseIdentifier: "searchCell", for: indexPath) as! SearchCell
             
+            cell.delegate = self
+            cell.index = indexPath.row
+            
             cell.liquorImage.loadImage(from: tempData[indexPath.row].imageUrl)
             cell.liquorTitleKor.text = tempData[indexPath.row].titleKor
             cell.liquorTitleEng.text = tempData[indexPath.row].titleEng
             cell.breweryTitle.text = tempData[indexPath.row].brewery
             
             if tempData[indexPath.row].isFavorite{
-                cell.isFavorite.image = UIImage(named: "heart_filled")
+                cell.isFavorite.isSelected = true
+                cell.updateIsFavoriteImage()
             }else{
-                cell.isFavorite.image = UIImage(named: "heart_blank")
+                cell.isFavorite.isSelected = false
+                cell.updateIsFavoriteImage()
             }
             
             return cell
         }
         
         return UICollectionViewCell()
+    }
+    
+    // Heart Click 시의, SearchCellDelegate 구현 메서드
+    func reloadFavoriteData(_ index: Int, _ isSelected: Bool){
+        tempData[index].isFavorite = isSelected
+//        searchCollectionView.reloadData()
     }
     
     // 선택시 move to Detail
@@ -172,7 +196,7 @@ extension SearchVC: UICollectionViewDataSource, UICollectionViewDelegate, UIColl
                 
         if collectionView == filterCollectionView{
             
-            let filterOption = selectedFilterOptions[indexPath.item]
+            let filterOption = filterOptions[indexPath.item]
             let cellWidth = calculateFilterCellWidth(for: filterOption)
             
             print("Width : \(cellWidth), Height : \(collectionView.frame.height)")
@@ -202,4 +226,21 @@ extension SearchVC: UICollectionViewDataSource, UICollectionViewDelegate, UIColl
         }
     }
     
+}
+
+extension SearchVC: UITextFieldDelegate{
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // 키보드를 사라지게 하는 코드
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    /// TODO 글자 입력시마다 검색 API 호출
+}
+
+struct SearchSBPreView:PreviewProvider {
+    static var previews: some View {
+        UIStoryboard(name: "Search", bundle: nil).instantiateInitialViewController()!.toPreview()
+    }
 }

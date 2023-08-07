@@ -9,6 +9,8 @@ import UIKit
 import PhotosUI
 
 class ReviewWritingVC: UIViewController {
+    
+    var reviewData = reviewEssentialContent()
 
     @IBOutlet weak var reviewWritingTextView: UITextView!
     
@@ -25,8 +27,14 @@ class ReviewWritingVC: UIViewController {
     
     @IBOutlet var titleViews: [UIView]!
     
+    @IBOutlet weak var reviewWriteBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("viewDidLoad and reviewData is : \(reviewData)")
+        
+        navigationBarInit()
         
         /// TODO : textColor / font
         /// 적용은 되는데, 그렇게 보이지 않음
@@ -50,6 +58,31 @@ class ReviewWritingVC: UIViewController {
         for view in titleViews{
             view.titleViewInit()
         }
+    }
+    
+    private func navigationBarInit(){
+
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "Beering_Black")
+                
+        let leftBarButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "arrow_left"), style: .done, target: self, action: #selector(goBack))
+        self.navigationItem.leftBarButtonItem = leftBarButton
+        
+        self.navigationItem.title = "리뷰 작성"
+        
+        // 커스텀 폰트를 가져옴
+        if let customFont = UIFont(name: "Pretendard", size: 16) {
+            // 타이틀 텍스트를 NSAttributedString으로 생성하고 폰트를 적용
+            let titleTextAttributes: [NSAttributedString.Key: Any] = [
+                .font: customFont,
+                .foregroundColor: UIColor(named: "Beering_Black") ?? .black // 폰트 색상 설정
+            ]
+            self.navigationController?.navigationBar.titleTextAttributes = titleTextAttributes
+        }
+        
+    }
+    
+    @objc private func goBack(){
+        self.navigationController?.popViewController(animated: true)
     }
     
     // 컬렉션 뷰 셀 삭제 처리
@@ -102,29 +135,34 @@ class ReviewWritingVC: UIViewController {
     //MARK: - Star Slider
     @IBAction func onSliderValueChanged(_ sender: UISlider) {
         
-        var sliderIdx: Int?
-        
-        switch sender{
-        case starSliders[0]:
-            sliderIdx = 0
-        case starSliders[1]:
-            sliderIdx = 1
-        case starSliders[2]:
-            sliderIdx = 2
-        case starSliders[3]:
-            sliderIdx = 3
-        case starSliders[4]:
-            sliderIdx = 4
-        default:
-            return
-        }
-        
         // label 표시 숫자. 소수점 1자리
         let floatValue = floor(sender.value * 100) / 100
         
         let intValue = Int(floor(sender.value))
         
         let roundedNumber = (floatValue * 2).rounded() / 2 // .5 단위 반올림
+        
+        var sliderIdx: Int?
+        
+        switch sender{
+        case starSliders[0]:
+            reviewData.tasteRating = roundedNumber
+            sliderIdx = 0
+        case starSliders[1]:
+            reviewData.aromaRating = roundedNumber
+            sliderIdx = 1
+        case starSliders[2]:
+            reviewData.colorRating = roundedNumber
+            sliderIdx = 2
+        case starSliders[3]:
+            reviewData.swallowingRating = roundedNumber
+            sliderIdx = 3
+        case starSliders[4]:
+            reviewData.totalRating = roundedNumber
+            sliderIdx = 4
+        default:
+            return
+        }
         
         starSliderRateLabel[sliderIdx!].text = String(roundedNumber)
         
@@ -144,6 +182,25 @@ class ReviewWritingVC: UIViewController {
             }
         }
         
+        updateReviewApplyBtn()
+    }
+    
+    @objc func updateReviewApplyBtn() {
+        
+        print("updateReviewApply and reviewData : \(reviewData)")
+        
+        if reviewData.reviewText != "" && reviewData.tasteRating != nil && reviewData.aromaRating != nil && reviewData.colorRating != nil && reviewData.swallowingRating != nil && reviewData.totalRating != nil{
+            reviewWriteBtn.isEnabled = true
+            reviewWriteBtn.backgroundColor = UIColor(named: "Beering_Black")
+        }else{
+            reviewWriteBtn.isEnabled = false
+            reviewWriteBtn.backgroundColor = UIColor(named: "Gray01")
+        }
+    }
+    
+    @IBAction func reviewWritingBtnTap(_ sender: Any) {
+        /// TODO review 작성 API 호출
+        print("리뷰작성 버튼 클릭")
     }
     
 }
@@ -161,6 +218,9 @@ extension ReviewWritingVC: UITextViewDelegate{
         if reviewWritingTextView.text.isEmpty || reviewWritingTextView.text == "" {
             reviewWritingTextView.textColor = .lightGray
             reviewWritingTextView.text = "시음한 뒤 감상을 적어주세요."
+        }else{
+            reviewData.reviewText = reviewWritingTextView.text
+            updateReviewApplyBtn()
         }
     }
     
@@ -208,7 +268,7 @@ extension ReviewWritingVC: UIImagePickerControllerDelegate, UINavigationControll
     func pictureUploadByCamera(){
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .camera
-        imagePicker.allowsEditing = true
+        imagePicker.allowsEditing = false
         imagePicker.cameraDevice = .rear
         imagePicker.cameraCaptureMode = .photo
         imagePicker.delegate = self
@@ -218,9 +278,11 @@ extension ReviewWritingVC: UIImagePickerControllerDelegate, UINavigationControll
     // Use Photo Btn
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             myReviewImages.append(image)
             myReviewImageCountLabel.text = String(myReviewImages.count) + "/10"
+            
+            self.reviewPictureCollectionView.reloadData()
         }
         
         picker.dismiss(animated: true, completion: nil)
@@ -282,4 +344,13 @@ extension ReviewWritingVC: UIImagePickerControllerDelegate, UINavigationControll
             }
         }
     }
+}
+
+struct reviewEssentialContent{
+    var reviewText: String = ""
+    var tasteRating: Float?
+    var aromaRating: Float?
+    var colorRating: Float?
+    var swallowingRating: Float?
+    var totalRating: Float?
 }

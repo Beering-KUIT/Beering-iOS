@@ -7,10 +7,26 @@
 
 import UIKit
 
+protocol ReviewCellDelegate: AnyObject {
+    func reloadReviewGoodOrBadData(_ index: Int, _ isGood: Bool, _ isBad: Bool)
+}
+
 class ReviewCell: UITableViewCell {
+    
+    weak var delegate: ReviewCellDelegate?
+    var index: Int?
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nickname: UILabel!
+        
+    @IBOutlet weak var creatdAt: UILabel!
+    
+    @IBOutlet weak var isGoodReviewBtn: UIButton!
+    @IBOutlet weak var isGoodCount: UILabel!
+    
+    @IBOutlet weak var isBadReviewBtn: UIButton!
+    @IBOutlet weak var isBadCount: UILabel!
+    
     @IBOutlet weak var reviewText: UILabel!
     
     @IBOutlet weak var reviewImageCollectionView: UICollectionView!
@@ -38,8 +54,40 @@ class ReviewCell: UITableViewCell {
     
     // 이미지뷰 크기 지정
     /// TODO 이미지 개수 0개이면 높이 0으로
-    func setCollectionViewHeight(){
-        self.reviewImageCollectionView.heightAnchor.constraint(equalToConstant: 208).isActive = true
+    func setCollectionViewHeight(_ constant: CGFloat){
+        self.reviewImageCollectionView.heightAnchor.constraint(equalToConstant: constant).isActive = true
+    }
+    
+    func updateIsGoodOrBadReviewImage(){
+        
+        if isGoodReviewBtn.isSelected{
+            isGoodReviewBtn.setImage(UIImage(named: "like_filled"), for: .normal)
+            isBadReviewBtn.setImage(UIImage(named: "dislike_blank"), for: .normal)
+        }else if isBadReviewBtn.isSelected{
+            isGoodReviewBtn.setImage(UIImage(named: "like_blank"), for: .normal)
+            isBadReviewBtn.setImage(UIImage(named: "dislike_filled"), for: .normal)
+        }else{
+            isGoodReviewBtn.setImage(UIImage(named: "like_blank"), for: .normal)
+            isBadReviewBtn.setImage(UIImage(named: "dislike_blank"), for: .normal)
+        }
+    }
+    
+    @IBAction func isGoodReviewBtnTap(_ sender: Any) {
+        
+        isGoodReviewBtn.isSelected = !isGoodReviewBtn.isSelected
+        isBadReviewBtn.isSelected = false
+        updateIsGoodOrBadReviewImage()
+        
+        delegate?.reloadReviewGoodOrBadData(index!, isGoodReviewBtn.isSelected, isBadReviewBtn.isSelected)
+    }
+    
+    @IBAction func isBadReviewBtnTap(_ sender: Any) {
+        
+        isBadReviewBtn.isSelected = !isBadReviewBtn.isSelected
+        isGoodReviewBtn.isSelected = false
+        updateIsGoodOrBadReviewImage()
+        
+        delegate?.reloadReviewGoodOrBadData(index!, isGoodReviewBtn.isSelected, isBadReviewBtn.isSelected)
     }
     
 }

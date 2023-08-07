@@ -13,6 +13,7 @@ target 'Beering' do
   # 레이아웃 적용 라이브러리
   pod 'SnapKit'
 
-  # Range Slider 라이브러리
+  # textfield 입력시 키보드 관련 라이브러리
+  pod 'IQKeyboardManagerSwift'
   
 end

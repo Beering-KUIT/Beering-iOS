@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-Beering/Pods-Beering-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework
 ${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework

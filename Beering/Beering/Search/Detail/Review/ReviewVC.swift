@@ -107,8 +107,13 @@ extension ReviewVC: UITableViewDelegate, UITableViewDataSource{
         cell.reviewImageCollectionView.delegate = cell
         cell.reviewImageCollectionView.dataSource = cell
         
-        cell.setReviewImages(reviewImages[indexPath.row])
-        cell.setCollectionViewHeight()
+        /// TODO CollectionView 의 높이를 조정하는 것이 아닌, 아예 사라지도록 Refactoring
+        if reviewImages[indexPath.row].count > 0{
+            cell.setReviewImages(reviewImages[indexPath.row])
+            cell.setCollectionViewHeight(208)
+        }else{
+            cell.setCollectionViewHeight(0)
+        }
         
         return cell
     }

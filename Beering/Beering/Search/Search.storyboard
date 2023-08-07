@@ -52,6 +52,9 @@
                                                 <color key="tintColor" name="Beering_Black"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="xmark" catalog="system"/>
+                                                <connections>
+                                                    <action selector="clearSearchTextfieldBtnTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ytF-SW-MRW"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -183,11 +186,11 @@
             </objects>
             <point key="canvasLocation" x="1918.3206106870227" y="-172.53521126760563"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="Q5Q-pS-Koe">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SQJ-0e-Q2s" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Nz3-Pz-4KV"/>
+                    <tabBarItem key="tabBarItem" title="" image="search_blank" selectedImage="search_filled" id="Nz3-Pz-4KV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Iql-3E-gd1">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -205,6 +208,8 @@
     </scenes>
     <resources>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="search_blank" width="16.666666030883789" height="24.333333969116211"/>
+        <image name="search_filled" width="40" height="40"/>
         <image name="slider.horizontal.3" catalog="system" width="128" height="99"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="Beering_Black">
