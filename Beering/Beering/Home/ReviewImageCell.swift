@@ -14,6 +14,7 @@ class ReviewImageCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        reviewImage.contentMode = .scaleAspectFill
     }
 
 }

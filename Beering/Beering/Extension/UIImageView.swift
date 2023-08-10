@@ -10,12 +10,7 @@ import UIKit
 
 extension UIImageView{
     
-    // 원형으로 Image 바꾸기. e.g. 프로필 이미지 등
-    func makeCircular() {
-        self.layer.cornerRadius = self.frame.size.width / 2
-        self.clipsToBounds = true
-    }
-    
+
     // url to Image. e.g. 프로필 이미지 등
     func loadImage(from urlString: String) {
         // URL 생성

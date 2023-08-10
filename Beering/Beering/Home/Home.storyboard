@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cxb-uv-rzt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iwb-IB-94C">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OoohBaby-Regular.ttf">
+            <string>OoohBaby-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Item-->
+        <!--HomeVC-->
         <scene sceneID="Ij5-iD-xeY">
             <objects>
                 <viewController id="Cxb-uv-rzt" customClass="HomeVC" customModule="Beering" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,37 +24,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfP-jH-XsQ">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="130"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="118"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beering" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQ6-BR-scf">
-                                        <rect key="frame" x="22" y="67" width="144" height="48"/>
+                                        <rect key="frame" x="141" y="61" width="111" height="49"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="144" id="I6Z-vn-dfU"/>
+                                            <constraint firstAttribute="width" constant="111" id="Q80-HU-1Zv"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <fontDescription key="fontDescription" name="OoohBaby-Regular" family="Oooh Baby" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Ww-U4-tm8">
-                                        <rect key="frame" x="335" y="72" width="50" height="50"/>
+                                        <rect key="frame" x="339" y="65.666666666666671" width="40" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="AaY-og-UpE"/>
-                                            <constraint firstAttribute="width" constant="50" id="YVw-3n-xxi"/>
+                                            <constraint firstAttribute="width" constant="40" id="HoS-yJ-BAX"/>
+                                            <constraint firstAttribute="height" constant="40" id="ent-Gk-hxN"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <color key="backgroundColor" name="Beering_White"/>
                                 <constraints>
-                                    <constraint firstItem="RQ6-BR-scf" firstAttribute="leading" secondItem="tfP-jH-XsQ" secondAttribute="leading" constant="22" id="1Hz-Gg-xFt"/>
-                                    <constraint firstAttribute="trailing" secondItem="0Ww-U4-tm8" secondAttribute="trailing" constant="8" id="RQ5-b1-lq5"/>
-                                    <constraint firstAttribute="bottom" secondItem="0Ww-U4-tm8" secondAttribute="bottom" constant="8" id="U2G-2w-70J"/>
-                                    <constraint firstAttribute="bottom" secondItem="RQ6-BR-scf" secondAttribute="bottom" constant="15" id="kYe-hQ-bMW"/>
-                                    <constraint firstAttribute="height" constant="130" id="qKJ-hf-tkT"/>
-                                    <constraint firstItem="RQ6-BR-scf" firstAttribute="top" secondItem="tfP-jH-XsQ" secondAttribute="top" constant="67" id="vZe-W2-ohu"/>
+                                    <constraint firstItem="RQ6-BR-scf" firstAttribute="centerX" secondItem="tfP-jH-XsQ" secondAttribute="centerX" id="Fri-13-3md"/>
+                                    <constraint firstAttribute="bottom" secondItem="RQ6-BR-scf" secondAttribute="bottom" constant="8" id="Qc0-d4-zRn"/>
+                                    <constraint firstItem="0Ww-U4-tm8" firstAttribute="centerY" secondItem="RQ6-BR-scf" secondAttribute="centerY" id="h5H-v8-1Fj"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Ww-U4-tm8" secondAttribute="trailing" constant="14" id="jTu-SH-GYy"/>
+                                    <constraint firstAttribute="height" constant="118" id="qKJ-hf-tkT"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tJG-16-c3c">
-                                <rect key="frame" x="0.0" y="130" width="393" height="722"/>
+                                <rect key="frame" x="0.0" y="118" width="393" height="734"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -64,22 +69,44 @@
                             <constraint firstItem="tfP-jH-XsQ" firstAttribute="leading" secondItem="1t2-Te-yfx" secondAttribute="leading" id="kRm-eR-CEg"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="q1q-23-mZ4"/>
+                    <navigationItem key="navigationItem" id="BPB-IO-IJl"/>
                     <connections>
+                        <outlet property="homeProfileImage" destination="0Ww-U4-tm8" id="fho-1r-88y"/>
                         <outlet property="reviewTableView" destination="tJG-16-c3c" id="VSg-z8-2UE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHx-tA-PmI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="536.64122137404581" y="650"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gdR-p9-aZX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iwb-IB-94C" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="home_blank" selectedImage="home_filled" id="q1q-23-mZ4"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9KK-DO-TCI">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Cxb-uv-rzt" kind="relationship" relationship="rootViewController" id="WNP-cv-lbN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Spp-JU-A8Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="-390.07633587786256" y="650"/>
         </scene>
     </scenes>
     <resources>
+        <image name="home_blank" width="22" height="23"/>
+        <image name="home_filled" width="128" height="128"/>
+        <namedColor name="Beering_White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

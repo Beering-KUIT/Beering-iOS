@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,8 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
         UINavigationBar.appearance().backIndicatorImage = UIImage(named: "BackButton.png")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal).withAlignmentRectInsets(UIEdgeInsets(top: 0, left: -24, bottom: 7, right: 0))
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "BackButton.png")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal).withAlignmentRectInsets(UIEdgeInsets(top: 0, left: -24, bottom: 7, right: 0))
+
+        IQKeyboardManager.shared.enable = true
+
         return true
     }
 
