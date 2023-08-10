@@ -1,10 +1,19 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+ platform :ios, '13.4.1'
 
 target 'Beering' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod 'Alamofire'
-  # Pods for Beering
 
+  # Pods for Beering
+  
+  # 통신 라이브러리
+  pod 'Alamofire'
+  
+  # 레이아웃 적용 라이브러리
+  pod 'SnapKit'
+
+  # textfield 입력시 키보드 관련 라이브러리
+  pod 'IQKeyboardManagerSwift'
+  
 end
