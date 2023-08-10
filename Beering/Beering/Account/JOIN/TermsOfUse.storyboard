@@ -1,28 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Terms Of UseVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TermsOfUse" id="Y6W-OH-hqX" customClass="TermsOfUseVC" customModule="Beering" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="681"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="characterWrap" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNI-rb-ClP">
+                                <rect key="frame" x="41" y="139" width="311" height="71.666666666666686"/>
+                                <mutableString key="text">본문 Lorem ipsum dolor sit amet consectetur. Turpis senectus purus viverra pulvinar. Magna quisque odio ipsum fermentum sit id. Tincidunt tortor euismod sed vulputate interdum purus mattis risus auctor. Cras maecenas pellentesque dolor ornare netus ullamcorper duis.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nph-8B-h1N">
+                                <rect key="frame" x="41" y="28" width="311" height="32"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비어링 서비스 이용약관" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ia9-Os-CxJ">
+                                        <rect key="frame" x="36" y="6.3333333333333339" width="243" height="19.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJr-3F-p19">
+                                        <rect key="frame" x="279" y="0.0" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="IJr-3F-p19" secondAttribute="height" multiplier="1:1" id="JVO-pV-gLt"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="CancelBlack"/>
+                                        <connections>
+                                            <action selector="backBtnTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5Gn-W8-UOK"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NecessaryOption" translatesAutoresizingMaskIntoConstraints="NO" id="Ehn-Te-QsO">
+                                        <rect key="frame" x="0.0" y="6" width="28" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="3Hi-lQ-oJ4"/>
+                                            <constraint firstAttribute="width" constant="28" id="Flo-hS-FOI"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="IJr-3F-p19" firstAttribute="leading" secondItem="Ia9-Os-CxJ" secondAttribute="trailing" id="4Az-jt-SGz"/>
+                                    <constraint firstAttribute="height" constant="32" id="9r2-VS-GzB"/>
+                                    <constraint firstAttribute="bottom" secondItem="IJr-3F-p19" secondAttribute="bottom" id="ALE-ws-Isb"/>
+                                    <constraint firstItem="IJr-3F-p19" firstAttribute="top" secondItem="nph-8B-h1N" secondAttribute="top" id="HWe-MY-sDw"/>
+                                    <constraint firstItem="Ehn-Te-QsO" firstAttribute="centerY" secondItem="nph-8B-h1N" secondAttribute="centerY" id="R6U-ZA-fEQ"/>
+                                    <constraint firstItem="Ia9-Os-CxJ" firstAttribute="leading" secondItem="Ehn-Te-QsO" secondAttribute="trailing" constant="8" id="SEa-bV-NNS"/>
+                                    <constraint firstItem="Ehn-Te-QsO" firstAttribute="leading" secondItem="nph-8B-h1N" secondAttribute="leading" id="SgG-vx-x39"/>
+                                    <constraint firstAttribute="trailing" secondItem="IJr-3F-p19" secondAttribute="trailing" id="SoC-GC-psd"/>
+                                    <constraint firstAttribute="width" constant="311" id="hj5-xX-LjR"/>
+                                    <constraint firstItem="Ia9-Os-CxJ" firstAttribute="centerY" secondItem="nph-8B-h1N" secondAttribute="centerY" id="qhN-5u-fDA"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2E-lo-4bw">
+                                <rect key="frame" x="41" y="111.66666666666667" width="28" height="19.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dW5-qv-f7P"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="X2E-lo-4bw" firstAttribute="leading" secondItem="PNI-rb-ClP" secondAttribute="leading" id="0Ed-zX-Kon"/>
+                            <constraint firstItem="PNI-rb-ClP" firstAttribute="leading" secondItem="dW5-qv-f7P" secondAttribute="leading" constant="41" id="2H8-Qj-I7O"/>
+                            <constraint firstItem="dW5-qv-f7P" firstAttribute="trailing" secondItem="PNI-rb-ClP" secondAttribute="trailing" constant="41" id="AgT-tY-2L1"/>
+                            <constraint firstItem="PNI-rb-ClP" firstAttribute="top" secondItem="X2E-lo-4bw" secondAttribute="bottom" constant="8" id="Ldn-fH-QyH"/>
+                            <constraint firstItem="nph-8B-h1N" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="28" id="cAt-ak-k5I"/>
+                            <constraint firstItem="PNI-rb-ClP" firstAttribute="top" secondItem="nph-8B-h1N" secondAttribute="bottom" constant="79" id="n6t-vD-i7L"/>
+                            <constraint firstItem="nph-8B-h1N" firstAttribute="leading" secondItem="dW5-qv-f7P" secondAttribute="leading" constant="41" id="wMr-Sn-0op"/>
+                        </constraints>
                     </view>
+                    <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="393" height="691"/>
+                    <connections>
+                        <outlet property="agreementTitle" destination="X2E-lo-4bw" id="PRz-p8-Klh"/>
+                        <outlet property="mainText" destination="PNI-rb-ClP" id="8We-ej-miP"/>
+                        <outlet property="termsOfUseBackBtn" destination="IJr-3F-p19" id="RAt-Km-5Nk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="65" y="-27"/>
         </scene>
     </scenes>
     <resources>
+        <image name="CancelBlack" width="32" height="32"/>
+        <image name="NecessaryOption" width="28" height="20"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

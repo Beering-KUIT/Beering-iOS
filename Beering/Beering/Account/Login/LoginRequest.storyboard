@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--main-->
+        <!--Login RequestVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="LoginRequest" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="LoginRequestVC" customModule="Beering" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인하고  나만의  주류기록 남기기" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JkH-61-aob">
-                                <rect key="frame" x="40" y="339" width="313" height="172"/>
+                                <rect key="frame" x="40" y="383" width="313" height="172"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -69,9 +69,8 @@
                             <constraint firstItem="JkH-61-aob" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="n26-zi-hOX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="main" leftItemsSupplementBackButton="YES" id="8q1-zf-N2M"/>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="8q1-zf-N2M"/>
                     <connections>
-                        <outlet property="LoginMain" destination="JkH-61-aob" id="eIr-nX-JuQ"/>
                         <outlet property="loginMain" destination="JkH-61-aob" id="a4d-es-MCo"/>
                         <outlet property="loginRequestButton" destination="qxG-Si-YK6" id="dm3-S5-lVK"/>
                         <outlet property="skipButton" destination="3OE-Vc-YI4" id="rpf-O1-iDi"/>
@@ -81,12 +80,23 @@
             </objects>
             <point key="canvasLocation" x="999.23664122137404" y="-34.507042253521128"/>
         </scene>
+        <!--Login-->
+        <scene sceneID="vJD-eo-lMz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" referencedIdentifier="Login" id="TRL-sX-Rk4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="n8I-pF-xIk"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vK4-kk-lAf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1524" y="-47"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="1EN-9P-PqZ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="QJk-6X-Y9h" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QJk-6X-Y9h" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uTh-GZ-Kk9">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

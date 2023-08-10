@@ -25,16 +25,18 @@
 		2E9F85D52A5270F10082BC8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F85D42A5270F10082BC8B /* SceneDelegate.swift */; };
 		2E9F85DC2A5270F20082BC8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E9F85DB2A5270F20082BC8B /* Assets.xcassets */; };
 		2E9F85DF2A5270F20082BC8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9F85DD2A5270F20082BC8B /* LaunchScreen.storyboard */; };
-		88B491002A5D341600CEB280 /* NomalJoin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B490FF2A5D341600CEB280 /* NomalJoin.storyboard */; };
+		88B491002A5D341600CEB280 /* NormalJoin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B490FF2A5D341600CEB280 /* NormalJoin.storyboard */; };
 		88B491032A5D344600CEB280 /* KAKAOJoin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B491022A5D344600CEB280 /* KAKAOJoin.storyboard */; };
-		88B491052A5D346B00CEB280 /* NomalJoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B491042A5D346B00CEB280 /* NomalJoinVC.swift */; };
+		88B491052A5D346B00CEB280 /* NormalJoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B491042A5D346B00CEB280 /* NormalJoinVC.swift */; };
 		88B491072A5D348200CEB280 /* KAKAOJoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B491062A5D348200CEB280 /* KAKAOJoinVC.swift */; };
-		88B491092A5E9A6900CEB280 /* Checkbox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88B491082A5E9A6900CEB280 /* Checkbox.xib */; };
-		88B4910B2A5E9BC500CEB280 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B4910A2A5E9BC500CEB280 /* Checkbox.swift */; };
-		88BEE9C52A69112900B7C279 /* agreementTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BEE9C42A69112900B7C279 /* agreementTable.xib */; };
-		88BEE9C72A6919F800B7C279 /* agreementTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BEE9C62A6919F800B7C279 /* agreementTable.swift */; };
+		88BEE9C52A69112900B7C279 /* CheckBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BEE9C42A69112900B7C279 /* CheckBox.xib */; };
+		88BEE9C72A6919F800B7C279 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BEE9C62A6919F800B7C279 /* CheckBox.swift */; };
 		88BEE9CB2A696DBB00B7C279 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BEE9CA2A696DBB00B7C279 /* Login.storyboard */; };
 		88BEE9CD2A696DCF00B7C279 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BEE9CC2A696DCF00B7C279 /* LoginVC.swift */; };
+		88BEE9DD2A6FA48A00B7C279 /* TermsOfUse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BEE9DC2A6FA48A00B7C279 /* TermsOfUse.storyboard */; };
+		88BEE9DF2A6FA4A400B7C279 /* TermsOfUseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BEE9DE2A6FA4A400B7C279 /* TermsOfUseVC.swift */; };
+		88BEE9E12A72517900B7C279 /* CheckDuplicate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BEE9E02A72517900B7C279 /* CheckDuplicate.storyboard */; };
+		88BEE9E32A72519300B7C279 /* CheckDuplicateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BEE9E22A72519300B7C279 /* CheckDuplicateVC.swift */; };
 		CF96CD6F49E151AD33D2DCA8 /* Pods_Beering.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045DA4A813987AF870E47FF4 /* Pods_Beering.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,16 +64,18 @@
 		2E9F85E02A5270F20082BC8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		577655B94711CB59CAC7EFB0 /* Pods-Beering.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beering.debug.xcconfig"; path = "Target Support Files/Pods-Beering/Pods-Beering.debug.xcconfig"; sourceTree = "<group>"; };
 		6EDB7ACF8C657147BA85F4D5 /* Pods-Beering.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beering.release.xcconfig"; path = "Target Support Files/Pods-Beering/Pods-Beering.release.xcconfig"; sourceTree = "<group>"; };
-		88B490FF2A5D341600CEB280 /* NomalJoin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NomalJoin.storyboard; sourceTree = "<group>"; };
+		88B490FF2A5D341600CEB280 /* NormalJoin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NormalJoin.storyboard; sourceTree = "<group>"; };
 		88B491022A5D344600CEB280 /* KAKAOJoin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KAKAOJoin.storyboard; sourceTree = "<group>"; };
-		88B491042A5D346B00CEB280 /* NomalJoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomalJoinVC.swift; sourceTree = "<group>"; };
+		88B491042A5D346B00CEB280 /* NormalJoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalJoinVC.swift; sourceTree = "<group>"; };
 		88B491062A5D348200CEB280 /* KAKAOJoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAKAOJoinVC.swift; sourceTree = "<group>"; };
-		88B491082A5E9A6900CEB280 /* Checkbox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Checkbox.xib; sourceTree = "<group>"; };
-		88B4910A2A5E9BC500CEB280 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
-		88BEE9C42A69112900B7C279 /* agreementTable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = agreementTable.xib; sourceTree = "<group>"; };
-		88BEE9C62A6919F800B7C279 /* agreementTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = agreementTable.swift; sourceTree = "<group>"; };
+		88BEE9C42A69112900B7C279 /* CheckBox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckBox.xib; sourceTree = "<group>"; };
+		88BEE9C62A6919F800B7C279 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		88BEE9CA2A696DBB00B7C279 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		88BEE9CC2A696DCF00B7C279 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		88BEE9DC2A6FA48A00B7C279 /* TermsOfUse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TermsOfUse.storyboard; sourceTree = "<group>"; };
+		88BEE9DE2A6FA4A400B7C279 /* TermsOfUseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseVC.swift; sourceTree = "<group>"; };
+		88BEE9E02A72517900B7C279 /* CheckDuplicate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CheckDuplicate.storyboard; sourceTree = "<group>"; };
+		88BEE9E22A72519300B7C279 /* CheckDuplicateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckDuplicateVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,14 +197,16 @@
 		88B491012A5D342300CEB280 /* JOIN */ = {
 			isa = PBXGroup;
 			children = (
-				88B490FF2A5D341600CEB280 /* NomalJoin.storyboard */,
-				88B491042A5D346B00CEB280 /* NomalJoinVC.swift */,
+				88B490FF2A5D341600CEB280 /* NormalJoin.storyboard */,
+				88B491042A5D346B00CEB280 /* NormalJoinVC.swift */,
 				88B491022A5D344600CEB280 /* KAKAOJoin.storyboard */,
 				88B491062A5D348200CEB280 /* KAKAOJoinVC.swift */,
-				88BEE9C42A69112900B7C279 /* agreementTable.xib */,
-				88BEE9C62A6919F800B7C279 /* agreementTable.swift */,
-				88B491082A5E9A6900CEB280 /* Checkbox.xib */,
-				88B4910A2A5E9BC500CEB280 /* Checkbox.swift */,
+				88BEE9DC2A6FA48A00B7C279 /* TermsOfUse.storyboard */,
+				88BEE9DE2A6FA4A400B7C279 /* TermsOfUseVC.swift */,
+				88BEE9C42A69112900B7C279 /* CheckBox.xib */,
+				88BEE9C62A6919F800B7C279 /* CheckBox.swift */,
+				88BEE9E02A72517900B7C279 /* CheckDuplicate.storyboard */,
+				88BEE9E22A72519300B7C279 /* CheckDuplicateVC.swift */,
 			);
 			path = JOIN;
 			sourceTree = "<group>";
@@ -224,6 +230,7 @@
 				2E9F85CB2A5270F10082BC8B /* Sources */,
 				2E9F85CC2A5270F10082BC8B /* Frameworks */,
 				2E9F85CD2A5270F10082BC8B /* Resources */,
+				7AC800527564BE76915233F8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -273,19 +280,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E1D583D2A53FB0D00C1FE9B /* LoginRequest.storyboard in Resources */,
-				88B491092A5E9A6900CEB280 /* Checkbox.xib in Resources */,
 				88BEE9CB2A696DBB00B7C279 /* Login.storyboard in Resources */,
+				88BEE9E12A72517900B7C279 /* CheckDuplicate.storyboard in Resources */,
 				2E309DC92A55131F00B19B2A /* ReviewCell.xib in Resources */,
+				88BEE9DD2A6FA48A00B7C279 /* TermsOfUse.storyboard in Resources */,
 				2E309DDB2A55558700B19B2A /* ReviewImageCell.xib in Resources */,
 				2E309DBE2A550C5A00B19B2A /* myPage.storyboard in Resources */,
 				2E9F85DF2A5270F20082BC8B /* LaunchScreen.storyboard in Resources */,
 				2E309DBC2A550C3E00B19B2A /* Search.storyboard in Resources */,
-				88B491002A5D341600CEB280 /* NomalJoin.storyboard in Resources */,
+				88B491002A5D341600CEB280 /* NormalJoin.storyboard in Resources */,
 				2E309DBA2A550BCB00B19B2A /* TabBar.storyboard in Resources */,
 				2E9F85DC2A5270F20082BC8B /* Assets.xcassets in Resources */,
 				2E309DC02A550D0D00B19B2A /* Home.storyboard in Resources */,
 				88B491032A5D344600CEB280 /* KAKAOJoin.storyboard in Resources */,
-				88BEE9C52A69112900B7C279 /* agreementTable.xib in Resources */,
+				88BEE9C52A69112900B7C279 /* CheckBox.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +322,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7AC800527564BE76915233F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Beering/Pods-Beering-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Beering/Pods-Beering-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Beering/Pods-Beering-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -322,7 +347,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				88B491072A5D348200CEB280 /* KAKAOJoinVC.swift in Sources */,
-				88B491052A5D346B00CEB280 /* NomalJoinVC.swift in Sources */,
+				88B491052A5D346B00CEB280 /* NormalJoinVC.swift in Sources */,
+				88BEE9E32A72519300B7C279 /* CheckDuplicateVC.swift in Sources */,
 				88BEE9CD2A696DCF00B7C279 /* LoginVC.swift in Sources */,
 				2E309DD12A554C3600B19B2A /* UILabel.swift in Sources */,
 				2E309DCF2A55425000B19B2A /* UIImageView.swift in Sources */,
@@ -331,10 +357,10 @@
 				2E309DB22A55081600B19B2A /* HomeVC.swift in Sources */,
 				2E9F85D52A5270F10082BC8B /* SceneDelegate.swift in Sources */,
 				2E1D583F2A53FB2200C1FE9B /* LoginRequestVC.swift in Sources */,
-				88B4910B2A5E9BC500CEB280 /* Checkbox.swift in Sources */,
 				2E309DC82A55131F00B19B2A /* ReviewCell.swift in Sources */,
 				2E309DDA2A55558700B19B2A /* ReviewImageCell.swift in Sources */,
-				88BEE9C72A6919F800B7C279 /* agreementTable.swift in Sources */,
+				88BEE9C72A6919F800B7C279 /* CheckBox.swift in Sources */,
+				88BEE9DF2A6FA4A400B7C279 /* TermsOfUseVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

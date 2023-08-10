@@ -20,16 +20,10 @@ class LoginRequestVC: UIViewController {
         loginSkipButtonInit()                          // loginSkipButton initiallize
     }
     @IBAction func loginRequestBtnTap(_ seder: Any){
-        print(1)
-       // let LoginStoryboard = UIStoryboard(name: "Login", bundle: nil)
-        print(2)
-        //let LoginVC = LoginStoryboard.instantiateViewController(withIdentifier: "Login")as! LoginVC
-        //let LoginVC = LoginStoryboard.instantiateInitialViewController()
-        print(3)
-        //print(self.navigationController as Any)
-        //self.navigationController?.pushViewController(LoginVC, animated: true)
-        print(4)
-        //print("test")
+        let LoginStoryboard = UIStoryboard(name: "Login", bundle: nil)
+        let LoginVC = LoginStoryboard.instantiateViewController(withIdentifier: "Login")
+        self.navigationItem.backButtonTitle = ""
+        self.navigationController?.pushViewController(LoginVC, animated: true)
         
     }
     
@@ -37,7 +31,6 @@ class LoginRequestVC: UIViewController {
         
         let TabBarStoryboard = UIStoryboard(name: "TabBar", bundle: nil)
         let TabBarVC = TabBarStoryboard.instantiateInitialViewController()
-        // 메인 화면을 풀 스크린으로 표시
         TabBarVC?.modalPresentationStyle = .fullScreen
         self.present(TabBarVC!, animated: true)
     }
@@ -74,11 +67,6 @@ extension UIButton {
     }
     
 }
-struct VCPreView:PreviewProvider {
-    static var previews: some View {
-        LoginRequestVC().toPreview()
-    }
-}
 extension UIColor {
     convenience init(red: Int, green: Int, blue: Int, a: Int = 0xFF) {
         self.init(
@@ -105,5 +93,11 @@ extension UIColor {
             blue: argb & 0xFF,
             a: (argb >> 24) & 0xFF
         )
+    }
+}
+
+struct LoginRequestSBPreView:PreviewProvider {
+    static var previews: some View {
+        UIStoryboard(name: "LoginRequest", bundle: nil).instantiateInitialViewController()!.toPreview()
     }
 }

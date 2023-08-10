@@ -8,11 +8,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="agreementTable" customModule="Beering" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckBox" customModule="Beering" customModuleProvider="target">
             <connections>
-                <outlet property="checkbox" destination="U6h-v4-Eaz" id="XMt-SZ-HBC"/>
+                <outlet property="checkBox" destination="X4V-x6-XZm" id="nKZ-lq-3xD"/>
+                <outlet property="displayDetailButton" destination="vtz-Jf-lZ3" id="auv-hv-dr2"/>
                 <outlet property="optionTag" destination="xAW-5G-R7l" id="6pg-UQ-2UZ"/>
-                <outlet property="titleTerms" destination="Lsp-Uo-dtr" id="cF3-QB-UAe"/>
+                <outlet property="titleTerms" destination="Lsp-Uo-dtr" id="OOU-i2-nEq"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -20,23 +21,8 @@
             <rect key="frame" x="0.0" y="0.0" width="311" height="36"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtz-Jf-lZ3">
-                    <rect key="frame" x="0.0" y="0.0" width="311" height="36"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain"/>
-                    <connections>
-                        <action selector="agreementBtnTap:" destination="-1" eventType="touchUpInside" id="cXo-2g-1xC"/>
-                    </connections>
-                </button>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="U6h-v4-Eaz">
-                    <rect key="frame" x="0.0" y="8.9999999999999982" width="20" height="18.666666666666664"/>
-                    <color key="tintColor" systemColor="systemGray3Color"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="U6h-v4-Eaz" secondAttribute="height" multiplier="1:1" id="OVw-zU-415"/>
-                    </constraints>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비어링 서비스 이용 약관" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsp-Uo-dtr">
-                    <rect key="frame" x="64" y="11" width="114" height="14.333333333333336"/>
+                    <rect key="frame" x="80" y="11" width="114" height="14.333333333333336"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -44,30 +30,47 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pointer" translatesAutoresizingMaskIntoConstraints="NO" id="LVt-tt-dFQ">
                     <rect key="frame" x="275" y="0.0" width="36" height="36"/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtz-Jf-lZ3" userLabel="displayDetailButton">
+                    <rect key="frame" x="80" y="0.0" width="231" height="36"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain"/>
+                </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Necessary" translatesAutoresizingMaskIntoConstraints="NO" id="xAW-5G-R7l">
-                    <rect key="frame" x="28" y="8" width="28" height="20"/>
+                    <rect key="frame" x="44" y="8" width="28" height="20"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="xAW-5G-R7l" secondAttribute="height" multiplier="28:20" id="2VT-5t-5Kb"/>
                         <constraint firstAttribute="height" constant="20" id="uWs-aA-Y38"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4V-x6-XZm">
+                    <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="X4V-x6-XZm" secondAttribute="height" multiplier="1:1" id="Y43-3W-Gy8"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="systemGrayColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="circle" catalog="system"/>
+                    <connections>
+                        <action selector="checkBoxBtnTap:" destination="-1" eventType="touchUpInside" id="CRr-a2-Esw"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="X4V-x6-XZm" firstAttribute="leading" secondItem="pjz-V6-Gdr" secondAttribute="leading" id="067-zT-rlP"/>
                 <constraint firstAttribute="bottom" secondItem="LVt-tt-dFQ" secondAttribute="bottom" id="1xu-mt-R5x"/>
-                <constraint firstItem="U6h-v4-Eaz" firstAttribute="top" secondItem="pjz-V6-Gdr" secondAttribute="top" constant="8" id="3zX-Tf-czX"/>
                 <constraint firstItem="LVt-tt-dFQ" firstAttribute="top" secondItem="pjz-V6-Gdr" secondAttribute="top" id="4nA-Nd-ucH"/>
                 <constraint firstAttribute="trailing" secondItem="LVt-tt-dFQ" secondAttribute="trailing" id="5TG-Fe-33q"/>
                 <constraint firstAttribute="bottom" secondItem="vtz-Jf-lZ3" secondAttribute="bottom" id="7Jg-tt-Vcy"/>
+                <constraint firstAttribute="bottom" secondItem="X4V-x6-XZm" secondAttribute="bottom" id="B8t-5X-waP"/>
                 <constraint firstItem="xAW-5G-R7l" firstAttribute="top" secondItem="pjz-V6-Gdr" secondAttribute="top" constant="8" id="D2w-cE-fa4"/>
                 <constraint firstItem="Lsp-Uo-dtr" firstAttribute="leading" secondItem="xAW-5G-R7l" secondAttribute="trailing" constant="8" id="HUd-6V-7lZ"/>
-                <constraint firstItem="vtz-Jf-lZ3" firstAttribute="leading" secondItem="pjz-V6-Gdr" secondAttribute="leading" id="Qcf-oA-FIp"/>
-                <constraint firstItem="U6h-v4-Eaz" firstAttribute="centerY" secondItem="pjz-V6-Gdr" secondAttribute="centerY" id="TLV-vv-Elt"/>
+                <constraint firstItem="vtz-Jf-lZ3" firstAttribute="leading" secondItem="Lsp-Uo-dtr" secondAttribute="leading" id="Qcf-oA-FIp"/>
                 <constraint firstItem="vtz-Jf-lZ3" firstAttribute="top" secondItem="pjz-V6-Gdr" secondAttribute="top" id="UVT-aY-p5o"/>
                 <constraint firstAttribute="trailing" secondItem="vtz-Jf-lZ3" secondAttribute="trailing" id="XNA-Oi-Knn"/>
                 <constraint firstItem="Lsp-Uo-dtr" firstAttribute="centerY" secondItem="pjz-V6-Gdr" secondAttribute="centerY" id="aDu-fH-V0q"/>
-                <constraint firstItem="xAW-5G-R7l" firstAttribute="leading" secondItem="U6h-v4-Eaz" secondAttribute="trailing" constant="8" id="djS-jC-ub8"/>
-                <constraint firstItem="U6h-v4-Eaz" firstAttribute="leading" secondItem="pjz-V6-Gdr" secondAttribute="leading" id="xra-MG-ONR"/>
+                <constraint firstItem="xAW-5G-R7l" firstAttribute="leading" secondItem="X4V-x6-XZm" secondAttribute="trailing" constant="8" id="m5w-am-06C"/>
+                <constraint firstItem="X4V-x6-XZm" firstAttribute="top" secondItem="pjz-V6-Gdr" secondAttribute="top" id="pxP-HI-rjB"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="287.78625954198475" y="-71.126760563380287"/>
@@ -80,8 +83,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
