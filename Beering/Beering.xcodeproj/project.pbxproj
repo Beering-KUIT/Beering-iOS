@@ -72,6 +72,8 @@
 		885929D92A857EB400C1F01D /* NormalJoin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 885929D82A857EB400C1F01D /* NormalJoin.storyboard */; };
 		885929DB2A85808F00C1F01D /* KAKAOJoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885929DA2A85808F00C1F01D /* KAKAOJoinVC.swift */; };
 		885929DD2A8580FE00C1F01D /* KAKAOJoin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 885929DC2A8580FE00C1F01D /* KAKAOJoin.storyboard */; };
+		885929DF2A85823900C1F01D /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885929DE2A85823900C1F01D /* CheckBox.swift */; };
+		885929E12A85835300C1F01D /* CheckBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 885929E02A85835300C1F01D /* CheckBox.xib */; };
 		CF96CD6F49E151AD33D2DCA8 /* Pods_Beering.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045DA4A813987AF870E47FF4 /* Pods_Beering.framework */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +147,8 @@
 		885929D82A857EB400C1F01D /* NormalJoin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NormalJoin.storyboard; sourceTree = "<group>"; };
 		885929DA2A85808F00C1F01D /* KAKAOJoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAKAOJoinVC.swift; sourceTree = "<group>"; };
 		885929DC2A8580FE00C1F01D /* KAKAOJoin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KAKAOJoin.storyboard; sourceTree = "<group>"; };
+		885929DE2A85823900C1F01D /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		885929E02A85835300C1F01D /* CheckBox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckBox.xib; sourceTree = "<group>"; };
 		D6F412E016012A6E28AC04C7 /* Pods-Beering.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beering.debug.xcconfig"; path = "Target Support Files/Pods-Beering/Pods-Beering.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -416,6 +420,8 @@
 				885929DA2A85808F00C1F01D /* KAKAOJoinVC.swift */,
 				885929D82A857EB400C1F01D /* NormalJoin.storyboard */,
 				885929D52A857D2E00C1F01D /* NormalJoinVC.swift */,
+				885929E02A85835300C1F01D /* CheckBox.xib */,
+				885929DE2A85823900C1F01D /* CheckBox.swift */,
 			);
 			path = Join;
 			sourceTree = "<group>";
@@ -507,6 +513,7 @@
 				2ED7A1882A5E76A3009CC66A /* Pretendard-ExtraBold.otf in Resources */,
 				2ED3C6BC2A68419D00C0836E /* Detail.storyboard in Resources */,
 				2ED7A1932A5E7D85009CC66A /* OoohBaby-Regular.ttf in Resources */,
+				885929E12A85835300C1F01D /* CheckBox.xib in Resources */,
 				2ED7A1902A5E76A3009CC66A /* Pretendard-Medium.otf in Resources */,
 				885929D92A857EB400C1F01D /* NormalJoin.storyboard in Resources */,
 				2ED3C6BE2A68419D00C0836E /* ReviewPreviewCell.xib in Resources */,
@@ -590,6 +597,7 @@
 				2EAF91CC2A6E461A00AF3A8D /* MyReviewVC.swift in Sources */,
 				2ED3C6BD2A68419D00C0836E /* ReviewPreviewCell.swift in Sources */,
 				2E309DCF2A55425000B19B2A /* UIImageView.swift in Sources */,
+				885929DF2A85823900C1F01D /* CheckBox.swift in Sources */,
 				2E80BE832A5F0A09002E8F0E /* FilterCell.swift in Sources */,
 				2E9F85D32A5270F10082BC8B /* AppDelegate.swift in Sources */,
 				2EB020852A6FF4460022AC17 /* ReviewWritingVC.swift in Sources */,
