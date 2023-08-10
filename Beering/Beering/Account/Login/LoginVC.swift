@@ -144,7 +144,7 @@ class LoginVC: UIViewController {
     func loginBtnInit(){
         loginBtn.setTitle("LOGIN", for: .normal)
         //loginBtn.layer.cornerRadius = 6
-        loginBtn.layer.shadowColor = Beering.Gray03.cgColor
+        loginBtn.layer.shadowColor = BeeringColor.Gray03.cgColor
         //loginBtn.layer.shadowOpacity = 1.0
         //loginBtn.layer.shadowOffset = CGSize.zero
     }
@@ -154,36 +154,36 @@ class LoginVC: UIViewController {
     }
     
     @objc func IDAttribute(){
-        IDTextField.textColor = Beering.Black
+        IDTextField.textColor = BeeringColor.Black
         if IDTextField.text!.isEmpty{
             validID = false
-            IDUnderLine.backgroundColor = Beering.Gray01
+            IDUnderLine.backgroundColor = BeeringColor.Gray01
         }
         else{
             validID = true
-            IDUnderLine.backgroundColor = Beering.Black
+            IDUnderLine.backgroundColor = BeeringColor.Black
         }
     }
     @objc func passwordAttribute(){
-        passwordTextField.textColor = Beering.Black
+        passwordTextField.textColor = BeeringColor.Black
         if passwordTextField.text!.isEmpty{
             validPassword = false
-            passwordUnderLine.backgroundColor = Beering.Gray01
+            passwordUnderLine.backgroundColor = BeeringColor.Gray01
         }
         else{
             validPassword = true
-            passwordUnderLine.backgroundColor = Beering.Black
+            passwordUnderLine.backgroundColor = BeeringColor.Black
         }
     }
     
     @objc func isValidLogin(){
         if validID && validPassword{
             validLogin = true
-            loginBtn.backgroundColor = Beering.Black
+            loginBtn.backgroundColor = BeeringColor.Black
         }
         else{
             validLogin = false
-            loginBtn.backgroundColor = Beering.Gray03
+            loginBtn.backgroundColor = BeeringColor.Gray03
         }
     }
 }
@@ -256,7 +256,7 @@ extension UIColor {
     }
 }
 
-enum Beering{
+enum BeeringColor{
     static let Black: UIColor = UIColor(red: 16, green: 15, blue: 15) // Beering Black
     static let Gray03: UIColor = UIColor(red: 226, green: 226, blue: 226) // Beering Gray/03
     static let Gray01: UIColor = UIColor(red: 167, green: 167, blue: 167) // Beering Gray/01
