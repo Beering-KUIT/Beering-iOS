@@ -68,6 +68,8 @@
 		2ED7A1932A5E7D85009CC66A /* OoohBaby-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ED7A1922A5E7D85009CC66A /* OoohBaby-Regular.ttf */; };
 		2ED7A1992A5E9BE2009CC66A /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED7A1982A5E9BE2009CC66A /* SearchVC.swift */; };
 		2ED7A19B2A5E9E67009CC66A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED7A19A2A5E9E67009CC66A /* UIView.swift */; };
+		885929D62A857D2E00C1F01D /* NormalJoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885929D52A857D2E00C1F01D /* NormalJoinVC.swift */; };
+		885929D92A857EB400C1F01D /* NormalJoin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 885929D82A857EB400C1F01D /* NormalJoin.storyboard */; };
 		CF96CD6F49E151AD33D2DCA8 /* Pods_Beering.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045DA4A813987AF870E47FF4 /* Pods_Beering.framework */; };
 /* End PBXBuildFile section */
 
@@ -137,6 +139,8 @@
 		2ED7A1982A5E9BE2009CC66A /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		2ED7A19A2A5E9E67009CC66A /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		7D62E9E04607F08D67C59DDA /* Pods-Beering.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beering.release.xcconfig"; path = "Target Support Files/Pods-Beering/Pods-Beering.release.xcconfig"; sourceTree = "<group>"; };
+		885929D52A857D2E00C1F01D /* NormalJoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalJoinVC.swift; sourceTree = "<group>"; };
+		885929D82A857EB400C1F01D /* NormalJoin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NormalJoin.storyboard; sourceTree = "<group>"; };
 		D6F412E016012A6E28AC04C7 /* Pods-Beering.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beering.debug.xcconfig"; path = "Target Support Files/Pods-Beering/Pods-Beering.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -326,6 +330,7 @@
 		2ED7A1752A5BA6E2009CC66A /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				885929D72A857D4700C1F01D /* Join */,
 				2ED7A1762A5BA747009CC66A /* Login */,
 			);
 			path = Account;
@@ -398,6 +403,15 @@
 			children = (
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		885929D72A857D4700C1F01D /* Join */ = {
+			isa = PBXGroup;
+			children = (
+				885929D52A857D2E00C1F01D /* NormalJoinVC.swift */,
+				885929D82A857EB400C1F01D /* NormalJoin.storyboard */,
+			);
+			path = Join;
 			sourceTree = "<group>";
 		};
 		D0580859C666F16728463A04 /* Frameworks */ = {
@@ -487,6 +501,7 @@
 				2ED3C6BC2A68419D00C0836E /* Detail.storyboard in Resources */,
 				2ED7A1932A5E7D85009CC66A /* OoohBaby-Regular.ttf in Resources */,
 				2ED7A1902A5E76A3009CC66A /* Pretendard-Medium.otf in Resources */,
+				885929D92A857EB400C1F01D /* NormalJoin.storyboard in Resources */,
 				2ED3C6BE2A68419D00C0836E /* ReviewPreviewCell.xib in Resources */,
 				2ED7A18C2A5E76A3009CC66A /* Pretendard-Light.otf in Resources */,
 				2EAF91CA2A6E45D900AF3A8D /* MyReview.storyboard in Resources */,
@@ -577,6 +592,7 @@
 				2EAF91C72A6E26C500AF3A8D /* MyPageVC.swift in Sources */,
 				2EB020772A6EB27A0022AC17 /* ReviewVC.swift in Sources */,
 				2E9F85D52A5270F10082BC8B /* SceneDelegate.swift in Sources */,
+				885929D62A857D2E00C1F01D /* NormalJoinVC.swift in Sources */,
 				2E1D583F2A53FB2200C1FE9B /* LoginVC.swift in Sources */,
 				2E309DC82A55131F00B19B2A /* ReviewCell.swift in Sources */,
 				2E309DDA2A55558700B19B2A /* ReviewImageCell.swift in Sources */,
