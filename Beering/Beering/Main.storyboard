@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,8 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginRequestBg" translatesAutoresizingMaskIntoConstraints="NO" id="3fU-ru-l2T">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fqx-oy-qV1">
-                                <rect key="frame" x="129" y="356" width="136" height="35"/>
+                                <rect key="frame" x="41" y="679" width="311" height="52"/>
+                                <color key="backgroundColor" name="Beering_Black"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="311" id="IDQ-Gu-hbQ"/>
+                                    <constraint firstAttribute="height" constant="52" id="ayl-vx-ZCP"/>
+                                </constraints>
+                                <color key="tintColor" name="Beering_White"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="로그인 필요할 때"/>
                                 <connections>
@@ -26,30 +36,56 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRC-yp-Ohh">
-                                <rect key="frame" x="121" y="492" width="151" height="35"/>
+                                <rect key="frame" x="121" y="743" width="151" height="35"/>
+                                <color key="tintColor" name="Beering_Black"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="로그인 되어있을 때"/>
                                 <connections>
                                     <action selector="loginDoneBtnTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="x3h-Fx-KwI"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인하고 나만의 주류기록남기기" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qy2-Vr-BlO">
+                                <rect key="frame" x="40" y="383" width="313" height="172"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <color key="textColor" name="Beering_Black"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="mRC-yp-Ohh" secondAttribute="bottom" constant="291" id="2c5-ua-srb"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Fqx-oy-qV1" secondAttribute="trailing" constant="128" id="F7t-3V-7pa"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mRC-yp-Ohh" secondAttribute="trailing" constant="121" id="NfV-xB-nqQ"/>
-                            <constraint firstItem="mRC-yp-Ohh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="121" id="dO2-3Z-Gem"/>
-                            <constraint firstItem="Fqx-oy-qV1" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="253" id="vKz-wP-Ca9"/>
-                            <constraint firstItem="Fqx-oy-qV1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="129" id="zUW-Eq-JQx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="qy2-Vr-BlO" secondAttribute="trailing" constant="40" id="0DV-L2-8bw"/>
+                            <constraint firstItem="3fU-ru-l2T" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="0yI-EB-0KB"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3fU-ru-l2T" secondAttribute="trailing" id="7Bo-XS-arG"/>
+                            <constraint firstItem="qy2-Vr-BlO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="280" id="DNm-IL-7Eg"/>
+                            <constraint firstAttribute="bottom" secondItem="mRC-yp-Ohh" secondAttribute="bottom" constant="74" id="PQa-YV-Rbl"/>
+                            <constraint firstItem="qy2-Vr-BlO" firstAttribute="centerX" secondItem="3fU-ru-l2T" secondAttribute="centerX" id="Pqm-9E-Tbw"/>
+                            <constraint firstItem="3fU-ru-l2T" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="WCF-QB-Grt"/>
+                            <constraint firstItem="Fqx-oy-qV1" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="gCJ-bx-jFc"/>
+                            <constraint firstItem="mRC-yp-Ohh" firstAttribute="top" secondItem="Fqx-oy-qV1" secondAttribute="bottom" constant="12" id="iGg-ci-mjp"/>
+                            <constraint firstAttribute="bottom" secondItem="3fU-ru-l2T" secondAttribute="bottom" id="kjg-x1-ueH"/>
+                            <constraint firstItem="mRC-yp-Ohh" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="ybt-d5-bN6"/>
+                            <constraint firstItem="qy2-Vr-BlO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="yeH-Ab-syN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qa1-en-Whg"/>
+                    <connections>
+                        <outlet property="LoginRequestButton" destination="Fqx-oy-qV1" id="RVv-tP-h6i"/>
+                        <outlet property="loginMain" destination="qy2-Vr-BlO" id="wWG-S1-Qsg"/>
+                        <outlet property="skipButton" destination="mRC-yp-Ohh" id="Mzw-fj-uwV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="991.60305343511448" y="-2.1126760563380285"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="uqR-UO-gRk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" referencedIdentifier="Login" id="gAb-Th-PRN" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6zY-Co-gsd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1552" y="-2"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oBe-gg-NsJ">
@@ -71,6 +107,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="LoginRequestBg" width="375" height="812"/>
+        <namedColor name="Beering_Black">
+            <color red="0.063000001013278961" green="0.059000000357627869" blue="0.059000000357627869" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Beering_White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
