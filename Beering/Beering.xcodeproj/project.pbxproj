@@ -74,6 +74,8 @@
 		885929DD2A8580FE00C1F01D /* KAKAOJoin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 885929DC2A8580FE00C1F01D /* KAKAOJoin.storyboard */; };
 		885929DF2A85823900C1F01D /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885929DE2A85823900C1F01D /* CheckBox.swift */; };
 		885929E12A85835300C1F01D /* CheckBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 885929E02A85835300C1F01D /* CheckBox.xib */; };
+		885929E32A85872F00C1F01D /* TermsOfUseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885929E22A85872F00C1F01D /* TermsOfUseVC.swift */; };
+		885929E52A85873D00C1F01D /* TermsOfUse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 885929E42A85873D00C1F01D /* TermsOfUse.storyboard */; };
 		CF96CD6F49E151AD33D2DCA8 /* Pods_Beering.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045DA4A813987AF870E47FF4 /* Pods_Beering.framework */; };
 /* End PBXBuildFile section */
 
@@ -149,6 +151,8 @@
 		885929DC2A8580FE00C1F01D /* KAKAOJoin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KAKAOJoin.storyboard; sourceTree = "<group>"; };
 		885929DE2A85823900C1F01D /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		885929E02A85835300C1F01D /* CheckBox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckBox.xib; sourceTree = "<group>"; };
+		885929E22A85872F00C1F01D /* TermsOfUseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseVC.swift; sourceTree = "<group>"; };
+		885929E42A85873D00C1F01D /* TermsOfUse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TermsOfUse.storyboard; sourceTree = "<group>"; };
 		D6F412E016012A6E28AC04C7 /* Pods-Beering.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beering.debug.xcconfig"; path = "Target Support Files/Pods-Beering/Pods-Beering.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -422,6 +426,8 @@
 				885929D52A857D2E00C1F01D /* NormalJoinVC.swift */,
 				885929E02A85835300C1F01D /* CheckBox.xib */,
 				885929DE2A85823900C1F01D /* CheckBox.swift */,
+				885929E42A85873D00C1F01D /* TermsOfUse.storyboard */,
+				885929E22A85872F00C1F01D /* TermsOfUseVC.swift */,
 			);
 			path = Join;
 			sourceTree = "<group>";
@@ -519,6 +525,7 @@
 				2ED3C6BE2A68419D00C0836E /* ReviewPreviewCell.xib in Resources */,
 				2ED7A18C2A5E76A3009CC66A /* Pretendard-Light.otf in Resources */,
 				2EAF91CA2A6E45D900AF3A8D /* MyReview.storyboard in Resources */,
+				885929E52A85873D00C1F01D /* TermsOfUse.storyboard in Resources */,
 				2E309DBC2A550C3E00B19B2A /* Search.storyboard in Resources */,
 				2ED7A18B2A5E76A3009CC66A /* Pretendard-Thin.otf in Resources */,
 				2E309DBA2A550BCB00B19B2A /* TabBar.storyboard in Resources */,
@@ -586,6 +593,7 @@
 				2ED7A19B2A5E9E67009CC66A /* UIView.swift in Sources */,
 				2EBD7C112A70F18400D84767 /* ReviewPictureCell.swift in Sources */,
 				2EB0206E2A6E53C30022AC17 /* MyLiquorVC.swift in Sources */,
+				885929E32A85872F00C1F01D /* TermsOfUseVC.swift in Sources */,
 				2ED7A1992A5E9BE2009CC66A /* SearchVC.swift in Sources */,
 				2E309DD12A554C3600B19B2A /* UILabel.swift in Sources */,
 				2E44D3032A7BE615004F8A3F /* UITextField.swift in Sources */,
