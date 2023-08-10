@@ -147,6 +147,7 @@ class LoginVC: UIViewController {
         loginBtn.layer.shadowColor = BeeringColor.Gray03.cgColor
         //loginBtn.layer.shadowOpacity = 1.0
         //loginBtn.layer.shadowOffset = CGSize.zero
+        kakaoLoginBtn.setTitle("", for: .normal)
     }
     
     @objc private func isSequrityTextEntry(){

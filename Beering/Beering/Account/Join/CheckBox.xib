@@ -29,7 +29,7 @@
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain"/>
                 </button>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Necessary" translatesAutoresizingMaskIntoConstraints="NO" id="QSO-MP-CEA">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NecessaryOption" translatesAutoresizingMaskIntoConstraints="NO" id="QSO-MP-CEA">
                     <rect key="frame" x="44" y="8" width="28" height="20"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="QSO-MP-CEA" secondAttribute="height" multiplier="28:20" id="WIC-Ao-oEF"/>
@@ -69,7 +69,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Necessary" width="28" height="20"/>
+        <image name="NecessaryOption" width="28" height="20"/>
         <image name="Pointer" width="36" height="36"/>
         <image name="circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">

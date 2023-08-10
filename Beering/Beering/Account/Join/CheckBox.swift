@@ -41,7 +41,7 @@ class CheckBox: UIView{
         self.addSubview(view)
     }
     private func checkBoxBtnInit(){
-        checkBox.tintColor = UIColor(red: 167, green: 167, blue: 167)
+        checkBox.tintColor = BeeringColor.Black
         checkBox.setTitle("", for: .normal)
     }
     func changeTitle(termsOfUseTitle: String){
@@ -60,13 +60,13 @@ class CheckBox: UIView{
         if(isChecked){
             //off
             checkBox.setImage(UIImage(systemName: "circle"), for: .normal)
-            checkBox.tintColor = UIColor(red: 167, green: 167, blue: 167)
+            checkBox.tintColor = BeeringColor.Black
             isChecked = false
         }
         else{
             //on
             checkBox.setImage(UIImage(systemName: "circle.fill"), for: .normal)
-            checkBox.tintColor = UIColor(red: 16, green: 15, blue: 15)
+            checkBox.tintColor = BeeringColor.Gray01
             isChecked = true
         }
     }

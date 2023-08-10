@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,15 +20,15 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeT-9a-spd">
                                 <rect key="frame" x="32" y="515" width="329" height="55"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="BeT-9a-spd" secondAttribute="height" multiplier="6:1" id="p5c-kv-dPl"/>
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="카카오 로그인"/>
+                                <buttonConfiguration key="configuration" style="plain" image="KakaoLoginButton" imagePadding="0.0"/>
                                 <connections>
                                     <action selector="kakaoJoin:" destination="xLa-yE-osW" eventType="touchUpInside" id="syd-n6-i0n"/>
+                                    <action selector="kakaoLoginBtnTap:" destination="xLa-yE-osW" eventType="touchUpInside" id="yPY-Bf-ege"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="아이디를 입력해주세요" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a4f-Ze-Kjo">
@@ -47,7 +48,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Pz-8N-dhh">
                                 <rect key="frame" x="32" y="345" width="329" height="55"/>
-                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <color key="backgroundColor" name="Gray03"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1Pz-8N-dhh" secondAttribute="height" multiplier="311:52" id="Kwd-Dv-Mlw"/>
                                 </constraints>
@@ -87,14 +88,14 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V2t-Eh-upU" userLabel="IDLine">
                                 <rect key="frame" x="32" y="199" width="329" height="1"/>
-                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <color key="backgroundColor" name="Gray01"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="cID-uF-6uj"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oIb-sQ-fpH" userLabel="PasswordLine">
                                 <rect key="frame" x="32" y="260" width="329" height="1"/>
-                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <color key="backgroundColor" name="Gray01"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Fyx-xg-bV7"/>
                                 </constraints>
@@ -148,6 +149,7 @@
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="IDTextField" destination="a4f-Ze-Kjo" id="hUv-Qn-JKm"/>
                         <outlet property="IDUnderLine" destination="V2t-Eh-upU" id="qg1-KD-TVY"/>
@@ -167,14 +169,18 @@
     </scenes>
     <resources>
         <image name="InvisibleButton" width="32" height="32"/>
+        <image name="KakaoLoginButton" width="312" height="52"/>
+        <namedColor name="Gray01">
+            <color red="0.65499997138977051" green="0.65499997138977051" blue="0.65499997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Gray03">
+            <color red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
