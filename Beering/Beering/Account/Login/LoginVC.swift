@@ -41,8 +41,8 @@ class LoginVC: UIViewController {
         print(params)
         //let JwtInfo = ["accessToken": String, "refreshToken": String] as Dictionary
         struct jwtInfo: Codable{
-            let accessToken: String
-            let refreshToken: String
+            var accessToken: String
+            var refreshToken: String
         }
         struct results : Codable{
             let memberId : Int
@@ -69,7 +69,9 @@ class LoginVC: UIViewController {
                     let loginResponse = try decoder.decode(LoginResponse.self, from: jsonData)
                     accessLogin = loginResponse.isSuccess
                     print("#######Response######")
-                    print(loginResponse)
+                    print("\(loginResponse.isSuccess)")
+                    print("#######Token######")
+                    print("\(loginResponse.result.jwtInfo)")
                     if validLogin && accessLogin {
                         let TabBarStoryboard = UIStoryboard(name: "TabBar", bundle: nil)
                         let TabBarVC = TabBarStoryboard.instantiateInitialViewController()
