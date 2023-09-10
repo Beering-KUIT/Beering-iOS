@@ -76,6 +76,7 @@
 		885929E12A85835300C1F01D /* CheckBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 885929E02A85835300C1F01D /* CheckBox.xib */; };
 		885929E32A85872F00C1F01D /* TermsOfUseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885929E22A85872F00C1F01D /* TermsOfUseVC.swift */; };
 		885929E52A85873D00C1F01D /* TermsOfUse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 885929E42A85873D00C1F01D /* TermsOfUse.storyboard */; };
+		886C4C9F2A9F40780012D713 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C4C9E2A9F40780012D713 /* KeyChain.swift */; };
 		CF96CD6F49E151AD33D2DCA8 /* Pods_Beering.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045DA4A813987AF870E47FF4 /* Pods_Beering.framework */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +154,7 @@
 		885929E02A85835300C1F01D /* CheckBox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckBox.xib; sourceTree = "<group>"; };
 		885929E22A85872F00C1F01D /* TermsOfUseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseVC.swift; sourceTree = "<group>"; };
 		885929E42A85873D00C1F01D /* TermsOfUse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TermsOfUse.storyboard; sourceTree = "<group>"; };
+		886C4C9E2A9F40780012D713 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		D6F412E016012A6E28AC04C7 /* Pods-Beering.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beering.debug.xcconfig"; path = "Target Support Files/Pods-Beering/Pods-Beering.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -372,6 +374,7 @@
 		2ED7A17C2A5E767A009CC66A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				886C4CA02A9F40850012D713 /* Users */,
 				2ED7A17D2A5E7685009CC66A /* Fonts */,
 			);
 			path = Resources;
@@ -430,6 +433,14 @@
 				885929E22A85872F00C1F01D /* TermsOfUseVC.swift */,
 			);
 			path = Join;
+			sourceTree = "<group>";
+		};
+		886C4CA02A9F40850012D713 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				886C4C9E2A9F40780012D713 /* KeyChain.swift */,
+			);
+			path = Users;
 			sourceTree = "<group>";
 		};
 		D0580859C666F16728463A04 /* Frameworks */ = {
@@ -605,6 +616,7 @@
 				2EAF91CC2A6E461A00AF3A8D /* MyReviewVC.swift in Sources */,
 				2ED3C6BD2A68419D00C0836E /* ReviewPreviewCell.swift in Sources */,
 				2E309DCF2A55425000B19B2A /* UIImageView.swift in Sources */,
+				886C4C9F2A9F40780012D713 /* KeyChain.swift in Sources */,
 				885929DF2A85823900C1F01D /* CheckBox.swift in Sources */,
 				2E80BE832A5F0A09002E8F0E /* FilterCell.swift in Sources */,
 				2E9F85D32A5270F10082BC8B /* AppDelegate.swift in Sources */,

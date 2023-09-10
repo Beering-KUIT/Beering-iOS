@@ -36,17 +36,17 @@ class LoginVC: UIViewController {
     @IBAction func normalLoginBtnTap(_ sendor: Any){
         var accessLogin: Bool = false
         let url = "https://api.beering.shop/auth/login"
-        let params = ["username": IDTextField.text! , "password": passwordTextField.text!] as Dictionary
+        let credentials = ["username": IDTextField.text! , "password": passwordTextField.text!] as Dictionary
         
-        print(params)
+        print(credentials)
         //let JwtInfo = ["accessToken": String, "refreshToken": String] as Dictionary
-        struct jwtInfo: Codable{
+        struct token: Codable{
             var accessToken: String
             var refreshToken: String
         }
         struct results : Codable{
             let memberId : Int
-            let jwtInfo : [String: String]
+            let jwtInfo: token
         }
         struct LoginResponse: Codable {
             let isSuccess: Bool
@@ -56,7 +56,7 @@ class LoginVC: UIViewController {
         }
         AF.request(url,
                    method: .post,
-                   parameters: params,
+                   parameters: credentials,
                    encoding: JSONEncoding.default,
                    headers: ["Content-Type":"application/json", "Accept":"application/json"])
         .responseJSON { [self] response in
@@ -67,11 +67,25 @@ class LoginVC: UIViewController {
                     let jsonData = try JSONSerialization.data(withJSONObject: data)
                     let decoder = JSONDecoder()
                     let loginResponse = try decoder.decode(LoginResponse.self, from: jsonData)
+                    
                     accessLogin = loginResponse.isSuccess
                     print("#######Response######")
                     print("\(loginResponse.isSuccess)")
+                    
+                    if(KeyChain.create(account: "BeeringAccessToken", token: loginResponse.result.jwtInfo.accessToken))
+                    {
+                        print("AccessToken create successfully")
+                    }
+                    if(KeyChain.create(account: "BeeringRefreshToken", token: loginResponse.result.jwtInfo.refreshToken))
+                    {
+                        print("RefreshToken create successfully")
+                    }
+//                    KeyChain.create(server: url, key: "refreshToken", token: loginResponse.result.jwtInfo.refreshToken)
+                    
                     print("#######Token######")
-                    print("\(loginResponse.result.jwtInfo)")
+                    print("accessToken: \(loginResponse.result.jwtInfo.accessToken)\n refreshToken: \(loginResponse.result.jwtInfo.refreshToken)")
+                    
+                    
                     if validLogin && accessLogin {
                         let TabBarStoryboard = UIStoryboard(name: "TabBar", bundle: nil)
                         let TabBarVC = TabBarStoryboard.instantiateInitialViewController()
@@ -88,6 +102,8 @@ class LoginVC: UIViewController {
             }
                 
         }
+        
+        
         print(validLogin)
         print(accessLogin)
     }
@@ -160,6 +176,7 @@ class LoginVC: UIViewController {
         IDTextField.textColor = BeeringColor.Black
         if IDTextField.text!.isEmpty{
             validID = false
+            
             IDUnderLine.backgroundColor = BeeringColor.Gray01
         }
         else{

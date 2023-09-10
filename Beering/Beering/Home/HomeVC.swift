@@ -33,7 +33,9 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        print("#############accessToken#############")
+        print(KeyChain.retrieve(account: "BeeringAccessToken"))
         // Do any additional setup after loading the view.
         print("## HomeVC 진입")
         self.navigationController?.navigationBar.barTintColor = UIColor(named: "Beering_White")
